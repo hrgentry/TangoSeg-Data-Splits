@@ -1,0 +1,58 @@
+{
+  "selection_rule": "Samples were selected from input images and ground-truth masks by pavement type and crack morphology before model predictions were inspected.",
+  "samples": [
+    {
+      "sample_id": "S1-A",
+      "category": "Alligator crack",
+      "dataset": "crack500",
+      "image": "data/Crack500/dataset/test_img/20160222_164141_641_1.jpg",
+      "mask": "data/Crack500/dataset/test_lab/20160222_164141_641_1.png"
+    },
+    {
+      "sample_id": "S2-A",
+      "category": "Asphalt linear crack",
+      "dataset": "crackmap",
+      "image": "data/CrackMap/CrackMap-main/images/GOPR0132 (2).png",
+      "mask": "data/CrackMap/CrackMap-main/masks/GOPR0132 (2).png"
+    },
+    {
+      "sample_id": "S3-A",
+      "category": "Concrete linear crack",
+      "dataset": "camcrack789",
+      "image": "data/CamCrack789/dataset/test_img/image-128.png",
+      "mask": "data/CamCrack789/dataset/test_lab/target-128.png"
+    },
+    {
+      "sample_id": "S4-A",
+      "category": "Concrete multiple cracks",
+      "dataset": "camcrack789",
+      "image": "data/CamCrack789/dataset/test_img/image-179.png",
+      "mask": "data/CamCrack789/dataset/test_lab/target-179.png"
+    },
+    {
+      "sample_id": "S5-A",
+      "category": "Branching crack",
+      "dataset": "deepcrack",
+      "image": "data/DeepCrack/dataset/test_img/11269-2.jpg",
+      "mask": "data/DeepCrack/dataset/test_lab/11269-2.png"
+    }
+  ],
+  "models": {
+    "tangoseg": {
+      "paper_name": "TANGO",
+      "group": "CNN",
+      "thresholds": {"deepcrack": 0.423, "crack500": 0.794, "crackmap": 0.633, "camcrack789": 0.740}
+    },
+    "dtrcnet": {
+      "paper_name": "DTrC-Net",
+      "group": "Transformer",
+      "thresholds": {"deepcrack": 0.406, "crack500": 0.531, "crackmap": 0.240, "camcrack789": 0.354}
+    },
+    "mixercseg_faithful": {
+      "paper_name": "MixerCSeg faithful",
+      "group": "Mamba",
+      "thresholds": {"deepcrack": 0.567, "crack500": 0.389, "crackmap": 0.622, "camcrack789": 0.530}
+    }
+  },
+  "checkpoint_rule": "Use final epoch 5 for DeepCrack because its validation and test index files are identical; use best_fgIoU for Crack500, CrackMap, and CamCrack789, matching the reported public-dataset matrix."
+}

@@ -1,0 +1,127 @@
+{
+  "split": "splits_mother/test.txt",
+  "num_eval": 674,
+  "note": "parent-disjoint rebuild of Crack500; only the unit of assignment differs from the distributed split",
+  "models": {
+    "carnet": {
+      "ODS_mother": 76.506,
+      "OIS_mother": 73.67,
+      "crackIoU_mother": 61.952,
+      "ODS_thr_mother": 0.738,
+      "ODS_distributed": 76.418,
+      "inflation": -0.088
+    },
+    "convnext_xlarge": {
+      "ODS_mother": 80.287,
+      "OIS_mother": 77.098,
+      "crackIoU_mother": 67.067,
+      "ODS_thr_mother": 0.415,
+      "ODS_distributed": 79.852,
+      "inflation": -0.435
+    },
+    "deepcrack_fast_fuse": {
+      "ODS_mother": 75.001,
+      "OIS_mother": 72.092,
+      "crackIoU_mother": 60.001,
+      "ODS_thr_mother": 0.351,
+      "ODS_distributed": 73.792,
+      "inflation": -1.209
+    },
+    "deeplabv3plus_r50": {
+      "ODS_mother": 78.638,
+      "OIS_mother": 76.926,
+      "crackIoU_mother": 64.796,
+      "ODS_thr_mother": 0.378,
+      "ODS_distributed": 78.858,
+      "inflation": 0.22
+    },
+    "dtrcnet": {
+      "ODS_mother": 76.941,
+      "OIS_mother": 72.761,
+      "crackIoU_mother": 62.524,
+      "ODS_thr_mother": 0.274,
+      "ODS_distributed": 76.313,
+      "inflation": -0.628
+    },
+    "hrnet_w48": {
+      "ODS_mother": 78.318,
+      "OIS_mother": 76.452,
+      "crackIoU_mother": 64.363,
+      "ODS_thr_mother": 0.394,
+      "ODS_distributed": 78.326,
+      "inflation": 0.008
+    },
+    "mambavision": {
+      "ODS_mother": 72.52,
+      "OIS_mother": 67.698,
+      "crackIoU_mother": 56.887,
+      "ODS_thr_mother": 0.217,
+      "ODS_distributed": 73.271,
+      "inflation": 0.751
+    },
+    "mixercseg_faithful": {
+      "ODS_mother": 73.817,
+      "OIS_mother": 71.72,
+      "crackIoU_mother": 58.499,
+      "ODS_thr_mother": 0.395,
+      "ODS_distributed": 74.58,
+      "inflation": 0.763
+    },
+    "mixercseg_improved": {
+      "ODS_mother": 76.776,
+      "OIS_mother": 74.965,
+      "crackIoU_mother": 62.306,
+      "ODS_thr_mother": 0.744,
+      "ODS_distributed": 76.463,
+      "inflation": -0.313
+    },
+    "restormixer": {
+      "ODS_mother": 76.639,
+      "OIS_mother": 70.924,
+      "crackIoU_mother": 62.126,
+      "ODS_thr_mother": 0.324,
+      "ODS_distributed": 76.875,
+      "inflation": 0.236
+    },
+    "rindnet": {
+      "ODS_mother": 77.621,
+      "OIS_mother": 67.579,
+      "crackIoU_mother": 63.427,
+      "ODS_thr_mother": 0.736,
+      "ODS_distributed": 77.51,
+      "inflation": -0.111
+    },
+    "segformer_mit_b5": {
+      "ODS_mother": 79.822,
+      "OIS_mother": 77.126,
+      "crackIoU_mother": 66.419,
+      "ODS_thr_mother": 0.393,
+      "ODS_distributed": 79.842,
+      "inflation": 0.02
+    },
+    "shuttlenet_v2": {
+      "ODS_mother": 76.841,
+      "OIS_mother": 73.39,
+      "crackIoU_mother": 62.391,
+      "ODS_thr_mother": 0.682,
+      "ODS_distributed": 76.726,
+      "inflation": -0.115
+    },
+    "tangoseg": {
+      "ODS_mother": 77.638,
+      "OIS_mother": 75.678,
+      "crackIoU_mother": 63.449,
+      "ODS_thr_mother": 0.759,
+      "ODS_distributed": 77.387,
+      "inflation": -0.251
+    },
+    "unet": {
+      "ODS_mother": 75.414,
+      "OIS_mother": 74.383,
+      "crackIoU_mother": 60.532,
+      "ODS_thr_mother": 0.357,
+      "ODS_distributed": 75.31,
+      "inflation": -0.104
+    }
+  }
+}

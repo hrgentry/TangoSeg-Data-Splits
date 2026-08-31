@@ -1,0 +1,104 @@
+{
+  "input": "1x3x512x512",
+  "forward": "encode_decode",
+  "note": "FLOPs are multiply-accumulate counts from mmengine.analysis.FlopAnalyzer, excluding elementwise, normalisation, activation and pooling ops as is conventional. Rows with lower_bound=true additionally contain compute the analyzer cannot count (fused attention, mamba selective scan); their FLOPs are underestimates and must be reported as such.",
+  "models": {
+    "carnet": {
+      "params_M": 4.89,
+      "gflops": 18.92,
+      "measured_on": "dot80-4090/torch2.6"
+    },
+    "convnext_xlarge": {
+      "params_M": 391.03,
+      "gflops": 532.84,
+      "measured_on": "workstation-5090/torch2.11"
+    },
+    "deepcrack_fast_fuse": {
+      "params_M": 30.91,
+      "gflops": 202.4,
+      "measured_on": "dot80-4090/torch2.6"
+    },
+    "deeplabv3plus_r50": {
+      "params_M": 43.58,
+      "gflops": 176.48,
+      "measured_on": "workstation-5090/torch2.11"
+    },
+    "dtrcnet": {
+      "params_M": 41.83,
+      "gflops": 40.84,
+      "uncounted_ops": {
+        "aten::scaled_dot_product_attention": 12
+      },
+      "lower_bound": true,
+      "measured_on": "workstation-5090/torch2.11"
+    },
+    "hrnet_w48": {
+      "params_M": 65.85,
+      "gflops": 93.73,
+      "measured_on": "workstation-5090/torch2.11"
+    },
+    "mambavision": {
+      "params_M": 32.05,
+      "gflops": 77.57,
+      "uncounted_ops": {
+        "aten::_convolution_mode": 12,
+        "prim::PythonOp.SelectiveScanFn": 6,
+        "aten::scaled_dot_product_attention": 6
+      },
+      "lower_bound": true,
+      "measured_on": "dot80-4090/torch2.6"
+    },
+    "mixercseg_faithful": {
+      "params_M": 2.51,
+      "gflops": 2.46,
+      "uncounted_ops": {
+        "aten::scaled_dot_product_attention": 4
+      },
+      "lower_bound": true,
+      "measured_on": "workstation-5090/torch2.11"
+    },
+    "mixercseg_improved": {
+      "params_M": 9.45,
+      "gflops": 6.54,
+      "uncounted_ops": {
+        "aten::scaled_dot_product_attention": 2
+      },
+      "lower_bound": true,
+      "measured_on": "workstation-5090/torch2.11"
+    },
+    "restormixer": {
+      "params_M": 1.9,
+      "gflops": 84.67,
+      "uncounted_ops": {
+        "prim::PythonOp.SelectiveScanFn": 8
+      },
+      "lower_bound": true,
+      "measured_on": "dot80-4090/torch2.6"
+    },
+    "rindnet": {
+      "params_M": 59.39,
+      "gflops": 311.63,
+      "measured_on": "workstation-5090/torch2.11"
+    },
+    "segformer_mit_b5": {
+      "params_M": 81.97,
+      "gflops": 74.56,
+      "measured_on": "workstation-5090/torch2.11 + dot80-4090/torch2.6"
+    },
+    "shuttlenet_v2": {
+      "params_M": 9.73,
+      "gflops": 49.53,
+      "measured_on": "workstation-5090/torch2.11"
+    },
+    "tangoseg": {
+      "params_M": 13.87,
+      "gflops": 23.9,
+      "measured_on": "workstation-5090/torch2.11"
+    },
+    "unet": {
+      "params_M": 28.99,
+      "gflops": 202.96,
+      "measured_on": "workstation-5090/torch2.11 + dot80-4090/torch2.6"
+    }
+  }
+}
