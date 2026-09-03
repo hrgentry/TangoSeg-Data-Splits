@@ -60,20 +60,20 @@
       "inflation": 0.751
     },
     "mixercseg_faithful": {
-      "ODS_mother": 73.817,
-      "OIS_mother": 71.72,
-      "crackIoU_mother": 58.499,
-      "ODS_thr_mother": 0.395,
-      "ODS_distributed": 74.58,
-      "inflation": 0.763
+      "ODS_mother": 74.191,
+      "OIS_mother": 69.177,
+      "crackIoU_mother": 58.971,
+      "ODS_thr_mother": 0.349,
+      "ODS_distributed": 68.176,
+      "inflation": -6.015
     },
     "mixercseg_improved": {
-      "ODS_mother": 76.776,
-      "OIS_mother": 74.965,
-      "crackIoU_mother": 62.306,
-      "ODS_thr_mother": 0.744,
-      "ODS_distributed": 76.463,
-      "inflation": -0.313
+      "ODS_mother": 76.795,
+      "OIS_mother": 74.181,
+      "crackIoU_mother": 62.331,
+      "ODS_thr_mother": 0.76,
+      "ODS_distributed": 76.241,
+      "inflation": -0.554
     },
     "restormixer": {
       "ODS_mother": 76.639,

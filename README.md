@@ -109,6 +109,22 @@ kernels are lower bounds, and are marked as such in the paper.
 
 ## Versions
 
+- **v1.2.0 (2026-09-03)** — both MixerCSeg rows re-evaluated after a defect in
+  our port of that architecture was corrected: every group normalization layer
+  used eight groups, whereas the published implementation uses one group per
+  eight channels. Loading the authors' released weights into both
+  implementations gave a logit correlation of 0.40 before the correction and
+  0.996 after, so the two arms were retrained on all five splits and on the
+  DeepCrack budget seeds. Changed files: `public_ods_ALL.json`,
+  `public_ods_deepcrack_final.json`, `public_ods_fixed_deepcrack.json`,
+  `crack500_mother_vs_distributed.json`, `budget_ods_deepcrack.json`, and the
+  MixerCSeg thresholds in `qualitative_selection.json`. New file:
+  `mixercseg_official_parity.json`, the per-layer comparison and the released
+  weights scored with this study's evaluator (DeepCrack 87.43, Crack500 77.56,
+  CamCrack789 82.06, CrackMap 78.30 pixel-ODS). `params_flops_512_merged.json`
+  is unchanged, since the group count changes neither parameters nor operators.
+  Every other model's entry, the split indices, the manifests, and the scripts
+  are unchanged.
 - **v1.1.0 (2026-09-03)** — DTrC-Net entries re-evaluated after its Transformer
   branch was retrained from the public DeiT-tiny-distilled ImageNet-1k weights.
   The published DTrC-Net uses a 256-dimensional DeiT variant whose weights were

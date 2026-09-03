@@ -62,10 +62,10 @@
       "paper_name": "MixerCSeg faithful",
       "group": "Mamba",
       "thresholds": {
-        "deepcrack": 0.567,
-        "crack500": 0.389,
-        "crackmap": 0.622,
-        "camcrack789": 0.53
+        "deepcrack": 0.489,
+        "crack500": 0.397,
+        "camcrack789": 0.475,
+        "crackmap": 0.526
       }
     }
   },
