@@ -41,17 +41,32 @@
     "tangoseg": {
       "paper_name": "TANGO",
       "group": "CNN",
-      "thresholds": {"deepcrack": 0.423, "crack500": 0.794, "crackmap": 0.633, "camcrack789": 0.740}
+      "thresholds": {
+        "deepcrack": 0.423,
+        "crack500": 0.794,
+        "crackmap": 0.633,
+        "camcrack789": 0.74
+      }
     },
     "dtrcnet": {
       "paper_name": "DTrC-Net",
       "group": "Transformer",
-      "thresholds": {"deepcrack": 0.406, "crack500": 0.531, "crackmap": 0.240, "camcrack789": 0.354}
+      "thresholds": {
+        "deepcrack": 0.336,
+        "crack500": 0.327,
+        "camcrack789": 0.418,
+        "crackmap": 0.129
+      }
     },
     "mixercseg_faithful": {
       "paper_name": "MixerCSeg faithful",
       "group": "Mamba",
-      "thresholds": {"deepcrack": 0.567, "crack500": 0.389, "crackmap": 0.622, "camcrack789": 0.530}
+      "thresholds": {
+        "deepcrack": 0.567,
+        "crack500": 0.389,
+        "crackmap": 0.622,
+        "camcrack789": 0.53
+      }
     }
   },
   "checkpoint_rule": "Use final epoch 5 for DeepCrack because its validation and test index files are identical; use best_fgIoU for Crack500, CrackMap, and CamCrack789, matching the reported public-dataset matrix."

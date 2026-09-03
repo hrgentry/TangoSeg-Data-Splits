@@ -24,8 +24,8 @@
       "measured_on": "workstation-5090/torch2.11"
     },
     "dtrcnet": {
-      "params_M": 41.83,
-      "gflops": 40.84,
+      "params_M": 37.02,
+      "gflops": 38.5,
       "uncounted_ops": {
         "aten::scaled_dot_product_attention": 12
       },

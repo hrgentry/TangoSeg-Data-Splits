@@ -107,6 +107,20 @@ fixed before any prediction was viewed.
 Operator counts for models with unsupported fused-attention or selective-scan
 kernels are lower bounds, and are marked as such in the paper.
 
+## Versions
+
+- **v1.1.0 (2026-09-03)** — DTrC-Net entries re-evaluated after its Transformer
+  branch was retrained from the public DeiT-tiny-distilled ImageNet-1k weights.
+  The published DTrC-Net uses a 256-dimensional DeiT variant whose weights were
+  never released, so the v1.0.0 entries had that branch randomly initialised;
+  the manuscript now marks the row *after* Xiang et al. and describes the
+  substitution. Changed files: `public_ods_ALL.json`,
+  `public_ods_deepcrack_final.json`, `public_ods_fixed_deepcrack.json`,
+  `crack500_mother_vs_distributed.json`, `params_flops_512_merged.json`, and
+  the DTrC-Net thresholds in `qualitative_selection.json`. Every other model's
+  entry, the split indices, the manifests, and the scripts are unchanged.
+- **v1.0.0 (2026-08-31)** — initial release.
+
 ## Source datasets
 
 The images and annotations must be obtained from their original releases:

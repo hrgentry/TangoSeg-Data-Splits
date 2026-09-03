@@ -36,12 +36,12 @@
       "inflation": 0.22
     },
     "dtrcnet": {
-      "ODS_mother": 76.941,
-      "OIS_mother": 72.761,
-      "crackIoU_mother": 62.524,
-      "ODS_thr_mother": 0.274,
-      "ODS_distributed": 76.313,
-      "inflation": -0.628
+      "ODS_mother": 76.004,
+      "OIS_mother": 71.415,
+      "crackIoU_mother": 61.296,
+      "ODS_thr_mother": 0.292,
+      "ODS_distributed": 76.472,
+      "inflation": 0.468
     },
     "hrnet_w48": {
       "ODS_mother": 78.318,
