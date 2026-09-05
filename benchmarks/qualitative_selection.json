@@ -42,32 +42,32 @@
       "paper_name": "TANGO",
       "group": "CNN",
       "thresholds": {
-        "deepcrack": 0.423,
-        "crack500": 0.794,
-        "crackmap": 0.633,
-        "camcrack789": 0.74
+        "deepcrack": 0.364,
+        "crack500": 0.781,
+        "camcrack789": 0.641,
+        "crackmap": 0.692
       }
     },
     "dtrcnet": {
       "paper_name": "DTrC-Net",
       "group": "Transformer",
       "thresholds": {
-        "deepcrack": 0.336,
-        "crack500": 0.327,
-        "camcrack789": 0.418,
-        "crackmap": 0.129
+        "deepcrack": 0.378,
+        "crack500": 0.295,
+        "camcrack789": 0.315,
+        "crackmap": 0.426
       }
     },
     "mixercseg_faithful": {
       "paper_name": "MixerCSeg faithful",
       "group": "Mamba",
       "thresholds": {
-        "deepcrack": 0.489,
-        "crack500": 0.397,
-        "camcrack789": 0.475,
-        "crackmap": 0.526
+        "deepcrack": 0.483,
+        "crack500": 0.35,
+        "camcrack789": 0.46,
+        "crackmap": 0.516
       }
     }
   },
-  "checkpoint_rule": "Use final epoch 5 for DeepCrack because its validation and test index files are identical; use best_fgIoU for Crack500, CrackMap, and CamCrack789, matching the reported public-dataset matrix."
+  "checkpoint_rule": "Use the prespecified final epoch (epoch 5 of the fixed 5-epoch budget) on every dataset, matching the reported public-dataset matrix. This replaced an earlier rule (final on DeepCrack, best_fgIoU elsewhere) after the best_fgIoU criterion was found to be constant across epochs for some model-dataset pairs."
 }

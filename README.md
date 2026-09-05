@@ -17,7 +17,7 @@ regenerate the partitions.
 | `splits/crack500_distributed/` | The crop-level partition shipped with the archive, kept for reference: 2,355 / 334 / 675 crops |
 | `splits/camcrack789/` | The CamCrack789 70/10/20 partition: 553 / 79 / 157 images |
 | `manifests/*.sha256` | Per-file SHA-256 of the audited copy of each dataset (DeepCrack 1,078; Crack500 6,742; CamCrack789 1,581; CrackMap 243 files) |
-| `benchmarks/*.json` | Machine-readable results: the full model × dataset matrix, the threshold-sweep and fixed-threshold variants, the seed-repeated budget arms, the matched TANGO arms, the two Crack500 partitions side by side, and parameter/FLOP counts |
+| `benchmarks/*.json` | Machine-readable results: the full model × dataset matrix at the prespecified final epoch, the same runs at the checkpoint a validation-selection rule would have kept, the threshold-sweep and fixed-threshold variants, the seed-repeated budget arms, the matched TANGO arms, the two Crack500 partitions side by side, and parameter/FLOP counts |
 | `verify_manifests.py` | Checks a local dataset copy against a manifest |
 | `make_crack500_mother_split.py` | Regenerates the parent-disjoint Crack500 partition (vendored verbatim; see below) |
 
@@ -107,7 +107,36 @@ fixed before any prediction was viewed.
 Operator counts for models with unsupported fused-attention or selective-scan
 kernels are lower bounds, and are marked as such in the paper.
 
+Every matrix cell (`public_ods_ALL.json`, `crack500_mother_vs_distributed.json`,
+`public_ods_final_crack500_mother.json`) reports the last epoch of the fixed
+5-epoch budget. The `public_ods_best_<dataset>.json` files score the *same*
+runs at the checkpoint that selection by foreground IoU at a 0.5 threshold on
+the validation split would have kept; the paper's Section 4.3 compares the two.
+For DeepCrack that pair keeps its original names: `public_ods_fixed_deepcrack.json`
+is the selected checkpoint and `public_ods_deepcrack_final.json` the final one.
+
 ## Versions
+
+- **v1.3.0 (2026-09-05)** — the whole model × dataset matrix retrained and
+  re-scored under one checkpoint rule: every cell now reports the last epoch of
+  the fixed 5-epoch budget. The earlier rule selected checkpoints by foreground
+  IoU at a 0.5 threshold on the validation split (DeepCrack excepted). That
+  criterion was constant across all five epochs for three model–dataset pairs
+  (MixerCSeg faithful on Crack500 and CrackMap, DTrC-Net on CrackMap) and so
+  silently returned the first epoch; the rule was replaced after this was found,
+  and the paper says so. All fifteen models were retrained on the four datasets
+  and on the parent-disjoint Crack500 rebuild — 75 runs on one machine under one
+  recipe, which also brought ConvNeXt-XLarge to the same micro-batch schedule on
+  every dataset — and both the final and the selected checkpoint of every run
+  were scored. Changed files: `public_ods_ALL.json`,
+  `public_ods_deepcrack_final.json`, `public_ods_fixed_deepcrack.json`,
+  `crack500_mother_vs_distributed.json`, and the thresholds and checkpoint rule
+  in `qualitative_selection.json`. New files:
+  `public_ods_best_{crack500,camcrack789,crackmap,crack500_mother}.json` and
+  `public_ods_final_crack500_mother.json` (see *Benchmark JSON* above).
+  `params_flops_512_merged.json`, `budget_ods_deepcrack.json`, the two TANGO
+  arm files, `mixercseg_official_parity.json`, the split indices, the manifests,
+  and the scripts are unchanged.
 
 - **v1.2.0 (2026-09-03)** — both MixerCSeg rows re-evaluated after a defect in
   our port of that architecture was corrected: every group normalization layer
