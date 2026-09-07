@@ -117,6 +117,24 @@ is the selected checkpoint and `public_ods_deepcrack_final.json` the final one.
 
 ## Versions
 
+Each release is archived on Zenodo. The concept DOI
+[10.5281/zenodo.22202977](https://doi.org/10.5281/zenodo.22202977) resolves to
+the newest version, and is the DOI cited in the accompanying study.
+
+Record metadata — authors, resource type, keywords, licence — is declared in
+[`.zenodo.json`](.zenodo.json) rather than inferred by Zenodo from the GitHub
+repository. **That file governs only releases archived after it was added;
+Zenodo does not revise records that already exist.** The records for v1.0.0
+through v1.3.0 keep what was inferred at the time — one creator taken from the
+GitHub contributor list, no affiliations, no keywords, and `software` as the
+resource type — and adding the file does not correct them. Each record's title
+and description are still taken from its GitHub release, which is why
+`.zenodo.json` declares neither.
+
+The accompanying manuscript is not yet published and has no DOI, so no related
+identifier points to it. One will be declared in `.zenodo.json` once that DOI
+exists, and will appear on versions archived from that point onward.
+
 - **v1.3.0 (2026-09-05)** — the whole model × dataset matrix retrained and
   re-scored under one checkpoint rule: every cell now reports the last epoch of
   the fixed 5-epoch budget. The earlier rule selected checkpoints by foreground
