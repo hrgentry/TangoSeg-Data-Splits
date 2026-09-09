@@ -42,30 +42,30 @@
       "paper_name": "TANGO",
       "group": "CNN",
       "thresholds": {
-        "deepcrack": 0.364,
-        "crack500": 0.781,
-        "camcrack789": 0.641,
-        "crackmap": 0.692
+        "deepcrack": 0.238,
+        "crack500": 0.46,
+        "camcrack789": 0.476,
+        "crackmap": 0.064
       }
     },
     "dtrcnet": {
       "paper_name": "DTrC-Net",
       "group": "Transformer",
       "thresholds": {
-        "deepcrack": 0.378,
-        "crack500": 0.295,
-        "camcrack789": 0.315,
-        "crackmap": 0.426
+        "deepcrack": 0.011,
+        "crack500": 0.15,
+        "camcrack789": 0.083,
+        "crackmap": 0.092
       }
     },
     "mixercseg_faithful": {
       "paper_name": "MixerCSeg faithful",
       "group": "Mamba",
       "thresholds": {
-        "deepcrack": 0.483,
-        "crack500": 0.35,
-        "camcrack789": 0.46,
-        "crackmap": 0.516
+        "deepcrack": 0.223,
+        "crack500": 0.427,
+        "camcrack789": 0.427,
+        "crackmap": 0.418
       }
     }
   },

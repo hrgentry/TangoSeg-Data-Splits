@@ -109,11 +109,28 @@ kernels are lower bounds, and are marked as such in the paper.
 
 Every matrix cell (`public_ods_ALL.json`, `crack500_mother_vs_distributed.json`,
 `public_ods_final_crack500_mother.json`) reports the last epoch of the fixed
-5-epoch budget. The `public_ods_best_<dataset>.json` files score the *same*
+50-epoch budget. The `public_ods_best_<dataset>.json` files score the *same*
 runs at the checkpoint that selection by foreground IoU at a 0.5 threshold on
 the validation split would have kept; the paper's Section 4.3 compares the two.
 For DeepCrack that pair keeps its original names: `public_ods_fixed_deepcrack.json`
 is the selected checkpoint and `public_ods_deepcrack_final.json` the final one.
+
+The same fifteen configurations were also trained at one tenth of that budget,
+and the paper reports the two arms against each other.
+`budget_matrix_5_vs_50.json` holds the per-cell comparison: pixel-ODS at both
+budgets, the between-model spread on each dataset, the rank changes, and the
+Spearman correlation between the two orderings. `public_ods_ALL_5ep.json` is the
+short arm's own matrix in the same layout as `public_ods_ALL.json`, so the
+threshold statistics the paper quotes for the 5-epoch budget can be recomputed
+from this release rather than only from the archived v1.3.0 record.
+
+`fuse_order_contrast.json` holds one single-variable comparison drawn from this
+matrix. The two DeepCrack side-fusion orders have identical parameter counts,
+tensor for tensor, and differ only in whether the fusion convolution runs before
+or after the upsample. The file records both orders' pixel-ODS on all five
+splits at the 50-epoch budget together with their counted operations, and is the
+basis of the computation-versus-accuracy statement in the paper's capacity
+section.
 
 ## Versions
 
@@ -134,6 +151,33 @@ and description are still taken from its GitHub release, which is why
 The accompanying manuscript is not yet published and has no DOI, so no related
 identifier points to it. One will be declared in `.zenodo.json` once that DOI
 exists, and will appear on versions archived from that point onward.
+
+- **v1.4.0 (2026-09-09)** — the training budget of the whole matrix raised from
+  5 epochs to 50, and the 5-epoch matrix kept as the short arm of a budget
+  comparison. Under the 5-epoch schedule the polynomial decay reached its floor
+  of 1e-6 in the final epoch, so "the last epoch" was both the end of the budget
+  and the point at which the learning rate had gone to zero; at 50 epochs the
+  last epoch means the budget is spent, not that learning has stopped. All
+  fifteen models were retrained on the four datasets and on the parent-disjoint
+  Crack500 rebuild — 75 runs on one machine under one recipe — and both the final
+  and the selected checkpoint of every run were scored. Between-model differences
+  shrink sharply with the longer budget, and by an amount that tracks the number
+  of optimizer updates rather than any property of the imagery: the spread across
+  the fifteen models falls from 58.47 to 8.80 pixel-ODS on CrackMap (about 550
+  updates at 50 epochs) and from 20.42 to 4.22 on DeepCrack, while Crack500
+  (14,700 updates) moves by 0.24 points on average. Changed files:
+  `public_ods_ALL.json`, `public_ods_deepcrack_final.json`,
+  `public_ods_fixed_deepcrack.json`, `public_ods_final_crack500_mother.json`,
+  `public_ods_best_{crack500,camcrack789,crackmap,crack500_mother}.json`,
+  `crack500_mother_vs_distributed.json`, and the thresholds in
+  `qualitative_selection.json`. New files: `budget_matrix_5_vs_50.json`,
+  `public_ods_ALL_5ep.json` and `fuse_order_contrast.json` (see *Benchmark JSON*
+  above). One recipe difference is worth naming: RINDNet ran at micro-batches of
+  4 with two accumulation steps in the 50-epoch arm and at an undivided batch of
+  8 in the 5-epoch arm, so its two arms differ in more than epoch count.
+  `params_flops_512_merged.json`, `budget_ods_deepcrack.json`, the two TANGO arm
+  files, `mixercseg_official_parity.json`, the split indices, the manifests, and
+  the scripts are unchanged.
 
 - **v1.3.0 (2026-09-05)** — the whole model × dataset matrix retrained and
   re-scored under one checkpoint rule: every cell now reports the last epoch of

@@ -1,127 +1,127 @@
 {
  "split": "splits_mother/test.txt",
  "num_eval": 674,
- "note": "parent-disjoint rebuild of Crack500; only the unit of assignment differs from the distributed split. Both sides use the final epoch of the same 2026-09-04 retraining batch.",
+ "note": "parent-disjoint rebuild of Crack500; only the unit of assignment differs from the distributed split. Both sides use the final epoch of the same 2026-09-07..09 fifty-epoch retraining batch.",
  "models": {
   "carnet": {
-   "ODS_mother": 76.594,
-   "OIS_mother": 74.16,
-   "crackIoU_mother": 62.066,
-   "ODS_thr_mother": 0.699,
-   "ODS_distributed": 76.328,
-   "inflation": -0.266
+   "ODS_mother": 77.749,
+   "OIS_mother": 72.021,
+   "crackIoU_mother": 63.597,
+   "ODS_thr_mother": 0.357,
+   "ODS_distributed": 78.138,
+   "inflation": 0.389
   },
   "convnext_xlarge": {
-   "ODS_mother": 80.043,
-   "OIS_mother": 76.87,
-   "crackIoU_mother": 66.726,
-   "ODS_thr_mother": 0.419,
-   "ODS_distributed": 79.852,
-   "inflation": -0.191
+   "ODS_mother": 78.881,
+   "OIS_mother": 67.722,
+   "crackIoU_mother": 65.128,
+   "ODS_thr_mother": 0.147,
+   "ODS_distributed": 79.469,
+   "inflation": 0.588
   },
   "deepcrack_fast_fuse": {
-   "ODS_mother": 75.019,
-   "OIS_mother": 73.278,
-   "crackIoU_mother": 60.024,
-   "ODS_thr_mother": 0.328,
-   "ODS_distributed": 73.434,
-   "inflation": -1.585
+   "ODS_mother": 75.089,
+   "OIS_mother": 66.708,
+   "crackIoU_mother": 60.114,
+   "ODS_thr_mother": 0.151,
+   "ODS_distributed": 75.205,
+   "inflation": 0.116
   },
   "deeplabv3plus_r50": {
-   "ODS_mother": 78.704,
-   "OIS_mother": 76.866,
-   "crackIoU_mother": 64.886,
-   "ODS_thr_mother": 0.403,
-   "ODS_distributed": 78.502,
-   "inflation": -0.202
+   "ODS_mother": 78.116,
+   "OIS_mother": 71.803,
+   "crackIoU_mother": 64.09,
+   "ODS_thr_mother": 0.222,
+   "ODS_distributed": 77.785,
+   "inflation": -0.331
   },
   "dtrcnet": {
-   "ODS_mother": 77.036,
-   "OIS_mother": 71.259,
-   "crackIoU_mother": 62.65,
-   "ODS_thr_mother": 0.348,
-   "ODS_distributed": 76.479,
-   "inflation": -0.557
+   "ODS_mother": 77.491,
+   "OIS_mother": 68.557,
+   "crackIoU_mother": 63.254,
+   "ODS_thr_mother": 0.091,
+   "ODS_distributed": 77.234,
+   "inflation": -0.257
   },
   "hrnet_w48": {
-   "ODS_mother": 78.222,
-   "OIS_mother": 76.499,
-   "crackIoU_mother": 64.233,
-   "ODS_thr_mother": 0.406,
-   "ODS_distributed": 78.178,
-   "inflation": -0.044
+   "ODS_mother": 77.885,
+   "OIS_mother": 72.463,
+   "crackIoU_mother": 63.779,
+   "ODS_thr_mother": 0.279,
+   "ODS_distributed": 77.781,
+   "inflation": -0.104
   },
   "mambavision": {
-   "ODS_mother": 72.469,
-   "OIS_mother": 62.768,
-   "crackIoU_mother": 56.824,
-   "ODS_thr_mother": 0.276,
-   "ODS_distributed": 73.496,
-   "inflation": 1.027
+   "ODS_mother": 71.286,
+   "OIS_mother": 71.089,
+   "crackIoU_mother": 55.383,
+   "ODS_thr_mother": 0.733,
+   "ODS_distributed": 69.312,
+   "inflation": -1.974
   },
   "mixercseg_faithful": {
-   "ODS_mother": 74.371,
-   "OIS_mother": 70.616,
-   "crackIoU_mother": 59.199,
-   "ODS_thr_mother": 0.349,
-   "ODS_distributed": 74.264,
-   "inflation": -0.107
+   "ODS_mother": 76.606,
+   "OIS_mother": 72.715,
+   "crackIoU_mother": 62.083,
+   "ODS_thr_mother": 0.416,
+   "ODS_distributed": 77.012,
+   "inflation": 0.406
   },
   "mixercseg_improved": {
-   "ODS_mother": 76.675,
-   "OIS_mother": 74.3,
-   "crackIoU_mother": 62.173,
-   "ODS_thr_mother": 0.754,
-   "ODS_distributed": 76.506,
-   "inflation": -0.169
+   "ODS_mother": 76.914,
+   "OIS_mother": 72.596,
+   "crackIoU_mother": 62.488,
+   "ODS_thr_mother": 0.756,
+   "ODS_distributed": 77.314,
+   "inflation": 0.4
   },
   "restormixer": {
-   "ODS_mother": 76.863,
-   "OIS_mother": 72.577,
-   "crackIoU_mother": 62.42,
-   "ODS_thr_mother": 0.273,
-   "ODS_distributed": 76.23,
-   "inflation": -0.633
+   "ODS_mother": 75.218,
+   "OIS_mother": 69.593,
+   "crackIoU_mother": 60.279,
+   "ODS_thr_mother": 0.819,
+   "ODS_distributed": 74.856,
+   "inflation": -0.362
   },
   "rindnet": {
-   "ODS_mother": 78.059,
-   "OIS_mother": 67.77,
-   "crackIoU_mother": 64.014,
-   "ODS_thr_mother": 0.746,
-   "ODS_distributed": 77.92,
-   "inflation": -0.139
+   "ODS_mother": 77.632,
+   "OIS_mother": 62.547,
+   "crackIoU_mother": 63.441,
+   "ODS_thr_mother": 0.641,
+   "ODS_distributed": 76.96,
+   "inflation": -0.672
   },
   "segformer_mit_b5": {
-   "ODS_mother": 80.269,
-   "OIS_mother": 77.315,
-   "crackIoU_mother": 67.041,
-   "ODS_thr_mother": 0.412,
-   "ODS_distributed": 79.586,
-   "inflation": -0.683
+   "ODS_mother": 78.701,
+   "OIS_mother": 72.871,
+   "crackIoU_mother": 64.882,
+   "ODS_thr_mother": 0.248,
+   "ODS_distributed": 78.411,
+   "inflation": -0.29
   },
   "shuttlenet_v2": {
-   "ODS_mother": 76.88,
-   "OIS_mother": 75.059,
-   "crackIoU_mother": 62.443,
-   "ODS_thr_mother": 0.691,
-   "ODS_distributed": 76.543,
-   "inflation": -0.337
+   "ODS_mother": 78.492,
+   "OIS_mother": 75.727,
+   "crackIoU_mother": 64.598,
+   "ODS_thr_mother": 0.887,
+   "ODS_distributed": 78.823,
+   "inflation": 0.331
   },
   "tangoseg": {
-   "ODS_mother": 77.561,
-   "OIS_mother": 75.294,
-   "crackIoU_mother": 63.347,
-   "ODS_thr_mother": 0.781,
-   "ODS_distributed": 77.397,
-   "inflation": -0.164
+   "ODS_mother": 76.928,
+   "OIS_mother": 68.154,
+   "crackIoU_mother": 62.506,
+   "ODS_thr_mother": 0.444,
+   "ODS_distributed": 76.954,
+   "inflation": 0.026
   },
   "unet": {
-   "ODS_mother": 75.399,
-   "OIS_mother": 74.633,
-   "crackIoU_mother": 60.512,
-   "ODS_thr_mother": 0.39,
-   "ODS_distributed": 75.144,
-   "inflation": -0.255
+   "ODS_mother": 78.106,
+   "OIS_mother": 76.232,
+   "crackIoU_mother": 64.077,
+   "ODS_thr_mother": 0.376,
+   "ODS_distributed": 78.219,
+   "inflation": 0.113
   }
  }
 }

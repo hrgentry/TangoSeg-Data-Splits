@@ -1,0 +1,65 @@
+{
+ "note": "Single-variable contrast between the two DeepCrack side-fusion orders at the common 50-epoch protocol. Parameter counts are tensor-for-tensor identical; only the order of the fusion convolution and the upsample differs. One seed per cell, so the accuracy difference is reported against the study's measured across-seed ranges, not as an effect.",
+ "budget_epochs": 50,
+ "params_M": 30.91,
+ "gflops_fast_fuse": 202.4,
+ "gflops_official_fuse": 549.83,
+ "gflops_ratio": 2.717,
+ "micro_batch_fast_fuse": null,
+ "micro_batch_official_fuse": "2 x 4 accumulation (batch 8 fails with CUDA error)",
+ "wallclock_50ep_min": {
+  "fast_fuse": 61,
+  "official_fuse": 278
+ },
+ "per_dataset": {
+  "deepcrack": {
+   "split": "splits/test.txt",
+   "num_eval": 237,
+   "ODS_fast_fuse": 82.513,
+   "ODS_official_fuse": 82.239,
+   "delta_official_minus_fast": -0.274,
+   "ODS_thr_fast_fuse": 0.208,
+   "ODS_thr_official_fuse": 0.206
+  },
+  "crack500": {
+   "split": "splits/test.txt",
+   "num_eval": 675,
+   "ODS_fast_fuse": 75.205,
+   "ODS_official_fuse": 74.981,
+   "delta_official_minus_fast": -0.224,
+   "ODS_thr_fast_fuse": 0.185,
+   "ODS_thr_official_fuse": 0.217
+  },
+  "camcrack789": {
+   "split": "splits/test.txt",
+   "num_eval": 157,
+   "ODS_fast_fuse": 83.424,
+   "ODS_official_fuse": 82.931,
+   "delta_official_minus_fast": -0.493,
+   "ODS_thr_fast_fuse": 0.317,
+   "ODS_thr_official_fuse": 0.244
+  },
+  "crackmap": {
+   "split": "splits/test.txt",
+   "num_eval": 24,
+   "ODS_fast_fuse": 71.253,
+   "ODS_official_fuse": 71.484,
+   "delta_official_minus_fast": 0.231,
+   "ODS_thr_fast_fuse": 0.398,
+   "ODS_thr_official_fuse": 0.37
+  },
+  "crack500_mother": {
+   "split": "splits_mother/test.txt",
+   "num_eval": 674,
+   "ODS_fast_fuse": 75.089,
+   "ODS_official_fuse": 75.049,
+   "delta_official_minus_fast": -0.04,
+   "ODS_thr_fast_fuse": 0.151,
+   "ODS_thr_official_fuse": 0.155
+  }
+ },
+ "mean_four_fast_fuse": 78.099,
+ "mean_four_official_fuse": 77.909,
+ "mean_four_delta": -0.19,
+ "max_abs_delta": 0.493
+}

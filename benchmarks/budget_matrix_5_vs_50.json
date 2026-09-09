@@ -1,0 +1,627 @@
+{
+ "note": "Whole-matrix budget contrast: the same fifteen configurations, data splits, machine and evaluator at 5 and at 50 epochs, one seed per cell. Per-cell differences carry seed noise and are not matched contrasts; the repeated-run evidence is the three-architecture, three-seed comparison on DeepCrack.",
+ "sources": {
+  "deepcrack": {
+   "5": "public_ods_final_deepcrack.json",
+   "50": "public_ods_final50_deepcrack.json"
+  },
+  "crack500": {
+   "5": "public_ods_final_crack500.json",
+   "50": "public_ods_final50_crack500.json"
+  },
+  "camcrack789": {
+   "5": "public_ods_final_camcrack789.json",
+   "50": "public_ods_final50_camcrack789.json"
+  },
+  "crackmap": {
+   "5": "public_ods_final_crackmap.json",
+   "50": "public_ods_final50_crackmap.json"
+  },
+  "crack500_mother": {
+   "5": "public_ods_final_crack500_mother.json",
+   "50": "public_ods_final50_crack500_mother.json"
+  }
+ },
+ "datasets": {
+  "deepcrack": {
+   "split": "splits/test.txt",
+   "num_eval": 237,
+   "models": {
+    "carnet": {
+     "ODS_5": 72.64,
+     "ODS_50": 83.293,
+     "change": 10.653,
+     "rank_5": 13,
+     "rank_50": 10
+    },
+    "convnext_xlarge": {
+     "ODS_5": 80.781,
+     "ODS_50": 84.768,
+     "change": 3.987,
+     "rank_5": 8,
+     "rank_50": 2
+    },
+    "deepcrack_fast_fuse": {
+     "ODS_5": 71.852,
+     "ODS_50": 82.513,
+     "change": 10.661,
+     "rank_5": 14,
+     "rank_50": 13
+    },
+    "deeplabv3plus_r50": {
+     "ODS_5": 79.984,
+     "ODS_50": 83.105,
+     "change": 3.121,
+     "rank_5": 10,
+     "rank_50": 11
+    },
+    "dtrcnet": {
+     "ODS_5": 81.525,
+     "ODS_50": 83.752,
+     "change": 2.227,
+     "rank_5": 5,
+     "rank_50": 6
+    },
+    "hrnet_w48": {
+     "ODS_5": 81.243,
+     "ODS_50": 83.482,
+     "change": 2.239,
+     "rank_5": 7,
+     "rank_50": 8
+    },
+    "mambavision": {
+     "ODS_5": 80.034,
+     "ODS_50": 80.716,
+     "change": 0.682,
+     "rank_5": 9,
+     "rank_50": 15
+    },
+    "mixercseg_faithful": {
+     "ODS_5": 62.471,
+     "ODS_50": 82.926,
+     "change": 20.455,
+     "rank_5": 15,
+     "rank_50": 12
+    },
+    "mixercseg_improved": {
+     "ODS_5": 77.403,
+     "ODS_50": 82.322,
+     "change": 4.919,
+     "rank_5": 12,
+     "rank_50": 14
+    },
+    "restormixer": {
+     "ODS_5": 82.497,
+     "ODS_50": 83.809,
+     "change": 1.312,
+     "rank_5": 2,
+     "rank_50": 5
+    },
+    "rindnet": {
+     "ODS_5": 82.888,
+     "ODS_50": 83.526,
+     "change": 0.638,
+     "rank_5": 1,
+     "rank_50": 7
+    },
+    "segformer_mit_b5": {
+     "ODS_5": 81.675,
+     "ODS_50": 84.512,
+     "change": 2.837,
+     "rank_5": 4,
+     "rank_50": 3
+    },
+    "shuttlenet_v2": {
+     "ODS_5": 82.329,
+     "ODS_50": 83.423,
+     "change": 1.094,
+     "rank_5": 3,
+     "rank_50": 9
+    },
+    "tangoseg": {
+     "ODS_5": 81.251,
+     "ODS_50": 84.934,
+     "change": 3.683,
+     "rank_5": 6,
+     "rank_50": 1
+    },
+    "unet": {
+     "ODS_5": 79.156,
+     "ODS_50": 84.346,
+     "change": 5.19,
+     "rank_5": 11,
+     "rank_50": 4
+    }
+   },
+   "spread_5": 20.417,
+   "spread_50": 4.218,
+   "mean_change": 4.913,
+   "min_change": 0.638,
+   "max_change": 20.455,
+   "n_improved": 15,
+   "ranks_changed": 15,
+   "max_displacement": 7,
+   "spearman": 0.546
+  },
+  "crack500": {
+   "split": "splits/test.txt",
+   "num_eval": 675,
+   "models": {
+    "carnet": {
+     "ODS_5": 76.328,
+     "ODS_50": 78.138,
+     "change": 1.81,
+     "rank_5": 10,
+     "rank_50": 5
+    },
+    "convnext_xlarge": {
+     "ODS_5": 79.852,
+     "ODS_50": 79.469,
+     "change": -0.383,
+     "rank_5": 1,
+     "rank_50": 1
+    },
+    "deepcrack_fast_fuse": {
+     "ODS_5": 73.434,
+     "ODS_50": 75.205,
+     "change": 1.771,
+     "rank_5": 15,
+     "rank_50": 13
+    },
+    "deeplabv3plus_r50": {
+     "ODS_5": 78.502,
+     "ODS_50": 77.785,
+     "change": -0.717,
+     "rank_5": 3,
+     "rank_50": 6
+    },
+    "dtrcnet": {
+     "ODS_5": 76.479,
+     "ODS_50": 77.234,
+     "change": 0.755,
+     "rank_5": 9,
+     "rank_50": 9
+    },
+    "hrnet_w48": {
+     "ODS_5": 78.178,
+     "ODS_50": 77.781,
+     "change": -0.397,
+     "rank_5": 4,
+     "rank_50": 7
+    },
+    "mambavision": {
+     "ODS_5": 73.496,
+     "ODS_50": 69.312,
+     "change": -4.184,
+     "rank_5": 14,
+     "rank_50": 15
+    },
+    "mixercseg_faithful": {
+     "ODS_5": 74.264,
+     "ODS_50": 77.012,
+     "change": 2.748,
+     "rank_5": 13,
+     "rank_50": 10
+    },
+    "mixercseg_improved": {
+     "ODS_5": 76.506,
+     "ODS_50": 77.314,
+     "change": 0.808,
+     "rank_5": 8,
+     "rank_50": 8
+    },
+    "restormixer": {
+     "ODS_5": 76.23,
+     "ODS_50": 74.856,
+     "change": -1.374,
+     "rank_5": 11,
+     "rank_50": 14
+    },
+    "rindnet": {
+     "ODS_5": 77.92,
+     "ODS_50": 76.96,
+     "change": -0.96,
+     "rank_5": 5,
+     "rank_50": 11
+    },
+    "segformer_mit_b5": {
+     "ODS_5": 79.586,
+     "ODS_50": 78.411,
+     "change": -1.175,
+     "rank_5": 2,
+     "rank_50": 3
+    },
+    "shuttlenet_v2": {
+     "ODS_5": 76.543,
+     "ODS_50": 78.823,
+     "change": 2.28,
+     "rank_5": 7,
+     "rank_50": 2
+    },
+    "tangoseg": {
+     "ODS_5": 77.397,
+     "ODS_50": 76.954,
+     "change": -0.443,
+     "rank_5": 6,
+     "rank_50": 12
+    },
+    "unet": {
+     "ODS_5": 75.144,
+     "ODS_50": 78.219,
+     "change": 3.075,
+     "rank_5": 12,
+     "rank_50": 4
+    }
+   },
+   "spread_5": 6.418,
+   "spread_50": 10.157,
+   "mean_change": 0.241,
+   "min_change": -4.184,
+   "max_change": 3.075,
+   "n_improved": 7,
+   "ranks_changed": 12,
+   "max_displacement": 8,
+   "spearman": 0.593
+  },
+  "camcrack789": {
+   "split": "splits/test.txt",
+   "num_eval": 157,
+   "models": {
+    "carnet": {
+     "ODS_5": 78.367,
+     "ODS_50": 84.812,
+     "change": 6.445,
+     "rank_5": 12,
+     "rank_50": 10
+    },
+    "convnext_xlarge": {
+     "ODS_5": 86.134,
+     "ODS_50": 86.45,
+     "change": 0.316,
+     "rank_5": 1,
+     "rank_50": 1
+    },
+    "deepcrack_fast_fuse": {
+     "ODS_5": 70.826,
+     "ODS_50": 83.424,
+     "change": 12.598,
+     "rank_5": 14,
+     "rank_50": 14
+    },
+    "deeplabv3plus_r50": {
+     "ODS_5": 85.042,
+     "ODS_50": 85.319,
+     "change": 0.277,
+     "rank_5": 4,
+     "rank_50": 7
+    },
+    "dtrcnet": {
+     "ODS_5": 82.808,
+     "ODS_50": 84.912,
+     "change": 2.104,
+     "rank_5": 6,
+     "rank_50": 9
+    },
+    "hrnet_w48": {
+     "ODS_5": 84.947,
+     "ODS_50": 85.864,
+     "change": 0.917,
+     "rank_5": 5,
+     "rank_50": 4
+    },
+    "mambavision": {
+     "ODS_5": 78.731,
+     "ODS_50": 84.452,
+     "change": 5.721,
+     "rank_5": 11,
+     "rank_50": 12
+    },
+    "mixercseg_faithful": {
+     "ODS_5": 61.536,
+     "ODS_50": 81.227,
+     "change": 19.691,
+     "rank_5": 15,
+     "rank_50": 15
+    },
+    "mixercseg_improved": {
+     "ODS_5": 77.392,
+     "ODS_50": 83.56,
+     "change": 6.168,
+     "rank_5": 13,
+     "rank_50": 13
+    },
+    "restormixer": {
+     "ODS_5": 79.835,
+     "ODS_50": 85.554,
+     "change": 5.719,
+     "rank_5": 8,
+     "rank_50": 5
+    },
+    "rindnet": {
+     "ODS_5": 85.548,
+     "ODS_50": 85.267,
+     "change": -0.281,
+     "rank_5": 2,
+     "rank_50": 8
+    },
+    "segformer_mit_b5": {
+     "ODS_5": 85.337,
+     "ODS_50": 86.102,
+     "change": 0.765,
+     "rank_5": 3,
+     "rank_50": 2
+    },
+    "shuttlenet_v2": {
+     "ODS_5": 82.415,
+     "ODS_50": 85.995,
+     "change": 3.58,
+     "rank_5": 7,
+     "rank_50": 3
+    },
+    "tangoseg": {
+     "ODS_5": 79.825,
+     "ODS_50": 84.617,
+     "change": 4.792,
+     "rank_5": 9,
+     "rank_50": 11
+    },
+    "unet": {
+     "ODS_5": 79.645,
+     "ODS_50": 85.517,
+     "change": 5.872,
+     "rank_5": 10,
+     "rank_50": 6
+    }
+   },
+   "spread_5": 24.598,
+   "spread_50": 5.223,
+   "mean_change": 4.979,
+   "min_change": -0.281,
+   "max_change": 19.691,
+   "n_improved": 14,
+   "ranks_changed": 11,
+   "max_displacement": 6,
+   "spearman": 0.811
+  },
+  "crackmap": {
+   "split": "splits/test.txt",
+   "num_eval": 24,
+   "models": {
+    "carnet": {
+     "ODS_5": 46.495,
+     "ODS_50": 76.113,
+     "change": 29.618,
+     "rank_5": 13,
+     "rank_50": 8
+    },
+    "convnext_xlarge": {
+     "ODS_5": 75.144,
+     "ODS_50": 79.494,
+     "change": 4.35,
+     "rank_5": 3,
+     "rank_50": 1
+    },
+    "deepcrack_fast_fuse": {
+     "ODS_5": 17.435,
+     "ODS_50": 71.253,
+     "change": 53.818,
+     "rank_5": 15,
+     "rank_50": 14
+    },
+    "deeplabv3plus_r50": {
+     "ODS_5": 75.901,
+     "ODS_50": 76.791,
+     "change": 0.89,
+     "rank_5": 1,
+     "rank_50": 6
+    },
+    "dtrcnet": {
+     "ODS_5": 71.78,
+     "ODS_50": 75.113,
+     "change": 3.333,
+     "rank_5": 7,
+     "rank_50": 9
+    },
+    "hrnet_w48": {
+     "ODS_5": 75.48,
+     "ODS_50": 77.856,
+     "change": 2.376,
+     "rank_5": 2,
+     "rank_50": 3
+    },
+    "mambavision": {
+     "ODS_5": 67.662,
+     "ODS_50": 74.44,
+     "change": 6.778,
+     "rank_5": 11,
+     "rank_50": 10
+    },
+    "mixercseg_faithful": {
+     "ODS_5": 27.921,
+     "ODS_50": 70.692,
+     "change": 42.771,
+     "rank_5": 14,
+     "rank_50": 15
+    },
+    "mixercseg_improved": {
+     "ODS_5": 67.518,
+     "ODS_50": 72.2,
+     "change": 4.682,
+     "rank_5": 12,
+     "rank_50": 12
+    },
+    "restormixer": {
+     "ODS_5": 72.095,
+     "ODS_50": 73.879,
+     "change": 1.784,
+     "rank_5": 6,
+     "rank_50": 11
+    },
+    "rindnet": {
+     "ODS_5": 74.723,
+     "ODS_50": 77.118,
+     "change": 2.395,
+     "rank_5": 4,
+     "rank_50": 4
+    },
+    "segformer_mit_b5": {
+     "ODS_5": 74.662,
+     "ODS_50": 78.859,
+     "change": 4.197,
+     "rank_5": 5,
+     "rank_50": 2
+    },
+    "shuttlenet_v2": {
+     "ODS_5": 70.574,
+     "ODS_50": 76.459,
+     "change": 5.885,
+     "rank_5": 8,
+     "rank_50": 7
+    },
+    "tangoseg": {
+     "ODS_5": 70.393,
+     "ODS_50": 71.799,
+     "change": 1.406,
+     "rank_5": 9,
+     "rank_50": 13
+    },
+    "unet": {
+     "ODS_5": 70.141,
+     "ODS_50": 76.841,
+     "change": 6.7,
+     "rank_5": 10,
+     "rank_50": 5
+    }
+   },
+   "spread_5": 58.466,
+   "spread_50": 8.802,
+   "mean_change": 11.399,
+   "min_change": 0.89,
+   "max_change": 53.818,
+   "n_improved": 15,
+   "ranks_changed": 13,
+   "max_displacement": 5,
+   "spearman": 0.754
+  },
+  "crack500_mother": {
+   "split": "splits_mother/test.txt",
+   "num_eval": 674,
+   "models": {
+    "carnet": {
+     "ODS_5": 76.594,
+     "ODS_50": 77.749,
+     "change": 1.155,
+     "rank_5": 11,
+     "rank_50": 7
+    },
+    "convnext_xlarge": {
+     "ODS_5": 80.043,
+     "ODS_50": 78.881,
+     "change": -1.162,
+     "rank_5": 2,
+     "rank_50": 1
+    },
+    "deepcrack_fast_fuse": {
+     "ODS_5": 75.019,
+     "ODS_50": 75.089,
+     "change": 0.07,
+     "rank_5": 13,
+     "rank_50": 14
+    },
+    "deeplabv3plus_r50": {
+     "ODS_5": 78.704,
+     "ODS_50": 78.116,
+     "change": -0.588,
+     "rank_5": 3,
+     "rank_50": 4
+    },
+    "dtrcnet": {
+     "ODS_5": 77.036,
+     "ODS_50": 77.491,
+     "change": 0.455,
+     "rank_5": 7,
+     "rank_50": 9
+    },
+    "hrnet_w48": {
+     "ODS_5": 78.222,
+     "ODS_50": 77.885,
+     "change": -0.337,
+     "rank_5": 4,
+     "rank_50": 6
+    },
+    "mambavision": {
+     "ODS_5": 72.469,
+     "ODS_50": 71.286,
+     "change": -1.183,
+     "rank_5": 15,
+     "rank_50": 15
+    },
+    "mixercseg_faithful": {
+     "ODS_5": 74.371,
+     "ODS_50": 76.606,
+     "change": 2.235,
+     "rank_5": 14,
+     "rank_50": 12
+    },
+    "mixercseg_improved": {
+     "ODS_5": 76.675,
+     "ODS_50": 76.914,
+     "change": 0.239,
+     "rank_5": 10,
+     "rank_50": 11
+    },
+    "restormixer": {
+     "ODS_5": 76.863,
+     "ODS_50": 75.218,
+     "change": -1.645,
+     "rank_5": 9,
+     "rank_50": 13
+    },
+    "rindnet": {
+     "ODS_5": 78.059,
+     "ODS_50": 77.632,
+     "change": -0.427,
+     "rank_5": 5,
+     "rank_50": 8
+    },
+    "segformer_mit_b5": {
+     "ODS_5": 80.269,
+     "ODS_50": 78.701,
+     "change": -1.568,
+     "rank_5": 1,
+     "rank_50": 2
+    },
+    "shuttlenet_v2": {
+     "ODS_5": 76.88,
+     "ODS_50": 78.492,
+     "change": 1.612,
+     "rank_5": 8,
+     "rank_50": 3
+    },
+    "tangoseg": {
+     "ODS_5": 77.561,
+     "ODS_50": 76.928,
+     "change": -0.633,
+     "rank_5": 6,
+     "rank_50": 10
+    },
+    "unet": {
+     "ODS_5": 75.399,
+     "ODS_50": 78.106,
+     "change": 2.707,
+     "rank_5": 12,
+     "rank_50": 5
+    }
+   },
+   "spread_5": 7.8,
+   "spread_50": 7.595,
+   "mean_change": 0.062,
+   "min_change": -1.645,
+   "max_change": 2.707,
+   "n_improved": 7,
+   "ranks_changed": 14,
+   "max_displacement": 7,
+   "spearman": 0.736
+  }
+ }
+}
