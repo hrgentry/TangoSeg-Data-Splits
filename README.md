@@ -101,8 +101,16 @@ would no longer match the published results.
 Each entry stores, per dataset and per model, the threshold-selected operating
 point and the metrics computed at it, the same metrics at a fixed threshold of
 0.5, the evaluated image count, and parameter and FLOP counts. `qualitative_selection.json`
-records the morphology-first rule by which the qualitative figure's samples were
-fixed before any prediction was viewed.
+records the four fixed samples used by the current qualitative figure, one per
+dataset, and their per-model operating points. Its input-only descriptor rules
+are explicit: crack width is foreground area divided by skeleton length at
+native 256 x 256 resolution; contrast uses the common 512 x 512 resize and a
+31 x 31 square dilation excluding foreground. The descriptor verification found
+4.00390625 pixels for the thinnest CrackMap sample and 0.0561185181 for the
+lowest-contrast DeepCrack sample, over 24 and 237 usable test images,
+respectively. The samples themselves were not changed by that verification.
+The `descriptor_verification.script` field names the companion paper's code
+path; the measurement definitions are contained in this archive's JSON.
 
 Operator counts for models with unsupported fused-attention or selective-scan
 kernels are lower bounds, and are marked as such in the paper.
@@ -124,19 +132,22 @@ short arm's own matrix in the same layout as `public_ods_ALL.json`, so the
 threshold statistics the paper quotes for the 5-epoch budget can be recomputed
 from this release rather than only from the archived v1.3.0 record.
 
-`fuse_order_contrast.json` holds one single-variable comparison drawn from this
-matrix. The two DeepCrack side-fusion orders have identical parameter counts,
-tensor for tensor, and differ only in whether the fusion convolution runs before
-or after the upsample. The file records both orders' pixel-ODS on all five
-splits at the 50-epoch budget together with their counted operations, and is the
-basis of the computation-versus-accuracy statement in the paper's capacity
-section.
+`fuse_order_contrast.json` records an implementation comparison between two
+DeepCrack side-fusion orders with identical parameter counts. The counted
+operation ratio is 2.717 (549.83 / 202.4 GFLOPs), but the accuracy and timing
+comparison does not isolate fusion order. Fast-fuse used physical batch 8;
+official-fuse used micro-batch 2 with four-step accumulation. Both applied an
+extra division of mean-reduced BCE by physical batch size, so loss scaling also
+differs. One seed per cell cannot establish accuracy equivalence; seed ranges
+from other models cannot supply the uncertainty of this pair. All measured
+scores, times and operation counts are retained.
 
 ## Versions
 
 Each release is archived on Zenodo. The concept DOI
 [10.5281/zenodo.22202977](https://doi.org/10.5281/zenodo.22202977) resolves to
-the newest version, and is the DOI cited in the accompanying study.
+the newest version. A fixed version DOI should be used when citing the exact
+archive accompanying a manuscript submission.
 
 Record metadata — authors, resource type, keywords, licence — is declared in
 [`.zenodo.json`](.zenodo.json) rather than inferred by Zenodo from the GitHub
@@ -152,17 +163,29 @@ The accompanying manuscript is not yet published and has no DOI, so no related
 identifier points to it. One will be declared in `.zenodo.json` once that DOI
 exists, and will appear on versions archived from that point onward.
 
+- **v1.4.1 (2026-09-10)** — metadata corrections for the submission audit.
+  `qualitative_selection.json` now records the four current figure samples and
+  reproducible input-descriptor definitions; the earlier contrast value 0.057
+  and usable count 230 are superseded by 0.0561185181 and 237 under the explicit
+  resize/dilation rule. `fuse_order_contrast.json` now discloses physical batch,
+  accumulation and loss-scaling differences and labels the result as an
+  implementation comparison. The benchmark matrix, per-seed scores, operation
+  counts, timing observations, partitions, manifests and scripts are unchanged.
+  The README also corrects two interpretations in the prior version summary:
+  1e-6 is a nonzero learning-rate floor at both budgets, and comparisons between
+  different datasets do not isolate update count from image difficulty.
+
 - **v1.4.0 (2026-09-09)** — the training budget of the whole matrix raised from
   5 epochs to 50, and the 5-epoch matrix kept as the short arm of a budget
-  comparison. Under the 5-epoch schedule the polynomial decay reached its floor
-  of 1e-6 in the final epoch, so "the last epoch" was both the end of the budget
-  and the point at which the learning rate had gone to zero; at 50 epochs the
-  last epoch means the budget is spent, not that learning has stopped. All
+  comparison. At both budgets the un-warmed polynomial schedule reached its
+  nonzero floor of 1e-6 in the final epoch; that epoch occupies one fifth of
+  the short budget and one fiftieth of the long budget. All
   fifteen models were retrained on the four datasets and on the parent-disjoint
   Crack500 rebuild — 75 runs on one machine under one recipe — and both the final
   and the selected checkpoint of every run were scored. Between-model differences
-  shrink sharply with the longer budget, and by an amount that tracks the number
-  of optimizer updates rather than any property of the imagery: the spread across
+  shrink sharply on three datasets under the longer budget. Dataset size and
+  image characteristics vary together, so these comparisons do not identify
+  their separate contributions. The spread across
   the fifteen models falls from 58.47 to 8.80 pixel-ODS on CrackMap (about 550
   updates at 50 epochs) and from 20.42 to 4.22 on DeepCrack, while Crack500
   (14,700 updates) moves by 0.24 points on average. Changed files:

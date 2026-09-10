@@ -1,40 +1,43 @@
 {
-  "selection_rule": "Samples were selected from input images and ground-truth masks by pavement type and crack morphology before model predictions were inspected.",
+  "selection_rule": "One sample per dataset, chosen from the input image and the ground-truth mask before any prediction was inspected. The four together cover five conditions: alligator cracking, concrete pavement, asphalt pavement, a thin linear crack, and a low-contrast crack; asphalt is carried by both the alligator and the thin-linear rows.",
+  "selection_criteria": {
+    "thin_linear": "Foreground area / skeleton length at native 256x256 resolution. CrackMap GOPR0318_(1) is the narrowest of all 24 test images, at 4.00390625 px (4.0 displayed).",
+    "low_contrast": "After resizing the image to 512x512 with bilinear interpolation and the mask with nearest-neighbor interpolation, compute abs(mean grayscale inside foreground - mean grayscale in the surrounding ring)/255. The ring is a 31x31 square dilation (15-pixel radius) excluding foreground. All 237 DeepCrack test images have usable foreground and rings; IMG24-1 is lowest, at 0.0561185181 (0.056 displayed).",
+    "concrete_pavement": "Surface type is read from the image; CamCrack789 image-128 is a single thin crack on smooth concrete and was already the concrete sample of the previous selection."
+  },
+  "alligator_note": "The alligator sample was NOT chosen by an automatic descriptor, because the two obvious candidates both fail. Skeleton branch density ranks the chosen image 4th rather than 1st, since it normalises by skeleton length and a large mesh grows numerator and denominator together. Enclosed-cell count (components minus Euler number) ranks it 597th of 633, because the annotation leaves sub-pixel gaps where cracks meet, so almost no cell closes; the images it ranks first are single wide cracks whose \"cells\" are annotation specks inside the crack body. The sample was confirmed by inspecting the candidates at full size. This is recorded so that a later refresh does not \"correct\" the choice to a descriptor ranking.",
   "samples": [
     {
       "sample_id": "S1-A",
       "category": "Alligator crack",
       "dataset": "crack500",
       "image": "data/Crack500/dataset/test_img/20160222_164141_641_1.jpg",
-      "mask": "data/Crack500/dataset/test_lab/20160222_164141_641_1.png"
+      "mask": "data/Crack500/dataset/test_lab/20160222_164141_641_1.png",
+      "note": "unchanged from the previous selection"
     },
     {
       "sample_id": "S2-A",
-      "category": "Asphalt linear crack",
-      "dataset": "crackmap",
-      "image": "data/CrackMap/CrackMap-main/images/GOPR0132 (2).png",
-      "mask": "data/CrackMap/CrackMap-main/masks/GOPR0132 (2).png"
+      "category": "Concrete pavement crack",
+      "dataset": "camcrack789",
+      "image": "data/CamCrack789/dataset/test_img/image-128.png",
+      "mask": "data/CamCrack789/dataset/test_lab/target-128.png",
+      "note": "unchanged from the previous selection (was S3-A)"
     },
     {
       "sample_id": "S3-A",
-      "category": "Concrete linear crack",
-      "dataset": "camcrack789",
-      "image": "data/CamCrack789/dataset/test_img/image-128.png",
-      "mask": "data/CamCrack789/dataset/test_lab/target-128.png"
+      "category": "Thin asphalt crack",
+      "dataset": "crackmap",
+      "image": "data/CrackMap/dataset/train_img/GOPR0318_(1).png",
+      "mask": "data/CrackMap/dataset/train_lab/GOPR0318_(1).png",
+      "note": "new; replaces GOPR0132_(2), which is wider and not the thin case"
     },
     {
       "sample_id": "S4-A",
-      "category": "Concrete multiple cracks",
-      "dataset": "camcrack789",
-      "image": "data/CamCrack789/dataset/test_img/image-179.png",
-      "mask": "data/CamCrack789/dataset/test_lab/target-179.png"
-    },
-    {
-      "sample_id": "S5-A",
-      "category": "Branching crack",
+      "category": "Low-contrast crack",
       "dataset": "deepcrack",
-      "image": "data/DeepCrack/dataset/test_img/11269-2.jpg",
-      "mask": "data/DeepCrack/dataset/test_lab/11269-2.png"
+      "image": "data/DeepCrack/dataset/test_img/IMG24-1.jpg",
+      "mask": "data/DeepCrack/dataset/test_lab/IMG24-1.png",
+      "note": "new; replaces 11269-2, a high-contrast branching crack"
     }
   ],
   "models": {
@@ -69,5 +72,12 @@
       }
     }
   },
-  "checkpoint_rule": "Use the prespecified final epoch (epoch 5 of the fixed 5-epoch budget) on every dataset, matching the reported public-dataset matrix. This replaced an earlier rule (final on DeepCrack, best_fgIoU elsewhere) after the best_fgIoU criterion was found to be constant across epochs for some model-dataset pairs."
+  "checkpoint_rule": "Use the prespecified final epoch of the fixed budget on every dataset, matching the reported public-dataset matrix. The budget is 50 epochs since 2026-09-09 (epoch_50.pth); it was 5 before that. An earlier rule (final on DeepCrack, best_fgIoU elsewhere) was abandoned when the best_fgIoU criterion was found to be constant across epochs for some model-dataset pairs at the short budget.",
+  "revised": "2026-09-10: five samples reduced to four, one per dataset",
+  "descriptor_verification": {
+    "date": "2026-09-10",
+    "script": "code/tools/audit_qualitative_inputs.py",
+    "samples_changed": false,
+    "note": "Recomputed from original test files. The earlier contrast value 0.057 and usable count 230 were not reproducible from the prior underspecified description; they are superseded by the explicit rule above."
+  }
 }

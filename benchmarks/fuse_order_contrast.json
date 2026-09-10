@@ -1,11 +1,11 @@
 {
- "note": "Single-variable contrast between the two DeepCrack side-fusion orders at the common 50-epoch protocol. Parameter counts are tensor-for-tensor identical; only the order of the fusion convolution and the upsample differs. One seed per cell, so the accuracy difference is reported against the study's measured across-seed ranges, not as an effect.",
+ "note": "Implementation comparison between two DeepCrack side-fusion orders at 50 epochs. Parameter counts are tensor-for-tensor identical, but physical batch size, accumulation, and the extra physical-batch loss normalization differ. Accuracy and timing differences therefore do not isolate fusion order. One seed per cell cannot establish equivalence.",
  "budget_epochs": 50,
  "params_M": 30.91,
  "gflops_fast_fuse": 202.4,
  "gflops_official_fuse": 549.83,
  "gflops_ratio": 2.717,
- "micro_batch_fast_fuse": null,
+ "micro_batch_fast_fuse": 8,
  "micro_batch_official_fuse": "2 x 4 accumulation (batch 8 fails with CUDA error)",
  "wallclock_50ep_min": {
   "fast_fuse": 61,
@@ -61,5 +61,6 @@
  "mean_four_fast_fuse": 78.099,
  "mean_four_official_fuse": 77.909,
  "mean_four_delta": -0.19,
- "max_abs_delta": 0.493
+ "max_abs_delta": 0.493,
+ "loss_normalization": "Mean-reduced BCE is additionally divided by physical batch size: 8 for fast-fuse, 2 for official-fuse, before optimizer accumulation."
 }
