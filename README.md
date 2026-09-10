@@ -18,6 +18,7 @@ regenerate the partitions.
 | `splits/camcrack789/` | The CamCrack789 70/10/20 partition: 553 / 79 / 157 images |
 | `manifests/*.sha256` | Per-file SHA-256 of the audited copy of each dataset (DeepCrack 1,078; Crack500 6,742; CamCrack789 1,581; CrackMap 243 files) |
 | `benchmarks/*.json` | Machine-readable results: the full model × dataset matrix at the prespecified final epoch, the same runs at the checkpoint a validation-selection rule would have kept, the threshold-sweep and fixed-threshold variants, the seed-repeated budget arms, the matched TANGO arms, the two Crack500 partitions side by side, and parameter/FLOP counts |
+| `build_budget_by_init.py` | Recomputes the initialization-stratified budget summaries from the archived budget matrix and counted operations |
 | `verify_manifests.py` | Checks a local dataset copy against a manifest |
 | `make_crack500_mother_split.py` | Regenerates the parent-disjoint Crack500 partition (vendored verbatim; see below) |
 
@@ -142,6 +143,37 @@ differs. One seed per cell cannot establish accuracy equivalence; seed ranges
 from other models cannot supply the uncertainty of this pair. All measured
 scores, times and operation counts are retained.
 
+## Initialization-stratified budget analysis
+
+`benchmarks/budget_by_init.json` groups the same fifteen configurations by their
+recorded initialization: six load pretrained weights and nine start from random
+weights. It reports per-dataset and four-dataset mean gains, sensitivity to
+excluding three short-budget collapse configurations, group gaps at each budget,
+mean-rank changes and counted-operation summaries. No new model training is
+introduced by this release.
+
+The four-dataset mean gains are 1.4088 and 8.0324 pixel-ODS points for the two
+groups, or 1.4088 and 3.1720 after excluding the three named configurations.
+The pretrained-minus-scratch score gap is 8.5110 points at 5 epochs and 1.8874 at
+50 epochs, a ratio of 4.51. Cross-group comparison counts (52/54 and 34/36)
+reuse the same model runs and are not independent experimental pairs.
+
+The standard median of the six pretrained models' counted GFLOPs is **135.1**;
+176.5 was the upper middle order statistic, incorrectly described as the median
+in the incoming manuscript analysis. The scratch-group median is 49.5. Counted
+operations include lower-bound entries. The groups also differ in family and
+scale, and U-Net alone cannot resolve those confounders. The stratification is
+descriptive and does not estimate a causal pretraining effect or prove convergence.
+
+Recompute using only Python's standard library and this archive:
+
+```bash
+python build_budget_by_init.py --budget-matrix benchmarks/budget_matrix_5_vs_50.json --params benchmarks/params_flops_512_merged.json --out budget_by_init_recomputed.json
+```
+
+The original per-budget input mode is retained for the training workspace;
+its numerical output was checked against the portable archived-input mode.
+
 ## Versions
 
 Each release is archived on Zenodo. The concept DOI
@@ -162,6 +194,12 @@ and description are still taken from its GitHub release, which is why
 The accompanying manuscript is not yet published and has no DOI, so no related
 identifier points to it. One will be declared in `.zenodo.json` once that DOI
 exists, and will appear on versions archived from that point onward.
+
+- **v1.5.0 (2026-09-10)** — add initialization-stratified budget analysis in
+  `benchmarks/budget_by_init.json` and its standalone regeneration script.
+  Correct the even-sized pretrained group's GFLOPs median to 135.1 and keep
+  group comparisons descriptive. Existing benchmark scores, seed results,
+  split indices, manifests and the v1.4.1 metadata corrections are unchanged.
 
 - **v1.4.1 (2026-09-10)** — metadata corrections for the submission audit.
   `qualitative_selection.json` now records the four current figure samples and
@@ -263,6 +301,6 @@ The images and annotations must be obtained from their original releases:
 ## Licence
 
 The metadata, indices, and manifests in this repository are released under
-CC BY 4.0. The two Python scripts are released under the MIT licence. Neither
+CC BY 4.0. The Python scripts are released under the MIT licence. Neither
 licence extends to the source datasets, which remain under the terms set by
 their respective authors.

@@ -1,0 +1,510 @@
+{
+ "note": "Whole-matrix 5-vs-50-epoch gains stratified by the initialization loaded before crack training, which is the Init. column of the comparative model matrix.",
+ "caveats": [
+  "One seed per cell: group differences include seed variability and are not matched contrasts. The repeated-run evidence is the three-architecture, three-seed budget comparison on DeepCrack.",
+  "The groups are not randomly assigned and also differ in model family and scale. Counted GFLOPs include lower-bound entries. U-Net illustrates the pattern but cannot isolate initialization from capacity.",
+  "Six models against nine: this describes the matrix, not a pretraining effect. The matched TANGO initialization contrasts answer a different question and do not identify a causal component of this group gap.",
+  "The 54 cross-group comparisons reuse 15 models; they are not 54 independent runs or matched experimental pairs."
+ ],
+ "init_labels": {
+  "convnext_xlarge": "IN-21k",
+  "segformer_mit_b5": "ADE20K",
+  "hrnet_w48": "ADE20K",
+  "deeplabv3plus_r50": "ADE20K",
+  "rindnet": "IN-1k",
+  "dtrcnet": "IN-1k",
+  "unet": "None",
+  "shuttlenet_v2": "None",
+  "carnet": "None",
+  "tangoseg": "None",
+  "deepcrack_fast_fuse": "None",
+  "restormixer": "None",
+  "mixercseg_improved": "None",
+  "mixercseg_faithful": "None",
+  "mambavision": "None"
+ },
+ "collapsed_at_5ep": [
+  "mixercseg_faithful",
+  "deepcrack_fast_fuse",
+  "carnet"
+ ],
+ "sources": {
+  "deepcrack": {
+   "5": "public_ods_final_deepcrack.json",
+   "50": "public_ods_final50_deepcrack.json"
+  },
+  "crack500": {
+   "5": "public_ods_final_crack500.json",
+   "50": "public_ods_final50_crack500.json"
+  },
+  "camcrack789": {
+   "5": "public_ods_final_camcrack789.json",
+   "50": "public_ods_final50_camcrack789.json"
+  },
+  "crackmap": {
+   "5": "public_ods_final_crackmap.json",
+   "50": "public_ods_final50_crackmap.json"
+  },
+  "crack500_mother": {
+   "5": "public_ods_final_crack500_mother.json",
+   "50": "public_ods_final50_crack500_mother.json"
+  }
+ },
+ "per_dataset": {
+  "deepcrack": {
+   "split": "splits/test.txt",
+   "num_eval": 237,
+   "gains": {
+    "carnet": 10.653,
+    "convnext_xlarge": 3.987,
+    "deepcrack_fast_fuse": 10.661,
+    "deeplabv3plus_r50": 3.121,
+    "dtrcnet": 2.227,
+    "hrnet_w48": 2.239,
+    "mambavision": 0.682,
+    "mixercseg_faithful": 20.455,
+    "mixercseg_improved": 4.919,
+    "restormixer": 1.312,
+    "rindnet": 0.638,
+    "segformer_mit_b5": 2.837,
+    "shuttlenet_v2": 1.094,
+    "tangoseg": 3.683,
+    "unet": 5.19
+   },
+   "all_models": {
+    "pretrained": {
+     "n": 6,
+     "mean": 2.5082,
+     "min": 0.638,
+     "max": 3.987
+    },
+    "scratch": {
+     "n": 9,
+     "mean": 6.5166,
+     "min": 0.682,
+     "max": 20.455
+    },
+    "mean_difference": 4.0084,
+    "pairs_favouring_scratch": 38.0,
+    "pairs_total": 54,
+    "groups_disjoint": false
+   },
+   "excluding_collapsed": {
+    "pretrained": {
+     "n": 6,
+     "mean": 2.5082,
+     "min": 0.638,
+     "max": 3.987
+    },
+    "scratch": {
+     "n": 6,
+     "mean": 2.8133,
+     "min": 0.682,
+     "max": 5.19
+    },
+    "mean_difference": 0.3052,
+    "pairs_favouring_scratch": 20.0,
+    "pairs_total": 36,
+    "groups_disjoint": false
+   }
+  },
+  "crack500": {
+   "split": "splits/test.txt",
+   "num_eval": 675,
+   "gains": {
+    "carnet": 1.81,
+    "convnext_xlarge": -0.383,
+    "deepcrack_fast_fuse": 1.771,
+    "deeplabv3plus_r50": -0.717,
+    "dtrcnet": 0.755,
+    "hrnet_w48": -0.397,
+    "mambavision": -4.184,
+    "mixercseg_faithful": 2.748,
+    "mixercseg_improved": 0.808,
+    "restormixer": -1.374,
+    "rindnet": -0.96,
+    "segformer_mit_b5": -1.175,
+    "shuttlenet_v2": 2.28,
+    "tangoseg": -0.443,
+    "unet": 3.075
+   },
+   "all_models": {
+    "pretrained": {
+     "n": 6,
+     "mean": -0.4795,
+     "min": -1.175,
+     "max": 0.755
+    },
+    "scratch": {
+     "n": 9,
+     "mean": 0.7212,
+     "min": -4.184,
+     "max": 3.075
+    },
+    "mean_difference": 1.2007,
+    "pairs_favouring_scratch": 39.0,
+    "pairs_total": 54,
+    "groups_disjoint": false
+   },
+   "excluding_collapsed": {
+    "pretrained": {
+     "n": 6,
+     "mean": -0.4795,
+     "min": -1.175,
+     "max": 0.755
+    },
+    "scratch": {
+     "n": 6,
+     "mean": 0.027,
+     "min": -4.184,
+     "max": 3.075
+    },
+    "mean_difference": 0.5065,
+    "pairs_favouring_scratch": 21.0,
+    "pairs_total": 36,
+    "groups_disjoint": false
+   }
+  },
+  "camcrack789": {
+   "split": "splits/test.txt",
+   "num_eval": 157,
+   "gains": {
+    "carnet": 6.445,
+    "convnext_xlarge": 0.316,
+    "deepcrack_fast_fuse": 12.598,
+    "deeplabv3plus_r50": 0.277,
+    "dtrcnet": 2.104,
+    "hrnet_w48": 0.917,
+    "mambavision": 5.721,
+    "mixercseg_faithful": 19.691,
+    "mixercseg_improved": 6.168,
+    "restormixer": 5.719,
+    "rindnet": -0.281,
+    "segformer_mit_b5": 0.765,
+    "shuttlenet_v2": 3.58,
+    "tangoseg": 4.792,
+    "unet": 5.872
+   },
+   "all_models": {
+    "pretrained": {
+     "n": 6,
+     "mean": 0.683,
+     "min": -0.281,
+     "max": 2.104
+    },
+    "scratch": {
+     "n": 9,
+     "mean": 7.8429,
+     "min": 3.58,
+     "max": 19.691
+    },
+    "mean_difference": 7.1599,
+    "pairs_favouring_scratch": 54.0,
+    "pairs_total": 54,
+    "groups_disjoint": true
+   },
+   "excluding_collapsed": {
+    "pretrained": {
+     "n": 6,
+     "mean": 0.683,
+     "min": -0.281,
+     "max": 2.104
+    },
+    "scratch": {
+     "n": 6,
+     "mean": 5.3087,
+     "min": 3.58,
+     "max": 6.168
+    },
+    "mean_difference": 4.6257,
+    "pairs_favouring_scratch": 36.0,
+    "pairs_total": 36,
+    "groups_disjoint": true
+   }
+  },
+  "crackmap": {
+   "split": "splits/test.txt",
+   "num_eval": 24,
+   "gains": {
+    "carnet": 29.618,
+    "convnext_xlarge": 4.35,
+    "deepcrack_fast_fuse": 53.818,
+    "deeplabv3plus_r50": 0.89,
+    "dtrcnet": 3.333,
+    "hrnet_w48": 2.376,
+    "mambavision": 6.778,
+    "mixercseg_faithful": 42.771,
+    "mixercseg_improved": 4.682,
+    "restormixer": 1.784,
+    "rindnet": 2.395,
+    "segformer_mit_b5": 4.197,
+    "shuttlenet_v2": 5.885,
+    "tangoseg": 1.406,
+    "unet": 6.7
+   },
+   "all_models": {
+    "pretrained": {
+     "n": 6,
+     "mean": 2.9235,
+     "min": 0.89,
+     "max": 4.35
+    },
+    "scratch": {
+     "n": 9,
+     "mean": 17.0491,
+     "min": 1.406,
+     "max": 53.818
+    },
+    "mean_difference": 14.1256,
+    "pairs_favouring_scratch": 44.0,
+    "pairs_total": 54,
+    "groups_disjoint": false
+   },
+   "excluding_collapsed": {
+    "pretrained": {
+     "n": 6,
+     "mean": 2.9235,
+     "min": 0.89,
+     "max": 4.35
+    },
+    "scratch": {
+     "n": 6,
+     "mean": 4.5392,
+     "min": 1.406,
+     "max": 6.778
+    },
+    "mean_difference": 1.6157,
+    "pairs_favouring_scratch": 26.0,
+    "pairs_total": 36,
+    "groups_disjoint": false
+   }
+  },
+  "crack500_mother": {
+   "split": "splits_mother/test.txt",
+   "num_eval": 674,
+   "gains": {
+    "carnet": 1.155,
+    "convnext_xlarge": -1.162,
+    "deepcrack_fast_fuse": 0.07,
+    "deeplabv3plus_r50": -0.588,
+    "dtrcnet": 0.455,
+    "hrnet_w48": -0.337,
+    "mambavision": -1.183,
+    "mixercseg_faithful": 2.235,
+    "mixercseg_improved": 0.239,
+    "restormixer": -1.645,
+    "rindnet": -0.427,
+    "segformer_mit_b5": -1.568,
+    "shuttlenet_v2": 1.612,
+    "tangoseg": -0.633,
+    "unet": 2.707
+   },
+   "all_models": {
+    "pretrained": {
+     "n": 6,
+     "mean": -0.6045,
+     "min": -1.568,
+     "max": 0.455
+    },
+    "scratch": {
+     "n": 9,
+     "mean": 0.5063,
+     "min": -1.645,
+     "max": 2.707
+    },
+    "mean_difference": 1.1108,
+    "pairs_favouring_scratch": 37.0,
+    "pairs_total": 54,
+    "groups_disjoint": false
+   },
+   "excluding_collapsed": {
+    "pretrained": {
+     "n": 6,
+     "mean": -0.6045,
+     "min": -1.568,
+     "max": 0.455
+    },
+    "scratch": {
+     "n": 6,
+     "mean": 0.1828,
+     "min": -1.645,
+     "max": 2.707
+    },
+    "mean_difference": 0.7873,
+    "pairs_favouring_scratch": 20.0,
+    "pairs_total": 36,
+    "groups_disjoint": false
+   }
+  }
+ },
+ "mean_over": [
+  "deepcrack",
+  "crack500",
+  "camcrack789",
+  "crackmap"
+ ],
+ "four_dataset_mean": {
+  "gains": {
+   "carnet": 12.132,
+   "convnext_xlarge": 2.067,
+   "deepcrack_fast_fuse": 19.712,
+   "deeplabv3plus_r50": 0.893,
+   "dtrcnet": 2.105,
+   "hrnet_w48": 1.284,
+   "mambavision": 2.249,
+   "mixercseg_faithful": 21.416,
+   "mixercseg_improved": 4.144,
+   "restormixer": 1.86,
+   "rindnet": 0.448,
+   "segformer_mit_b5": 1.656,
+   "shuttlenet_v2": 3.21,
+   "tangoseg": 2.359,
+   "unet": 5.209
+  },
+  "all_models": {
+   "pretrained": {
+    "n": 6,
+    "mean": 1.4088,
+    "min": 0.448,
+    "max": 2.1047
+   },
+   "scratch": {
+    "n": 9,
+    "mean": 8.0324,
+    "min": 1.8603,
+    "max": 21.4163
+   },
+   "mean_difference": 6.6237,
+   "pairs_favouring_scratch": 52.0,
+   "pairs_total": 54,
+   "groups_disjoint": false
+  },
+  "excluding_collapsed": {
+   "pretrained": {
+    "n": 6,
+    "mean": 1.4088,
+    "min": 0.448,
+    "max": 2.1047
+   },
+   "scratch": {
+    "n": 6,
+    "mean": 3.172,
+    "min": 1.8603,
+    "max": 5.2092
+   },
+   "mean_difference": 1.7632,
+   "pairs_favouring_scratch": 34.0,
+   "pairs_total": 36,
+   "groups_disjoint": false
+  }
+ },
+ "mean_rank_move": {
+  "per_model": {
+   "carnet": {
+    "rank_5": 13,
+    "rank_50": 8,
+    "move": 5
+   },
+   "convnext_xlarge": {
+    "rank_5": 1,
+    "rank_50": 1,
+    "move": 0
+   },
+   "deepcrack_fast_fuse": {
+    "rank_5": 14,
+    "rank_50": 13,
+    "move": 1
+   },
+   "deeplabv3plus_r50": {
+    "rank_5": 5,
+    "rank_50": 6,
+    "move": -1
+   },
+   "dtrcnet": {
+    "rank_5": 6,
+    "rank_50": 9,
+    "move": -3
+   },
+   "hrnet_w48": {
+    "rank_5": 4,
+    "rank_50": 3,
+    "move": 1
+   },
+   "mambavision": {
+    "rank_5": 11,
+    "rank_50": 15,
+    "move": -4
+   },
+   "mixercseg_faithful": {
+    "rank_5": 15,
+    "rank_50": 14,
+    "move": 1
+   },
+   "mixercseg_improved": {
+    "rank_5": 12,
+    "rank_50": 12,
+    "move": 0
+   },
+   "restormixer": {
+    "rank_5": 8,
+    "rank_50": 11,
+    "move": -3
+   },
+   "rindnet": {
+    "rank_5": 3,
+    "rank_50": 7,
+    "move": -4
+   },
+   "segformer_mit_b5": {
+    "rank_5": 2,
+    "rank_50": 2,
+    "move": 0
+   },
+   "shuttlenet_v2": {
+    "rank_5": 7,
+    "rank_50": 5,
+    "move": 2
+   },
+   "tangoseg": {
+    "rank_5": 9,
+    "rank_50": 10,
+    "move": -1
+   },
+   "unet": {
+    "rank_5": 10,
+    "rank_50": 4,
+    "move": 6
+   }
+  },
+  "largest_rise": {
+   "model": "unet",
+   "move": 6
+  },
+  "is_also_largest_absolute": true
+ },
+ "group_gap_by_budget": {
+  "5": {
+   "pretrained_mean": 79.8383,
+   "scratch_mean": 71.3272,
+   "gap": 8.511
+  },
+  "50": {
+   "pretrained_mean": 81.2471,
+   "scratch_mean": 79.3597,
+   "gap": 1.8874
+  },
+  "gap_ratio": 4.51,
+  "comment": "The gap between the two initialization groups at each budget, in four-dataset mean pixel-ODS. The short budget reports a gap several times the one the 50-epoch budget reports. This is a cross-model association and does not isolate initialization, capacity, model family or convergence speed."
+ },
+ "capacity_confound": {
+  "pretrained_median_gflops": 135.1,
+  "scratch_median_gflops": 49.5,
+  "unet_gflops": 202.96,
+  "unet_heavier_than_n_pretrained": 4,
+  "n_pretrained": 6
+ },
+ "derived_from": {
+  "budget_matrix": "budget_matrix_5_vs_50.json",
+  "params_flops": "params_flops_512_merged.json"
+ }
+}
