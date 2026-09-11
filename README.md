@@ -16,6 +16,7 @@ regenerate the partitions.
 | `splits/crack500_parent_disjoint/` | The parent-disjoint Crack500 partition used in the paper: 2,357 / 337 / 674 crops over 272 / 62 / 108 mutually exclusive parent photographs |
 | `splits/crack500_distributed/` | The crop-level partition shipped with the archive, kept for reference: 2,355 / 334 / 675 crops |
 | `splits/camcrack789/` | The CamCrack789 70/10/20 partition: 553 / 79 / 157 images |
+| `splits/deepcrack/` | The DeepCrack index files this study used: 300 / 237 / 237, plus the two halves of the test set used for the held-out-threshold control. The original release ships no validation split and no index files, so these are local artifacts---and `val.txt` and `test.txt` are byte-identical, which is the defect the study reports |
 | `splits/crackmap_source_disjoint/` | The source-disjoint CrackMap partition, used for every CrackMap number from v1.5.0 on: 84 / 12 / 24 crops over 40 / 4 / 10 mutually exclusive GoPro source photographs |
 | `splits/crackmap_original/` | The image-level CrackMap partition used up to v1.4.0, kept so the partition control can be recomputed: the same 84 / 12 / 24 crop counts, but 15 of the 24 test crops share a source photograph with the training set |
 | `manifests/*.sha256` | Per-file SHA-256 of the audited copy of each dataset (DeepCrack 1,078; Crack500 6,742; CamCrack789 1,581; CrackMap 243 files) |
@@ -116,6 +117,25 @@ CrackMap partitions cover exactly the same 120 crops, but their test sets share
 only 3 images, so a per-model difference between them mixes the assignment unit
 with test-set composition. `benchmarks/crackmap_parent_vs_random.json` holds
 both columns, the per-model difference, and the leakage counts for each.
+
+## DeepCrack indices
+
+The DeepCrack release contains four directories---`train_img`, `train_lab`,
+`test_img`, `test_lab`, holding 300 and 237 images---and no index files, no
+validation split and no README describing one. Everything downstream of "which
+images are validation" is therefore a local decision, and this study's decision
+was a defective one: `splits/deepcrack/val.txt` and `splits/deepcrack/test.txt`
+are the same 237 lines in the same order, SHA-256
+
+```
+0b8d4cd53e0d01ae3234450a622159bf54d24a86b6579e2552f262e74d372fb2
+```
+
+so any rule that selects a checkpoint on validation selected it on the test set.
+The study reports what that is worth rather than repairing it, and publishes the
+files so the claim can be checked rather than taken on trust.
+`test_halfA.txt` and `test_halfB.txt` split the test set 119/118 for the control
+that selects an operating point on one half and reports on the other.
 
 ## CamCrack789 partition
 
@@ -244,6 +264,15 @@ and description are still taken from its GitHub release, which is why
 The accompanying manuscript is not yet published and has no DOI, so no related
 identifier points to it. One will be declared in `.zenodo.json` once that DOI
 exists, and will appear on versions archived from that point onward.
+
+- **v1.6.1 (2026-09-12)** — publish the DeepCrack index files. The original
+  release ships no validation split and no index files, so the lists this study
+  trained and scored on existed only locally; every DeepCrack number in the paper
+  and two columns of its matrix were unreproducible without them. `val.txt` and
+  `test.txt` are byte-identical, which is the checkpoint-selection defect the
+  study reports, now checkable from the archive instead of asserted. The two test
+  halves used for the held-out-threshold control ship with them. No results
+  change.
 
 - **v1.6.0 (2026-09-11)** — CrackMap repartitioned by source photograph and the
   whole column retrained, plus four control arms and a threshold-free ranking.
