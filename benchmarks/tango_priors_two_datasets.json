@@ -1,0 +1,876 @@
+{
+ "deepcrack": {
+  "reference": {
+   "ODS": {
+    "mean": 84.4923,
+    "min": 84.186,
+    "max": 84.87,
+    "range": 0.684,
+    "per_seed": [
+     84.87,
+     84.421,
+     84.186
+    ]
+   },
+   "clDice": {
+    "mean": 88.2087,
+    "min": 87.957,
+    "max": 88.512,
+    "range": 0.555,
+    "per_seed": [
+     88.157,
+     88.512,
+     87.957
+    ]
+   },
+   "crackIoU": {
+    "mean": 73.1493,
+    "min": 72.69,
+    "max": 73.717,
+    "range": 1.027,
+    "per_seed": [
+     73.717,
+     73.041,
+     72.69
+    ]
+   }
+  },
+  "contrasts": {
+   "a2_noprop": {
+    "label": "remove_propagation",
+    "ODS": {
+     "mean": 0.4207,
+     "min": -0.27,
+     "max": 1.106,
+     "range": 1.376,
+     "per_seed": [
+      -0.27,
+      0.426,
+      1.106
+     ],
+     "exceeds_own_range": false
+    },
+    "clDice": {
+     "mean": 0.5537,
+     "min": 0.095,
+     "max": 0.885,
+     "range": 0.79,
+     "per_seed": [
+      0.681,
+      0.095,
+      0.885
+     ],
+     "exceeds_own_range": false
+    },
+    "crackIoU": {
+     "mean": 0.6333,
+     "min": -0.407,
+     "max": 1.666,
+     "range": 2.073,
+     "per_seed": [
+      -0.407,
+      0.641,
+      1.666
+     ],
+     "exceeds_own_range": false
+    },
+    "absolute": {
+     "ODS": {
+      "mean": 84.913,
+      "min": 84.6,
+      "max": 85.292,
+      "range": 0.692,
+      "per_seed": [
+       84.6,
+       84.847,
+       85.292
+      ]
+     },
+     "clDice": {
+      "mean": 88.7623,
+      "min": 88.607,
+      "max": 88.842,
+      "range": 0.235,
+      "per_seed": [
+       88.838,
+       88.607,
+       88.842
+      ]
+     },
+     "crackIoU": {
+      "mean": 73.7827,
+      "min": 73.31,
+      "max": 74.356,
+      "range": 1.046,
+      "per_seed": [
+       73.31,
+       73.682,
+       74.356
+      ]
+     }
+    }
+   },
+   "a3_noori": {
+    "label": "remove_orientation",
+    "ODS": {
+     "mean": 0.052,
+     "min": -0.54,
+     "max": 0.736,
+     "range": 1.276,
+     "per_seed": [
+      -0.54,
+      -0.04,
+      0.736
+     ],
+     "exceeds_own_range": false
+    },
+    "clDice": {
+     "mean": -0.413,
+     "min": -0.601,
+     "max": -0.081,
+     "range": 0.52,
+     "per_seed": [
+      -0.557,
+      -0.601,
+      -0.081
+     ],
+     "exceeds_own_range": false
+    },
+    "crackIoU": {
+     "mean": 0.0783,
+     "min": -0.811,
+     "max": 1.105,
+     "range": 1.916,
+     "per_seed": [
+      -0.811,
+      -0.059,
+      1.105
+     ],
+     "exceeds_own_range": false
+    },
+    "absolute": {
+     "ODS": {
+      "mean": 84.5443,
+      "min": 84.33,
+      "max": 84.922,
+      "range": 0.592,
+      "per_seed": [
+       84.33,
+       84.381,
+       84.922
+      ]
+     },
+     "clDice": {
+      "mean": 87.7957,
+      "min": 87.6,
+      "max": 87.911,
+      "range": 0.311,
+      "per_seed": [
+       87.6,
+       87.911,
+       87.876
+      ]
+     },
+     "crackIoU": {
+      "mean": 73.2277,
+      "min": 72.906,
+      "max": 73.795,
+      "range": 0.889,
+      "per_seed": [
+       72.906,
+       72.982,
+       73.795
+      ]
+     }
+    }
+   },
+   "a4_nocldice": {
+    "label": "remove_cldice_loss",
+    "ODS": {
+     "mean": 0.336,
+     "min": 0.145,
+     "max": 0.529,
+     "range": 0.384,
+     "per_seed": [
+      0.334,
+      0.145,
+      0.529
+     ],
+     "exceeds_own_range": false
+    },
+    "clDice": {
+     "mean": -0.4193,
+     "min": -0.535,
+     "max": -0.202,
+     "range": 0.333,
+     "per_seed": [
+      -0.202,
+      -0.521,
+      -0.535
+     ],
+     "exceeds_own_range": true
+    },
+    "crackIoU": {
+     "mean": 0.5053,
+     "min": 0.218,
+     "max": 0.793,
+     "range": 0.575,
+     "per_seed": [
+      0.505,
+      0.218,
+      0.793
+     ],
+     "exceeds_own_range": false
+    },
+    "absolute": {
+     "ODS": {
+      "mean": 84.8283,
+      "min": 84.566,
+      "max": 85.204,
+      "range": 0.638,
+      "per_seed": [
+       85.204,
+       84.566,
+       84.715
+      ]
+     },
+     "clDice": {
+      "mean": 87.7893,
+      "min": 87.422,
+      "max": 87.991,
+      "range": 0.569,
+      "per_seed": [
+       87.955,
+       87.991,
+       87.422
+      ]
+     },
+     "crackIoU": {
+      "mean": 73.6547,
+      "min": 73.259,
+      "max": 74.222,
+      "range": 0.963,
+      "per_seed": [
+       74.222,
+       73.259,
+       73.483
+      ]
+     }
+    }
+   },
+   "a5_uniform": {
+    "label": "uniform_instead_of_anisotropic",
+    "ODS": {
+     "mean": -0.0747,
+     "min": -0.596,
+     "max": 0.343,
+     "range": 0.939,
+     "per_seed": [
+      0.029,
+      -0.596,
+      0.343
+     ],
+     "exceeds_own_range": false
+    },
+    "clDice": {
+     "mean": 0.0053,
+     "min": -0.432,
+     "max": 0.45,
+     "range": 0.882,
+     "per_seed": [
+      0.45,
+      -0.432,
+      -0.002
+     ],
+     "exceeds_own_range": false
+    },
+    "crackIoU": {
+     "mean": -0.1097,
+     "min": -0.886,
+     "max": 0.514,
+     "range": 1.4,
+     "per_seed": [
+      0.043,
+      -0.886,
+      0.514
+     ],
+     "exceeds_own_range": false
+    },
+    "absolute": {
+     "ODS": {
+      "mean": 84.4177,
+      "min": 83.825,
+      "max": 84.899,
+      "range": 1.074,
+      "per_seed": [
+       84.899,
+       83.825,
+       84.529
+      ]
+     },
+     "clDice": {
+      "mean": 88.214,
+      "min": 87.955,
+      "max": 88.607,
+      "range": 0.652,
+      "per_seed": [
+       88.607,
+       88.08,
+       87.955
+      ]
+     },
+     "crackIoU": {
+      "mean": 73.0397,
+      "min": 72.155,
+      "max": 73.76,
+      "range": 1.605,
+      "per_seed": [
+       73.76,
+       72.155,
+       73.204
+      ]
+     }
+    }
+   },
+   "a7_in1k": {
+    "label": "add_imagenet1k_init",
+    "ODS": {
+     "mean": 0.1177,
+     "min": -0.023,
+     "max": 0.316,
+     "range": 0.339,
+     "per_seed": [
+      -0.023,
+      0.06,
+      0.316
+     ],
+     "exceeds_own_range": false
+    },
+    "clDice": {
+     "mean": 0.758,
+     "min": 0.34,
+     "max": 1.04,
+     "range": 0.7,
+     "per_seed": [
+      0.894,
+      0.34,
+      1.04
+     ],
+     "exceeds_own_range": true
+    },
+    "crackIoU": {
+     "mean": 0.1763,
+     "min": -0.034,
+     "max": 0.473,
+     "range": 0.507,
+     "per_seed": [
+      -0.034,
+      0.09,
+      0.473
+     ],
+     "exceeds_own_range": false
+    },
+    "absolute": {
+     "ODS": {
+      "mean": 84.61,
+      "min": 84.481,
+      "max": 84.847,
+      "range": 0.366,
+      "per_seed": [
+       84.847,
+       84.481,
+       84.502
+      ]
+     },
+     "clDice": {
+      "mean": 88.9667,
+      "min": 88.852,
+      "max": 89.051,
+      "range": 0.199,
+      "per_seed": [
+       89.051,
+       88.852,
+       88.997
+      ]
+     },
+     "crackIoU": {
+      "mean": 73.3257,
+      "min": 73.131,
+      "max": 73.683,
+      "range": 0.552,
+      "per_seed": [
+       73.683,
+       73.131,
+       73.163
+      ]
+     }
+    }
+   }
+  },
+  "source_files": [
+   "benchmarks/budget_ods_deepcrack.json",
+   "benchmarks/tango_arms_ods_deepcrack.json"
+  ],
+  "split": "splits/test.txt",
+  "num_eval": 237,
+  "factor_scale": {
+   "priors_largest_abs": {
+    "arm": "a2_noprop",
+    "mean": 0.4207,
+    "exceeds_own_range": false,
+    "n_runs": 3
+   },
+   "initialization": {
+    "mean": 0.1177,
+    "exceeds_own_range": false,
+    "n_runs": 3
+   },
+   "reference_seed_range": 0.684,
+   "budget_5_to_50": {
+    "mean": 2.7333,
+    "min": 1.083,
+    "max": 3.62,
+    "range": 2.537,
+    "per_seed": [
+     3.62,
+     3.497,
+     1.083
+    ],
+    "n_runs": 3
+   }
+  }
+ },
+ "crack500_mother": {
+  "reference": {
+   "ODS": {
+    "mean": 77.166,
+    "min": 77.1,
+    "max": 77.278,
+    "range": 0.178,
+    "per_seed": [
+     77.278,
+     77.1,
+     77.12
+    ]
+   },
+   "clDice": {
+    "mean": 80.3493,
+    "min": 80.211,
+    "max": 80.6,
+    "range": 0.389,
+    "per_seed": [
+     80.6,
+     80.211,
+     80.237
+    ]
+   },
+   "crackIoU": {
+    "mean": 62.822,
+    "min": 62.734,
+    "max": 62.971,
+    "range": 0.237,
+    "per_seed": [
+     62.971,
+     62.734,
+     62.761
+    ]
+   }
+  },
+  "contrasts": {
+   "a2_noprop": {
+    "label": "remove_propagation",
+    "ODS": {
+     "mean": 0.0047,
+     "min": -0.044,
+     "max": 0.088,
+     "range": 0.132,
+     "per_seed": [
+      -0.03,
+      0.088,
+      -0.044
+     ],
+     "exceeds_own_range": false
+    },
+    "clDice": {
+     "mean": 0.5167,
+     "min": 0.329,
+     "max": 0.692,
+     "range": 0.363,
+     "per_seed": [
+      0.692,
+      0.529,
+      0.329
+     ],
+     "exceeds_own_range": true
+    },
+    "crackIoU": {
+     "mean": 0.0057,
+     "min": -0.059,
+     "max": 0.117,
+     "range": 0.176,
+     "per_seed": [
+      -0.041,
+      0.117,
+      -0.059
+     ],
+     "exceeds_own_range": false
+    },
+    "absolute": {
+     "ODS": {
+      "mean": 77.1707,
+      "min": 77.076,
+      "max": 77.248,
+      "range": 0.172,
+      "per_seed": [
+       77.248,
+       77.188,
+       77.076
+      ]
+     },
+     "clDice": {
+      "mean": 80.866,
+      "min": 80.566,
+      "max": 81.292,
+      "range": 0.726,
+      "per_seed": [
+       81.292,
+       80.74,
+       80.566
+      ]
+     },
+     "crackIoU": {
+      "mean": 62.8277,
+      "min": 62.702,
+      "max": 62.93,
+      "range": 0.228,
+      "per_seed": [
+       62.93,
+       62.851,
+       62.702
+      ]
+     }
+    }
+   },
+   "a3_noori": {
+    "label": "remove_orientation",
+    "ODS": {
+     "mean": -0.2717,
+     "min": -0.357,
+     "max": -0.185,
+     "range": 0.172,
+     "per_seed": [
+      -0.357,
+      -0.273,
+      -0.185
+     ],
+     "exceeds_own_range": true
+    },
+    "clDice": {
+     "mean": -0.152,
+     "min": -0.317,
+     "max": 0.053,
+     "range": 0.37,
+     "per_seed": [
+      -0.317,
+      0.053,
+      -0.192
+     ],
+     "exceeds_own_range": false
+    },
+    "crackIoU": {
+     "mean": -0.36,
+     "min": -0.474,
+     "max": -0.245,
+     "range": 0.229,
+     "per_seed": [
+      -0.474,
+      -0.361,
+      -0.245
+     ],
+     "exceeds_own_range": true
+    },
+    "absolute": {
+     "ODS": {
+      "mean": 76.8943,
+      "min": 76.827,
+      "max": 76.935,
+      "range": 0.108,
+      "per_seed": [
+       76.921,
+       76.827,
+       76.935
+      ]
+     },
+     "clDice": {
+      "mean": 80.1973,
+      "min": 80.045,
+      "max": 80.283,
+      "range": 0.238,
+      "per_seed": [
+       80.283,
+       80.264,
+       80.045
+      ]
+     },
+     "crackIoU": {
+      "mean": 62.462,
+      "min": 62.373,
+      "max": 62.516,
+      "range": 0.143,
+      "per_seed": [
+       62.497,
+       62.373,
+       62.516
+      ]
+     }
+    }
+   },
+   "a4_nocldice": {
+    "label": "remove_cldice_loss",
+    "ODS": {
+     "mean": 0.172,
+     "min": 0.112,
+     "max": 0.272,
+     "range": 0.16,
+     "per_seed": [
+      0.112,
+      0.272,
+      0.132
+     ],
+     "exceeds_own_range": true
+    },
+    "clDice": {
+     "mean": -1.3517,
+     "min": -1.913,
+     "max": -0.872,
+     "range": 1.041,
+     "per_seed": [
+      -1.913,
+      -0.872,
+      -1.27
+     ],
+     "exceeds_own_range": true
+    },
+    "crackIoU": {
+     "mean": 0.2277,
+     "min": 0.148,
+     "max": 0.36,
+     "range": 0.212,
+     "per_seed": [
+      0.148,
+      0.36,
+      0.175
+     ],
+     "exceeds_own_range": true
+    },
+    "absolute": {
+     "ODS": {
+      "mean": 77.338,
+      "min": 77.252,
+      "max": 77.39,
+      "range": 0.138,
+      "per_seed": [
+       77.39,
+       77.372,
+       77.252
+      ]
+     },
+     "clDice": {
+      "mean": 78.9977,
+      "min": 78.687,
+      "max": 79.339,
+      "range": 0.652,
+      "per_seed": [
+       78.687,
+       79.339,
+       78.967
+      ]
+     },
+     "crackIoU": {
+      "mean": 63.0497,
+      "min": 62.936,
+      "max": 63.119,
+      "range": 0.183,
+      "per_seed": [
+       63.119,
+       63.094,
+       62.936
+      ]
+     }
+    }
+   },
+   "a5_uniform": {
+    "label": "uniform_instead_of_anisotropic",
+    "ODS": {
+     "mean": -0.0127,
+     "min": -0.071,
+     "max": 0.074,
+     "range": 0.145,
+     "per_seed": [
+      -0.071,
+      0.074,
+      -0.041
+     ],
+     "exceeds_own_range": false
+    },
+    "clDice": {
+     "mean": -0.011,
+     "min": -0.183,
+     "max": 0.15,
+     "range": 0.333,
+     "per_seed": [
+      -0.183,
+      0.15,
+      0.0
+     ],
+     "exceeds_own_range": false
+    },
+    "crackIoU": {
+     "mean": -0.0177,
+     "min": -0.096,
+     "max": 0.098,
+     "range": 0.194,
+     "per_seed": [
+      -0.096,
+      0.098,
+      -0.055
+     ],
+     "exceeds_own_range": false
+    },
+    "absolute": {
+     "ODS": {
+      "mean": 77.1533,
+      "min": 77.079,
+      "max": 77.207,
+      "range": 0.128,
+      "per_seed": [
+       77.207,
+       77.174,
+       77.079
+      ]
+     },
+     "clDice": {
+      "mean": 80.3383,
+      "min": 80.237,
+      "max": 80.417,
+      "range": 0.18,
+      "per_seed": [
+       80.417,
+       80.361,
+       80.237
+      ]
+     },
+     "crackIoU": {
+      "mean": 62.8043,
+      "min": 62.706,
+      "max": 62.875,
+      "range": 0.169,
+      "per_seed": [
+       62.875,
+       62.832,
+       62.706
+      ]
+     }
+    }
+   },
+   "a7_in1k": {
+    "label": "add_imagenet1k_init",
+    "ODS": {
+     "mean": 1.302,
+     "min": 1.184,
+     "max": 1.413,
+     "range": 0.229,
+     "per_seed": [
+      1.184,
+      1.309,
+      1.413
+     ],
+     "exceeds_own_range": true
+    },
+    "clDice": {
+     "mean": 1.448,
+     "min": 1.272,
+     "max": 1.56,
+     "range": 0.288,
+     "per_seed": [
+      1.56,
+      1.512,
+      1.272
+     ],
+     "exceeds_own_range": true
+    },
+    "crackIoU": {
+     "mean": 1.7437,
+     "min": 1.587,
+     "max": 1.893,
+     "range": 0.306,
+     "per_seed": [
+      1.587,
+      1.751,
+      1.893
+     ],
+     "exceeds_own_range": true
+    },
+    "absolute": {
+     "ODS": {
+      "mean": 78.468,
+      "min": 78.409,
+      "max": 78.533,
+      "range": 0.124,
+      "per_seed": [
+       78.462,
+       78.409,
+       78.533
+      ]
+     },
+     "clDice": {
+      "mean": 81.7973,
+      "min": 81.509,
+      "max": 82.16,
+      "range": 0.651,
+      "per_seed": [
+       82.16,
+       81.723,
+       81.509
+      ]
+     },
+     "crackIoU": {
+      "mean": 64.5657,
+      "min": 64.485,
+      "max": 64.654,
+      "range": 0.169,
+      "per_seed": [
+       64.558,
+       64.485,
+       64.654
+      ]
+     }
+    }
+   }
+  },
+  "source_files": [
+   "benchmarks/tango_arms_ods_crack500_mother.json"
+  ],
+  "split": "splits_mother/test.txt",
+  "num_eval": 674,
+  "factor_scale": {
+   "priors_largest_abs": {
+    "arm": "a3_noori",
+    "mean": -0.2717,
+    "exceeds_own_range": true,
+    "n_runs": 3
+   },
+   "initialization": {
+    "mean": 1.302,
+    "exceeds_own_range": true,
+    "n_runs": 3
+   },
+   "reference_seed_range": 0.178,
+   "budget_5_to_50": {
+    "mean": -0.633,
+    "n_runs": 1,
+    "note": "matrix cell, single run per budget"
+   }
+  }
+ }
+}

@@ -40,13 +40,13 @@
    "ODS_thr_official_fuse": 0.244
   },
   "crackmap": {
-   "split": "splits/test.txt",
+   "split": "splits_parent/test.txt",
    "num_eval": 24,
-   "ODS_fast_fuse": 71.253,
-   "ODS_official_fuse": 71.484,
-   "delta_official_minus_fast": 0.231,
-   "ODS_thr_fast_fuse": 0.398,
-   "ODS_thr_official_fuse": 0.37
+   "ODS_fast_fuse": 72.273,
+   "ODS_official_fuse": 71.928,
+   "delta_official_minus_fast": -0.345,
+   "ODS_thr_fast_fuse": 0.333,
+   "ODS_thr_official_fuse": 0.314
   },
   "crack500_mother": {
    "split": "splits_mother/test.txt",
@@ -58,8 +58,8 @@
    "ODS_thr_official_fuse": 0.155
   }
  },
- "mean_four_fast_fuse": 78.099,
- "mean_four_official_fuse": 77.909,
- "mean_four_delta": -0.19,
+ "mean_four_fast_fuse": 78.354,
+ "mean_four_official_fuse": 78.02,
+ "mean_four_delta": -0.334,
  "max_abs_delta": 0.493
 }

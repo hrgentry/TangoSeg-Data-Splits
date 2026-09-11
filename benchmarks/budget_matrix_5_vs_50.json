@@ -14,8 +14,8 @@
    "50": "public_ods_final50_camcrack789.json"
   },
   "crackmap": {
-   "5": "public_ods_final_crackmap.json",
-   "50": "public_ods_final50_crackmap.json"
+   "5": "public_ods_final_crackmap_parent.json",
+   "50": "public_ods_final50_crackmap_parent.json"
   },
   "crack500_mother": {
    "5": "public_ods_final_crack500_mother.json",
@@ -384,124 +384,124 @@
    "spearman": 0.811
   },
   "crackmap": {
-   "split": "splits/test.txt",
+   "split": "splits_parent/test.txt",
    "num_eval": 24,
    "models": {
     "carnet": {
-     "ODS_5": 46.495,
-     "ODS_50": 76.113,
-     "change": 29.618,
+     "ODS_5": 42.879,
+     "ODS_50": 74.649,
+     "change": 31.77,
      "rank_5": 13,
-     "rank_50": 8
+     "rank_50": 6
     },
     "convnext_xlarge": {
-     "ODS_5": 75.144,
-     "ODS_50": 79.494,
-     "change": 4.35,
-     "rank_5": 3,
+     "ODS_5": 72.822,
+     "ODS_50": 77.199,
+     "change": 4.377,
+     "rank_5": 5,
      "rank_50": 1
     },
     "deepcrack_fast_fuse": {
-     "ODS_5": 17.435,
-     "ODS_50": 71.253,
-     "change": 53.818,
+     "ODS_5": 17.266,
+     "ODS_50": 72.273,
+     "change": 55.007,
      "rank_5": 15,
-     "rank_50": 14
+     "rank_50": 13
     },
     "deeplabv3plus_r50": {
-     "ODS_5": 75.901,
-     "ODS_50": 76.791,
-     "change": 0.89,
+     "ODS_5": 74.225,
+     "ODS_50": 73.655,
+     "change": -0.57,
      "rank_5": 1,
-     "rank_50": 6
+     "rank_50": 8
     },
     "dtrcnet": {
-     "ODS_5": 71.78,
-     "ODS_50": 75.113,
-     "change": 3.333,
+     "ODS_5": 70.009,
+     "ODS_50": 72.565,
+     "change": 2.556,
      "rank_5": 7,
-     "rank_50": 9
+     "rank_50": 11
     },
     "hrnet_w48": {
-     "ODS_5": 75.48,
-     "ODS_50": 77.856,
-     "change": 2.376,
+     "ODS_5": 74.05,
+     "ODS_50": 74.367,
+     "change": 0.317,
      "rank_5": 2,
-     "rank_50": 3
+     "rank_50": 7
     },
     "mambavision": {
-     "ODS_5": 67.662,
-     "ODS_50": 74.44,
-     "change": 6.778,
+     "ODS_5": 65.2,
+     "ODS_50": 73.166,
+     "change": 7.966,
      "rank_5": 11,
      "rank_50": 10
     },
     "mixercseg_faithful": {
-     "ODS_5": 27.921,
-     "ODS_50": 70.692,
-     "change": 42.771,
+     "ODS_5": 21.59,
+     "ODS_50": 71.692,
+     "change": 50.102,
      "rank_5": 14,
      "rank_50": 15
     },
     "mixercseg_improved": {
-     "ODS_5": 67.518,
-     "ODS_50": 72.2,
-     "change": 4.682,
-     "rank_5": 12,
+     "ODS_5": 67.724,
+     "ODS_50": 72.296,
+     "change": 4.572,
+     "rank_5": 10,
      "rank_50": 12
     },
     "restormixer": {
-     "ODS_5": 72.095,
-     "ODS_50": 73.879,
-     "change": 1.784,
-     "rank_5": 6,
-     "rank_50": 11
+     "ODS_5": 69.561,
+     "ODS_50": 74.758,
+     "change": 5.197,
+     "rank_5": 8,
+     "rank_50": 5
     },
     "rindnet": {
-     "ODS_5": 74.723,
-     "ODS_50": 77.118,
-     "change": 2.395,
+     "ODS_5": 73.112,
+     "ODS_50": 73.28,
+     "change": 0.168,
      "rank_5": 4,
-     "rank_50": 4
+     "rank_50": 9
     },
     "segformer_mit_b5": {
-     "ODS_5": 74.662,
-     "ODS_50": 78.859,
-     "change": 4.197,
-     "rank_5": 5,
-     "rank_50": 2
+     "ODS_5": 73.941,
+     "ODS_50": 75.493,
+     "change": 1.552,
+     "rank_5": 3,
+     "rank_50": 3
     },
     "shuttlenet_v2": {
-     "ODS_5": 70.574,
-     "ODS_50": 76.459,
-     "change": 5.885,
-     "rank_5": 8,
-     "rank_50": 7
+     "ODS_5": 69.448,
+     "ODS_50": 75.212,
+     "change": 5.764,
+     "rank_5": 9,
+     "rank_50": 4
     },
     "tangoseg": {
-     "ODS_5": 70.393,
-     "ODS_50": 71.799,
-     "change": 1.406,
-     "rank_5": 9,
-     "rank_50": 13
+     "ODS_5": 72.629,
+     "ODS_50": 71.969,
+     "change": -0.66,
+     "rank_5": 6,
+     "rank_50": 14
     },
     "unet": {
-     "ODS_5": 70.141,
-     "ODS_50": 76.841,
-     "change": 6.7,
-     "rank_5": 10,
-     "rank_50": 5
+     "ODS_5": 64.326,
+     "ODS_50": 75.717,
+     "change": 11.391,
+     "rank_5": 12,
+     "rank_50": 2
     }
    },
-   "spread_5": 58.466,
-   "spread_50": 8.802,
-   "mean_change": 11.399,
-   "min_change": 0.89,
-   "max_change": 53.818,
-   "n_improved": 15,
-   "ranks_changed": 13,
-   "max_displacement": 5,
-   "spearman": 0.754
+   "spread_5": 56.959,
+   "spread_50": 5.507,
+   "mean_change": 11.967,
+   "min_change": -0.66,
+   "max_change": 55.007,
+   "n_improved": 13,
+   "ranks_changed": 14,
+   "max_displacement": 10,
+   "spearman": 0.307
   },
   "crack500_mother": {
    "split": "splits_mother/test.txt",

@@ -1,0 +1,195 @@
+{
+ "note": "DeepCrack, 50-epoch and 5-epoch budgets, three seeds per arm. New arms train MixerCSeg faithful under the matrix recipe (no clipping, no warm-up) and TANGO under the twelve baselines' optimizer wrapper (fp32, no clipping, no weight-decay grouping); old arms are the clipped ones of budget_ods_deepcrack.json.",
+ "split": "splits/test.txt",
+ "num_eval": 237,
+ "arms": {
+  "faithful_noclip_5ep": {
+   "per_seed": [
+    62.532,
+    75.758,
+    76.756
+   ],
+   "mean": 71.682,
+   "min": 62.532,
+   "max": 76.756,
+   "range": 14.224
+  },
+  "faithful_5ep": {
+   "per_seed": [
+    47.689,
+    75.624,
+    76.729
+   ],
+   "mean": 66.6807,
+   "min": 47.689,
+   "max": 76.729,
+   "range": 29.04
+  },
+  "faithful_noclip_50ep": {
+   "per_seed": [
+    82.324,
+    81.176,
+    82.349
+   ],
+   "mean": 81.9497,
+   "min": 81.176,
+   "max": 82.349,
+   "range": 1.173
+  },
+  "faithful_50ep": {
+   "per_seed": [
+    83.182,
+    82.384,
+    82.643
+   ],
+   "mean": 82.7363,
+   "min": 82.384,
+   "max": 83.182,
+   "range": 0.798
+  },
+  "tango_basewrap_5ep": {
+   "per_seed": [
+    81.431,
+    81.718,
+    82.697
+   ],
+   "mean": 81.9487,
+   "min": 81.431,
+   "max": 82.697,
+   "range": 1.266
+  },
+  "tango_5ep": {
+   "per_seed": [
+    81.25,
+    80.924,
+    83.103
+   ],
+   "mean": 81.759,
+   "min": 80.924,
+   "max": 83.103,
+   "range": 2.179
+  },
+  "tango_basewrap_50ep": {
+   "per_seed": [
+    85.118,
+    84.042,
+    84.382
+   ],
+   "mean": 84.514,
+   "min": 84.042,
+   "max": 85.118,
+   "range": 1.076
+  },
+  "tango_50ep": {
+   "per_seed": [
+    84.87,
+    84.421,
+    84.186
+   ],
+   "mean": 84.4923,
+   "min": 84.186,
+   "max": 84.87,
+   "range": 0.684
+  }
+ },
+ "contrasts": {
+  "faithful_noclip_5ep_minus_faithful_5ep": {
+   "per_seed": [
+    14.843,
+    0.134,
+    0.027
+   ],
+   "mean": 5.0013,
+   "range": 14.816,
+   "same_sign": true
+  },
+  "faithful_noclip_50ep_minus_faithful_50ep": {
+   "per_seed": [
+    -0.858,
+    -1.208,
+    -0.294
+   ],
+   "mean": -0.7867,
+   "range": 0.914,
+   "same_sign": true
+  },
+  "tango_basewrap_5ep_minus_tango_5ep": {
+   "per_seed": [
+    0.181,
+    0.794,
+    -0.406
+   ],
+   "mean": 0.1897,
+   "range": 1.2,
+   "same_sign": false
+  },
+  "tango_basewrap_50ep_minus_tango_50ep": {
+   "per_seed": [
+    0.248,
+    -0.379,
+    0.196
+   ],
+   "mean": 0.0217,
+   "range": 0.627,
+   "same_sign": false
+  },
+  "budget_effect_faithful_noclip": {
+   "per_seed": [
+    19.792,
+    5.418,
+    5.593
+   ],
+   "mean": 10.2677,
+   "range": 14.374,
+   "same_sign": true
+  },
+  "budget_effect_faithful_clip": {
+   "per_seed": [
+    35.493,
+    6.76,
+    5.914
+   ],
+   "mean": 16.0557,
+   "range": 29.579,
+   "same_sign": true
+  },
+  "budget_effect_tango_basewrap": {
+   "per_seed": [
+    3.687,
+    2.324,
+    1.685
+   ],
+   "mean": 2.5653,
+   "range": 2.002,
+   "same_sign": true
+  },
+  "budget_effect_tango_clip": {
+   "per_seed": [
+    3.62,
+    3.497,
+    1.083
+   ],
+   "mean": 2.7333,
+   "range": 2.537,
+   "same_sign": true
+  }
+ },
+ "matrix_cell_vs_new_arm": {
+  "faithful_noclip_5ep": {
+   "matrix_cell": 62.471,
+   "inside_range": false
+  },
+  "faithful_noclip_50ep": {
+   "matrix_cell": 82.926,
+   "inside_range": false
+  },
+  "tango_basewrap_5ep": {
+   "matrix_cell": 81.251,
+   "inside_range": false
+  },
+  "tango_basewrap_50ep": {
+   "matrix_cell": 84.934,
+   "inside_range": true
+  }
+ }
+}

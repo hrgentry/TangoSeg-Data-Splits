@@ -16,10 +16,13 @@ regenerate the partitions.
 | `splits/crack500_parent_disjoint/` | The parent-disjoint Crack500 partition used in the paper: 2,357 / 337 / 674 crops over 272 / 62 / 108 mutually exclusive parent photographs |
 | `splits/crack500_distributed/` | The crop-level partition shipped with the archive, kept for reference: 2,355 / 334 / 675 crops |
 | `splits/camcrack789/` | The CamCrack789 70/10/20 partition: 553 / 79 / 157 images |
+| `splits/crackmap_source_disjoint/` | The source-disjoint CrackMap partition, used for every CrackMap number from v1.5.0 on: 84 / 12 / 24 crops over 40 / 4 / 10 mutually exclusive GoPro source photographs |
+| `splits/crackmap_original/` | The image-level CrackMap partition used up to v1.4.0, kept so the partition control can be recomputed: the same 84 / 12 / 24 crop counts, but 15 of the 24 test crops share a source photograph with the training set |
 | `manifests/*.sha256` | Per-file SHA-256 of the audited copy of each dataset (DeepCrack 1,078; Crack500 6,742; CamCrack789 1,581; CrackMap 243 files) |
 | `benchmarks/*.json` | Machine-readable results: the full model × dataset matrix at the prespecified final epoch, the same runs at the checkpoint a validation-selection rule would have kept, the threshold-sweep and fixed-threshold variants, the seed-repeated budget arms, the matched TANGO arms, the two Crack500 partitions side by side, and parameter/FLOP counts |
 | `verify_manifests.py` | Checks a local dataset copy against a manifest |
 | `make_crack500_mother_split.py` | Regenerates the parent-disjoint Crack500 partition (vendored verbatim; see below) |
+| `make_crackmap_parent_split.py` | Regenerates the source-disjoint CrackMap partition (vendored verbatim; same rule, grouping by GoPro source file) |
 
 Split index files list one sample per line as `<image path> <mask path>`,
 relative to the dataset root.
@@ -87,6 +90,32 @@ index file parsed on whitespace — a path is silently truncated at the space. T
 audited copy was renamed to underscores before the manifests were computed, so a
 copy that still contains spaces will not verify against `crack500.sha256`.
 
+## Reproducing the source-disjoint CrackMap partition
+
+```bash
+python3 make_crackmap_parent_split.py \
+    --root /path/to/CrackMap/dataset --out splits_check
+diff splits_check/train.txt splits/crackmap_source_disjoint/train.txt
+diff splits_check/val.txt   splits/crackmap_source_disjoint/val.txt
+diff splits_check/test.txt  splits/crackmap_source_disjoint/test.txt
+```
+
+CrackMap ships 120 crops with no official partition. Crop names carry the GoPro
+source file that produced them, `GOPR0315_(3).png` being the third crop of
+`GOPR0315`, and the 120 crops come from 54 source photographs. The image-level
+partition in `splits/crackmap_original/` splits 18 of those 54 photographs
+across roles, so 15 of its 24 test crops have a crop of the same photograph in
+the training set. A content hash cannot see this: the crops are distinct files
+with distinct contents.
+
+`splits/crackmap_source_disjoint/` assigns whole photographs instead, by the
+same longest-processing-time rule and the same tie-break as the Crack500 script,
+and lands on the same 84 / 12 / 24 crop counts. Unlike the Crack500 pair the two
+CrackMap partitions cover exactly the same 120 crops, but their test sets share
+only 3 images, so a per-model difference between them mixes the assignment unit
+with test-set composition. `benchmarks/crackmap_parent_vs_random.json` holds
+both columns, the per-model difference, and the leakage counts for each.
+
 ## CamCrack789 partition
 
 `splits/camcrack789/` contains the index files **actually used for every
@@ -132,6 +161,27 @@ splits at the 50-epoch budget together with their counted operations, and is the
 basis of the computation-versus-accuracy statement in the paper's capacity
 section.
 
+Four files added in v1.5.0 record controls rather than matrix cells.
+`crackmap_parent_vs_random.json` is the CrackMap partition control described
+above. `budget_align.json` repeats two configurations under the other arm's
+optimizer wrapper, separating "this model is stable" from "this model was
+trained with gradient clipping". `shared_threshold_deepcrack.json` sweeps every
+threshold that could be imposed on all fifteen models at once and records what
+each one costs. `budget_by_init.json` stratifies the budget matrix by
+initialization and by two capacity axes, so the short budget's apparent
+initialization gap can be read against a capacity split of the same models.
+
+`ops_eval.json` answers the two questions the ODS convention invites. Its
+per-dataset entries hold, for every model, the score at a threshold selected on
+data disjoint from the reported split, average precision over the same
+1,000-bin sweep (which no threshold rule can move), and a 10,000-draw bootstrap of
+the test set — source photographs rather than crops where the dataset is tiled —
+giving a sampling interval per cell and a paired interval for every model pair.
+`tango_priors_two_datasets.json` aligns the six matched TANGO contrasts across
+the two datasets on which they were run, and
+`threshold_curves_deepcrack.json` holds the pooled threshold sweeps the
+threshold figure is drawn from.
+
 ## Versions
 
 Each release is archived on Zenodo. The concept DOI
@@ -151,6 +201,40 @@ and description are still taken from its GitHub release, which is why
 The accompanying manuscript is not yet published and has no DOI, so no related
 identifier points to it. One will be declared in `.zenodo.json` once that DOI
 exists, and will appear on versions archived from that point onward.
+
+- **v1.5.0 (2026-09-11)** — CrackMap repartitioned by source photograph and the
+  whole column retrained, plus four control arms and a threshold-free ranking.
+  The CrackMap indices shipped up to v1.4.0 were assigned per crop, which split
+  18 of the 54 GoPro source photographs across roles and left 15 of the 24 test
+  crops with a sibling crop in training. Reassigning whole photographs, at
+  unchanged 84 / 12 / 24 counts, and retraining all fifteen models lowers the
+  median model by 1.27 pixel-ODS points, changes 11 of the fifteen ranks, and
+  contracts the column's between-model spread from 8.80 to 5.51 points — the
+  first partition rebuild in this study that changes conclusions rather than
+  decimals. Both partitions ship, and
+  `benchmarks/crackmap_parent_vs_random.json` holds both columns side by side so
+  the control can be recomputed. `benchmarks/public_ods_ALL.json` now carries the
+  source-disjoint CrackMap column.
+
+  The four TANGO crack-prior switches, previously run on DeepCrack only, were
+  repeated at three seeds each on the parent-disjoint Crack500 partition, so all
+  six matched contrasts now exist on two datasets
+  (`benchmarks/tango_priors_two_datasets.json`,
+  `benchmarks/tango_arms_ods_crack500_mother.json`). On Crack500 the reference
+  arm varies by 0.18 points across seeds against 0.68 on DeepCrack, and against
+  that smaller background removing orientation supervision costs 0.27 points and
+  removing the centerline-Dice loss gains 0.17 while costing 1.35 points of
+  centerline Dice; on DeepCrack none of the switches separates from seed
+  variation. `benchmarks/budget_align.json` retrains TANGO and MixerCSeg
+  faithful under the other arm's optimizer wrapper, which shows the stability
+  reported for TANGO is not an artifact of its gradient clipping (84.51 against
+  84.49 mean pixel-ODS at 50 epochs).
+
+  `benchmarks/ops_eval.json` adds the measurement controls: thresholds selected
+  on held-out data, average precision as a threshold-free ranking, and a
+  bootstrap over the test sets. `benchmarks/shared_threshold_deepcrack.json`,
+  `benchmarks/budget_by_init.json` and
+  `benchmarks/threshold_curves_deepcrack.json` complete the set.
 
 - **v1.4.0 (2026-09-09)** — the training budget of the whole matrix raised from
   5 epochs to 50, and the 5-epoch matrix kept as the short arm of a budget

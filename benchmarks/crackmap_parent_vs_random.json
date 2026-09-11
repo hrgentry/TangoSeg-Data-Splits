@@ -1,0 +1,135 @@
+{
+ "note": "CrackMap under two partitions of the same 120 images: the image-level random split (splits/) and the parent-disjoint rebuild (splits_parent/). One run per cell. The two test sets share only a few images, so per-model differences mix the assignment unit with test-set composition.",
+ "budget_epochs": 50,
+ "test_overlap_images": 3,
+ "leakage": {
+  "random": {
+   "test_images": 24,
+   "test_images_with_parent_in_train": 15,
+   "test_parents": 19,
+   "test_parents_also_in_train": 12
+  },
+  "parent": {
+   "test_images": 24,
+   "test_images_with_parent_in_train": 0,
+   "test_parents": 10,
+   "test_parents_also_in_train": 0
+  }
+ },
+ "models": {
+  "carnet": {
+   "ODS_random": 76.113,
+   "ODS_parent": 74.649,
+   "diff_parent_minus_random": -1.464,
+   "rank_random": 8,
+   "rank_parent": 6
+  },
+  "convnext_xlarge": {
+   "ODS_random": 79.494,
+   "ODS_parent": 77.199,
+   "diff_parent_minus_random": -2.295,
+   "rank_random": 1,
+   "rank_parent": 1
+  },
+  "deepcrack_fast_fuse": {
+   "ODS_random": 71.253,
+   "ODS_parent": 72.273,
+   "diff_parent_minus_random": 1.02,
+   "rank_random": 14,
+   "rank_parent": 13
+  },
+  "deeplabv3plus_r50": {
+   "ODS_random": 76.791,
+   "ODS_parent": 73.655,
+   "diff_parent_minus_random": -3.136,
+   "rank_random": 6,
+   "rank_parent": 8
+  },
+  "dtrcnet": {
+   "ODS_random": 75.113,
+   "ODS_parent": 72.565,
+   "diff_parent_minus_random": -2.548,
+   "rank_random": 9,
+   "rank_parent": 11
+  },
+  "hrnet_w48": {
+   "ODS_random": 77.856,
+   "ODS_parent": 74.367,
+   "diff_parent_minus_random": -3.489,
+   "rank_random": 3,
+   "rank_parent": 7
+  },
+  "mambavision": {
+   "ODS_random": 74.44,
+   "ODS_parent": 73.166,
+   "diff_parent_minus_random": -1.274,
+   "rank_random": 10,
+   "rank_parent": 10
+  },
+  "mixercseg_faithful": {
+   "ODS_random": 70.692,
+   "ODS_parent": 71.692,
+   "diff_parent_minus_random": 1.0,
+   "rank_random": 15,
+   "rank_parent": 15
+  },
+  "mixercseg_improved": {
+   "ODS_random": 72.2,
+   "ODS_parent": 72.296,
+   "diff_parent_minus_random": 0.096,
+   "rank_random": 12,
+   "rank_parent": 12
+  },
+  "restormixer": {
+   "ODS_random": 73.879,
+   "ODS_parent": 74.758,
+   "diff_parent_minus_random": 0.879,
+   "rank_random": 11,
+   "rank_parent": 5
+  },
+  "rindnet": {
+   "ODS_random": 77.118,
+   "ODS_parent": 73.28,
+   "diff_parent_minus_random": -3.838,
+   "rank_random": 4,
+   "rank_parent": 9
+  },
+  "segformer_mit_b5": {
+   "ODS_random": 78.859,
+   "ODS_parent": 75.493,
+   "diff_parent_minus_random": -3.366,
+   "rank_random": 2,
+   "rank_parent": 3
+  },
+  "shuttlenet_v2": {
+   "ODS_random": 76.459,
+   "ODS_parent": 75.212,
+   "diff_parent_minus_random": -1.247,
+   "rank_random": 7,
+   "rank_parent": 4
+  },
+  "tangoseg": {
+   "ODS_random": 71.799,
+   "ODS_parent": 71.969,
+   "diff_parent_minus_random": 0.17,
+   "rank_random": 13,
+   "rank_parent": 14
+  },
+  "unet": {
+   "ODS_random": 76.841,
+   "ODS_parent": 75.717,
+   "diff_parent_minus_random": -1.124,
+   "rank_random": 5,
+   "rank_parent": 2
+  }
+ },
+ "median_diff": -1.274,
+ "median_abs_diff": 1.274,
+ "min_diff": -3.838,
+ "max_diff": 1.02,
+ "mean_diff": -1.374,
+ "n_higher_on_parent": 5,
+ "ranks_changed": 11,
+ "spread_random": 8.802,
+ "spread_parent": 5.507
+}
