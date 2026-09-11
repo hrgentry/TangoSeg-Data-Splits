@@ -20,6 +20,7 @@ regenerate the partitions.
 | `splits/crackmap_original/` | The image-level CrackMap partition used up to v1.4.0, kept so the partition control can be recomputed: the same 84 / 12 / 24 crop counts, but 15 of the 24 test crops share a source photograph with the training set |
 | `manifests/*.sha256` | Per-file SHA-256 of the audited copy of each dataset (DeepCrack 1,078; Crack500 6,742; CamCrack789 1,581; CrackMap 243 files) |
 | `benchmarks/*.json` | Machine-readable results: the full model × dataset matrix at the prespecified final epoch, the same runs at the checkpoint a validation-selection rule would have kept, the threshold-sweep and fixed-threshold variants, the seed-repeated budget arms, the matched TANGO arms, the two Crack500 partitions side by side, and parameter/FLOP counts |
+| `build_budget_by_init.py` | Recomputes the initialization-stratified budget summaries from the archived budget matrix and counted operations |
 | `verify_manifests.py` | Checks a local dataset copy against a manifest |
 | `make_crack500_mother_split.py` | Regenerates the parent-disjoint Crack500 partition (vendored verbatim; see below) |
 | `make_crackmap_parent_split.py` | Regenerates the source-disjoint CrackMap partition (vendored verbatim; same rule, grouping by GoPro source file) |
@@ -130,8 +131,16 @@ would no longer match the published results.
 Each entry stores, per dataset and per model, the threshold-selected operating
 point and the metrics computed at it, the same metrics at a fixed threshold of
 0.5, the evaluated image count, and parameter and FLOP counts. `qualitative_selection.json`
-records the morphology-first rule by which the qualitative figure's samples were
-fixed before any prediction was viewed.
+records the four fixed samples used by the current qualitative figure, one per
+dataset, and their per-model operating points. Its input-only descriptor rules
+are explicit: crack width is foreground area divided by skeleton length at
+native 256 x 256 resolution; contrast uses the common 512 x 512 resize and a
+31 x 31 square dilation excluding foreground. The descriptor verification found
+4.00390625 pixels for the thinnest CrackMap sample and 0.0561185181 for the
+lowest-contrast DeepCrack sample, over 24 and 237 usable test images,
+respectively. The samples themselves were not changed by that verification.
+The `descriptor_verification.script` field names the companion paper's code
+path; the measurement definitions are contained in this archive's JSON.
 
 Operator counts for models with unsupported fused-attention or selective-scan
 kernels are lower bounds, and are marked as such in the paper.
@@ -153,13 +162,46 @@ short arm's own matrix in the same layout as `public_ods_ALL.json`, so the
 threshold statistics the paper quotes for the 5-epoch budget can be recomputed
 from this release rather than only from the archived v1.3.0 record.
 
-`fuse_order_contrast.json` holds one single-variable comparison drawn from this
-matrix. The two DeepCrack side-fusion orders have identical parameter counts,
-tensor for tensor, and differ only in whether the fusion convolution runs before
-or after the upsample. The file records both orders' pixel-ODS on all five
-splits at the 50-epoch budget together with their counted operations, and is the
-basis of the computation-versus-accuracy statement in the paper's capacity
-section.
+`fuse_order_contrast.json` records an implementation comparison between two
+DeepCrack side-fusion orders with identical parameter counts. The counted
+operation ratio is 2.717 (549.83 / 202.4 GFLOPs), but the accuracy and timing
+comparison does not isolate fusion order. Fast-fuse used physical batch 8;
+official-fuse used micro-batch 2 with four-step accumulation. Both applied an
+extra division of mean-reduced BCE by physical batch size, so loss scaling also
+differs. One seed per cell cannot establish accuracy equivalence; seed ranges
+from other models cannot supply the uncertainty of this pair. All measured
+scores, times and operation counts are retained.
+
+## Initialization-stratified budget analysis
+
+`benchmarks/budget_by_init.json` groups the same fifteen configurations by their
+recorded initialization: six load pretrained weights and nine start from random
+weights. It reports per-dataset and four-dataset mean gains, sensitivity to
+excluding three short-budget collapse configurations, group gaps at each budget,
+mean-rank changes and counted-operation summaries. No new model training is
+introduced by this release.
+
+The four-dataset mean gains are 1.4088 and 8.0324 pixel-ODS points for the two
+groups, or 1.4088 and 3.1720 after excluding the three named configurations.
+The pretrained-minus-scratch score gap is 8.5110 points at 5 epochs and 1.8874 at
+50 epochs, a ratio of 4.51. Cross-group comparison counts (52/54 and 34/36)
+reuse the same model runs and are not independent experimental pairs.
+
+The standard median of the six pretrained models' counted GFLOPs is **135.1**;
+176.5 was the upper middle order statistic, incorrectly described as the median
+in the incoming manuscript analysis. The scratch-group median is 49.5. Counted
+operations include lower-bound entries. The groups also differ in family and
+scale, and U-Net alone cannot resolve those confounders. The stratification is
+descriptive and does not estimate a causal pretraining effect or prove convergence.
+
+Recompute using only Python's standard library and this archive:
+
+```bash
+python build_budget_by_init.py --budget-matrix benchmarks/budget_matrix_5_vs_50.json --params benchmarks/params_flops_512_merged.json --out budget_by_init_recomputed.json
+```
+
+The original per-budget input mode is retained for the training workspace;
+its numerical output was checked against the portable archived-input mode.
 
 Four files added in v1.5.0 record controls rather than matrix cells.
 `crackmap_parent_vs_random.json` is the CrackMap partition control described
@@ -186,7 +228,8 @@ threshold figure is drawn from.
 
 Each release is archived on Zenodo. The concept DOI
 [10.5281/zenodo.22202977](https://doi.org/10.5281/zenodo.22202977) resolves to
-the newest version, and is the DOI cited in the accompanying study.
+the newest version. A fixed version DOI should be used when citing the exact
+archive accompanying a manuscript submission.
 
 Record metadata — authors, resource type, keywords, licence — is declared in
 [`.zenodo.json`](.zenodo.json) rather than inferred by Zenodo from the GitHub
@@ -202,7 +245,7 @@ The accompanying manuscript is not yet published and has no DOI, so no related
 identifier points to it. One will be declared in `.zenodo.json` once that DOI
 exists, and will appear on versions archived from that point onward.
 
-- **v1.5.0 (2026-09-11)** — CrackMap repartitioned by source photograph and the
+- **v1.6.0 (2026-09-11)** — CrackMap repartitioned by source photograph and the
   whole column retrained, plus four control arms and a threshold-free ranking.
   The CrackMap indices shipped up to v1.4.0 were assigned per crop, which split
   18 of the 54 GoPro source photographs across roles and left 15 of the 24 test
@@ -236,17 +279,35 @@ exists, and will appear on versions archived from that point onward.
   `benchmarks/budget_by_init.json` and
   `benchmarks/threshold_curves_deepcrack.json` complete the set.
 
+- **v1.5.0 (2026-09-10)** — add initialization-stratified budget analysis in
+  `benchmarks/budget_by_init.json` and its standalone regeneration script.
+  Correct the even-sized pretrained group's GFLOPs median to 135.1 and keep
+  group comparisons descriptive. Existing benchmark scores, seed results,
+  split indices, manifests and the v1.4.1 metadata corrections are unchanged.
+
+- **v1.4.1 (2026-09-10)** — metadata corrections for the submission audit.
+  `qualitative_selection.json` now records the four current figure samples and
+  reproducible input-descriptor definitions; the earlier contrast value 0.057
+  and usable count 230 are superseded by 0.0561185181 and 237 under the explicit
+  resize/dilation rule. `fuse_order_contrast.json` now discloses physical batch,
+  accumulation and loss-scaling differences and labels the result as an
+  implementation comparison. The benchmark matrix, per-seed scores, operation
+  counts, timing observations, partitions, manifests and scripts are unchanged.
+  The README also corrects two interpretations in the prior version summary:
+  1e-6 is a nonzero learning-rate floor at both budgets, and comparisons between
+  different datasets do not isolate update count from image difficulty.
+
 - **v1.4.0 (2026-09-09)** — the training budget of the whole matrix raised from
   5 epochs to 50, and the 5-epoch matrix kept as the short arm of a budget
-  comparison. Under the 5-epoch schedule the polynomial decay reached its floor
-  of 1e-6 in the final epoch, so "the last epoch" was both the end of the budget
-  and the point at which the learning rate had gone to zero; at 50 epochs the
-  last epoch means the budget is spent, not that learning has stopped. All
+  comparison. At both budgets the un-warmed polynomial schedule reached its
+  nonzero floor of 1e-6 in the final epoch; that epoch occupies one fifth of
+  the short budget and one fiftieth of the long budget. All
   fifteen models were retrained on the four datasets and on the parent-disjoint
   Crack500 rebuild — 75 runs on one machine under one recipe — and both the final
   and the selected checkpoint of every run were scored. Between-model differences
-  shrink sharply with the longer budget, and by an amount that tracks the number
-  of optimizer updates rather than any property of the imagery: the spread across
+  shrink sharply on three datasets under the longer budget. Dataset size and
+  image characteristics vary together, so these comparisons do not identify
+  their separate contributions. The spread across
   the fifteen models falls from 58.47 to 8.80 pixel-ODS on CrackMap (about 550
   updates at 50 epochs) and from 20.42 to 4.22 on DeepCrack, while Crack500
   (14,700 updates) moves by 0.24 points on average. Changed files:
@@ -324,6 +385,6 @@ The images and annotations must be obtained from their original releases:
 ## Licence
 
 The metadata, indices, and manifests in this repository are released under
-CC BY 4.0. The two Python scripts are released under the MIT licence. Neither
+CC BY 4.0. The Python scripts are released under the MIT licence. Neither
 licence extends to the source datasets, which remain under the terms set by
 their respective authors.

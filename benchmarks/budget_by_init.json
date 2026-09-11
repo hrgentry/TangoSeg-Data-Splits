@@ -1,9 +1,10 @@
 {
  "note": "Whole-matrix 5-vs-50-epoch gains stratified by the initialization loaded before crack training, which is the Init. column of the comparative model matrix.",
  "caveats": [
-  "One seed per cell: the group difference carries seed noise and is not a matched contrast. The repeated-run evidence is the three-architecture, three-seed budget comparison on DeepCrack.",
-  "The two groups are not randomly assigned. The pretrained group is also the heavier group (median 176.5 against 49.5 GFLOPs), so capacity is a competing explanation. U-Net is the counter-example that separates them: at 203.0 GFLOPs it is heavier than four of the six pretrained models yet gains with the from-scratch group.",
-  "Six models against nine. This describes this matrix; it is not an estimate of a pretraining effect. The controlled estimate is the matched initialization contrast, which changes the final score by 1.30 and 0.12 pixel-ODS points at 50 epochs."
+  "One seed per cell: group differences include seed variability and are not matched contrasts. The repeated-run evidence is the three-architecture, three-seed budget comparison on DeepCrack.",
+  "The groups are not randomly assigned and also differ in model family and scale. Counted GFLOPs include lower-bound entries. U-Net illustrates the pattern but cannot isolate initialization from capacity.",
+  "Six models against nine: this describes the matrix, not a pretraining effect. The matched TANGO initialization contrasts answer a different question and do not identify a causal component of this group gap.",
+  "The 54 cross-group comparisons reuse 15 models; they are not 54 independent runs or matched experimental pairs."
  ],
  "init_labels": {
   "convnext_xlarge": "IN-21k",
@@ -493,7 +494,7 @@
    "gap": 1.1634
   },
   "gap_ratio": 7.44,
-  "comment": "The gap between the two initialization groups at each budget, in four-dataset mean pixel-ODS. The short budget reports a gap several times the one the converged budget reports, which is what makes a 5-epoch table read as an architecture ranking when it partly records initialization."
+  "comment": "The gap between the two initialization groups at each budget, in four-dataset mean pixel-ODS. The short budget reports a gap several times the one the 50-epoch budget reports. This is a cross-model association and does not isolate initialization, capacity, model family or convergence speed."
  },
  "capacity_confound": {
   "pretrained_median_gflops": 135.1,
@@ -502,6 +503,7 @@
   "scratch_median_params_M": 9.7,
   "unet_gflops": 202.96,
   "unet_params_M": 28.99,
+  "unet_heavier_than_n_pretrained": 4,
   "unet_heavier_than_n_pretrained_by_gflops": 4,
   "unet_heavier_than_n_pretrained_by_params": 0,
   "n_pretrained": 6
@@ -526,5 +528,9 @@
    "pairs_total": 56
   },
   "comment": "Median split of the fifteen configurations by each capacity proxy, reporting the same gain statistics as the initialization split. Gains are four-dataset means."
+ },
+ "derived_from": {
+  "budget_matrix": "budget_matrix_5_vs_50.json",
+  "params_flops": "params_flops_512_merged.json"
  }
 }
