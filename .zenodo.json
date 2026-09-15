@@ -1,0 +1,45 @@
+{
+  "upload_type": "dataset",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Wang, Haoyang",
+      "affiliation": "School of Transportation, Southeast University, Nanjing, China; RoadMainT Co., Ltd., Beijing, China"
+    },
+    {
+      "name": "Gong, Hongren",
+      "affiliation": "Key Laboratory of Road and Traffic Engineering of the Ministry of Education, Tongji University, Shanghai, China"
+    },
+    {
+      "name": "Liu, Haobing",
+      "affiliation": "Key Laboratory of Road and Traffic Engineering of the Ministry of Education, Tongji University, Shanghai, China"
+    },
+    {
+      "name": "Ji, Yuanjin",
+      "affiliation": "Key Laboratory of Road and Traffic Engineering of the Ministry of Education, Tongji University, Shanghai, China"
+    },
+    {
+      "name": "Cong, Lin",
+      "affiliation": "Key Laboratory of Road and Traffic Engineering of the Ministry of Education, Tongji University, Shanghai, China"
+    }
+  ],
+  "keywords": [
+    "crack segmentation",
+    "pavement distress",
+    "semantic segmentation",
+    "benchmark",
+    "dataset partitioning",
+    "train-test leakage",
+    "reproducibility",
+    "checksum manifest",
+    "deep learning",
+    "road infrastructure inspection",
+    "DeepCrack",
+    "Crack500",
+    "CamCrack789",
+    "CrackMap"
+  ],
+  "notes": "<p>Derived metadata that make the partitions and measurements of the accompanying crack-segmentation study reproducible: split index files, per-file SHA-256 manifests of the audited dataset copies, machine-readable benchmark results, and the scripts that verify a local download and regenerate the partitions. No images or annotations from the four source datasets (DeepCrack, Crack500, CamCrack789, CrackMap) are redistributed here; those remain under the terms set by their original authors.</p><p>The accompanying manuscript is not yet published and has no DOI, so this record deliberately carries no related identifier pointing to it. An <code>isSupplementTo</code> relation will be declared once that DOI exists, and will appear on versions archived from that point onward.</p><p>This record's metadata is declared in the repository's <code>.zenodo.json</code> rather than inferred from GitHub. That file was added after v1.3.0, so the records for v1.0.0 through v1.3.0 keep the metadata Zenodo derived at the time — a single creator and a software resource type — and are not revised retroactively.</p>"
+}

@@ -1,0 +1,12 @@
+train_img/GOPR0104_(1).png train_lab/GOPR0104_(1).png
+train_img/GOPR0325_(4).png train_lab/GOPR0325_(4).png
+train_img/GOPR0323_(1).png train_lab/GOPR0323_(1).png
+train_img/GOPR0279_(2).png train_lab/GOPR0279_(2).png
+train_img/GOPR0325_(2).png train_lab/GOPR0325_(2).png
+train_img/GOPR0263_(3).png train_lab/GOPR0263_(3).png
+train_img/GOPR0323_(3).png train_lab/GOPR0323_(3).png
+train_img/GOPR0317_(2).png train_lab/GOPR0317_(2).png
+train_img/GOPR0315_(9).png train_lab/GOPR0315_(9).png
+train_img/GOPR0317_(4).png train_lab/GOPR0317_(4).png
+train_img/GOPR0152_(2).png train_lab/GOPR0152_(2).png
+train_img/GOPR0313_(2).png train_lab/GOPR0313_(2).png
