@@ -1,0 +1,8369 @@
+{
+ "note": "Table 4 的新数据源：独立标定阈值下的矩阵（CACAIE 一审 A1/A2, R2-1）。",
+ "seeds": [
+  42,
+  43,
+  44
+ ],
+ "boot": 10000,
+ "halves": 200,
+ "mean_datasets": [
+  "deepcrack",
+  "crack500_mother",
+  "camcrack789",
+  "crackmap_parent"
+ ],
+ "datasets": {
+  "deepcrack": {
+   "carnet": {
+    "heldout_F1": {
+     "per_seed": [
+      83.208,
+      83.919,
+      83.832
+     ],
+     "mean": 83.653,
+     "sd": 0.388
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      71.244,
+      72.293,
+      72.165
+     ],
+     "mean": 71.901,
+     "sd": 0.572
+    },
+    "heldout_thr": null,
+    "ODS": {
+     "per_seed": [
+      83.293,
+      83.969,
+      83.878
+     ],
+     "mean": 83.713,
+     "sd": 0.367
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.123,
+      0.06,
+      0.097
+     ],
+     "mean": 0.093,
+     "sd": 0.032
+    },
+    "AP": {
+     "per_seed": [
+      85.658,
+      86.166,
+      85.309
+     ],
+     "mean": 85.711,
+     "sd": 0.431
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      71.37,
+      72.368,
+      72.232
+     ],
+     "mean": 71.99,
+     "sd": 0.541
+    },
+    "boot_nested_ODS_ci_seed42": [
+     81.278,
+     85.188
+    ],
+    "boot_nested_halfwidth_seed42": 1.955,
+    "boot_fixed_thr_F1_ci_seed42": [
+     81.242,
+     85.169
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.963
+   },
+   "convnext_xlarge": {
+    "heldout_F1": {
+     "per_seed": [
+      84.733,
+      84.722,
+      84.223
+     ],
+     "mean": 84.559,
+     "sd": 0.291
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      73.51,
+      73.494,
+      72.746
+     ],
+     "mean": 73.25,
+     "sd": 0.437
+    },
+    "heldout_thr": null,
+    "ODS": {
+     "per_seed": [
+      84.768,
+      84.755,
+      84.26
+     ],
+     "mean": 84.594,
+     "sd": 0.29
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.151,
+      0.148,
+      0.186
+     ],
+     "mean": 0.162,
+     "sd": 0.021
+    },
+    "AP": {
+     "per_seed": [
+      89.278,
+      89.562,
+      88.644
+     ],
+     "mean": 89.161,
+     "sd": 0.47
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      73.563,
+      73.543,
+      72.802
+     ],
+     "mean": 73.303,
+     "sd": 0.434
+    },
+    "boot_nested_ODS_ci_seed42": [
+     83.027,
+     86.344
+    ],
+    "boot_nested_halfwidth_seed42": 1.658,
+    "boot_fixed_thr_F1_ci_seed42": [
+     83.01,
+     86.334
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.662
+   },
+   "deepcrack_fast_fuse": {
+    "heldout_F1": {
+     "per_seed": [
+      82.474,
+      82.763,
+      82.798
+     ],
+     "mean": 82.678,
+     "sd": 0.178
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      70.175,
+      70.595,
+      70.646
+     ],
+     "mean": 70.472,
+     "sd": 0.258
+    },
+    "heldout_thr": null,
+    "ODS": {
+     "per_seed": [
+      82.513,
+      82.802,
+      82.836
+     ],
+     "mean": 82.717,
+     "sd": 0.177
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.208,
+      0.249,
+      0.221
+     ],
+     "mean": 0.226,
+     "sd": 0.021
+    },
+    "AP": {
+     "per_seed": [
+      87.019,
+      87.293,
+      88.08
+     ],
+     "mean": 87.464,
+     "sd": 0.551
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      70.231,
+      70.651,
+      70.701
+     ],
+     "mean": 70.528,
+     "sd": 0.258
+    },
+    "boot_nested_ODS_ci_seed42": [
+     80.615,
+     84.279
+    ],
+    "boot_nested_halfwidth_seed42": 1.832,
+    "boot_fixed_thr_F1_ci_seed42": [
+     80.594,
+     84.266
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.836
+   },
+   "deeplabv3plus_r50": {
+    "heldout_F1": {
+     "per_seed": [
+      82.984,
+      82.983,
+      84.327
+     ],
+     "mean": 83.431,
+     "sd": 0.776
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      70.917,
+      70.915,
+      72.902
+     ],
+     "mean": 71.578,
+     "sd": 1.147
+    },
+    "heldout_thr": null,
+    "ODS": {
+     "per_seed": [
+      83.105,
+      83.036,
+      84.362
+     ],
+     "mean": 83.501,
+     "sd": 0.746
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.313,
+      0.192,
+      0.259
+     ],
+     "mean": 0.255,
+     "sd": 0.061
+    },
+    "AP": {
+     "per_seed": [
+      88.387,
+      89.839,
+      90.62
+     ],
+     "mean": 89.615,
+     "sd": 1.133
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      71.093,
+      70.993,
+      72.954
+     ],
+     "mean": 71.68,
+     "sd": 1.104
+    },
+    "boot_nested_ODS_ci_seed42": [
+     81.351,
+     84.765
+    ],
+    "boot_nested_halfwidth_seed42": 1.707,
+    "boot_fixed_thr_F1_ci_seed42": [
+     81.312,
+     84.731
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.709
+   },
+   "dtrcnet_pubdeit": {
+    "heldout_F1": {
+     "per_seed": [
+      83.642,
+      82.856,
+      83.539
+     ],
+     "mean": 83.346,
+     "sd": 0.427
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      71.883,
+      70.731,
+      71.732
+     ],
+     "mean": 71.449,
+     "sd": 0.626
+    },
+    "heldout_thr": null,
+    "ODS": {
+     "per_seed": [
+      83.752,
+      82.974,
+      83.609
+     ],
+     "mean": 83.445,
+     "sd": 0.414
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.011,
+      0.002,
+      0.008
+     ],
+     "mean": 0.007,
+     "sd": 0.005
+    },
+    "AP": {
+     "per_seed": [
+      81.899,
+      80.348,
+      81.281
+     ],
+     "mean": 81.176,
+     "sd": 0.781
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      72.046,
+      70.902,
+      71.835
+     ],
+     "mean": 71.594,
+     "sd": 0.609
+    },
+    "boot_nested_ODS_ci_seed42": [
+     82.094,
+     85.357
+    ],
+    "boot_nested_halfwidth_seed42": 1.632,
+    "boot_fixed_thr_F1_ci_seed42": [
+     82.059,
+     85.325
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.633
+   },
+   "hrnet_w48": {
+    "heldout_F1": {
+     "per_seed": [
+      83.437,
+      82.854,
+      83.735
+     ],
+     "mean": 83.342,
+     "sd": 0.448
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      71.58,
+      70.727,
+      72.021
+     ],
+     "mean": 71.443,
+     "sd": 0.658
+    },
+    "heldout_thr": null,
+    "ODS": {
+     "per_seed": [
+      83.482,
+      82.896,
+      83.782
+     ],
+     "mean": 83.387,
+     "sd": 0.451
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.201,
+      0.216,
+      0.25
+     ],
+     "mean": 0.222,
+     "sd": 0.025
+    },
+    "AP": {
+     "per_seed": [
+      89.42,
+      89.372,
+      90.68
+     ],
+     "mean": 89.824,
+     "sd": 0.742
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      71.647,
+      70.789,
+      72.09
+     ],
+     "mean": 71.509,
+     "sd": 0.661
+    },
+    "boot_nested_ODS_ci_seed42": [
+     81.698,
+     85.119
+    ],
+    "boot_nested_halfwidth_seed42": 1.711,
+    "boot_fixed_thr_F1_ci_seed42": [
+     81.674,
+     85.106
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.716
+   },
+   "mambavision": {
+    "heldout_F1": {
+     "per_seed": [
+      80.525,
+      81.748,
+      75.478
+     ],
+     "mean": 79.25,
+     "sd": 3.324
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      67.399,
+      69.13,
+      60.622
+     ],
+     "mean": 65.717,
+     "sd": 4.496
+    },
+    "heldout_thr": null,
+    "ODS": {
+     "per_seed": [
+      80.716,
+      81.835,
+      76.091
+     ],
+     "mean": 79.547,
+     "sd": 3.045
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.429,
+      0.082,
+      0.704
+     ],
+     "mean": 0.405,
+     "sd": 0.312
+    },
+    "AP": {
+     "per_seed": [
+      83.404,
+      83.508,
+      81.907
+     ],
+     "mean": 82.94,
+     "sd": 0.896
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      67.667,
+      69.255,
+      61.409
+     ],
+     "mean": 66.11,
+     "sd": 4.148
+    },
+    "boot_nested_ODS_ci_seed42": [
+     77.201,
+     83.857
+    ],
+    "boot_nested_halfwidth_seed42": 3.328,
+    "boot_fixed_thr_F1_ci_seed42": [
+     77.082,
+     83.784
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 3.351
+   },
+   "mixercseg_faithful": {
+    "heldout_F1": {
+     "per_seed": [
+      82.897,
+      82.304,
+      82.484
+     ],
+     "mean": 82.562,
+     "sd": 0.304
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      70.79,
+      69.929,
+      70.19
+     ],
+     "mean": 70.303,
+     "sd": 0.441
+    },
+    "heldout_thr": null,
+    "ODS": {
+     "per_seed": [
+      82.926,
+      82.355,
+      82.53
+     ],
+     "mean": 82.604,
+     "sd": 0.293
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.223,
+      0.21,
+      0.186
+     ],
+     "mean": 0.206,
+     "sd": 0.019
+    },
+    "AP": {
+     "per_seed": [
+      83.088,
+      86.049,
+      87.543
+     ],
+     "mean": 85.56,
+     "sd": 2.267
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      70.832,
+      70.003,
+      70.257
+     ],
+     "mean": 70.364,
+     "sd": 0.425
+    },
+    "boot_nested_ODS_ci_seed42": [
+     81.005,
+     84.684
+    ],
+    "boot_nested_halfwidth_seed42": 1.84,
+    "boot_fixed_thr_F1_ci_seed42": [
+     80.985,
+     84.677
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.846
+   },
+   "mixercseg_improved": {
+    "heldout_F1": {
+     "per_seed": [
+      82.286,
+      81.069,
+      82.053
+     ],
+     "mean": 81.803,
+     "sd": 0.646
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      69.903,
+      68.165,
+      69.568
+     ],
+     "mean": 69.212,
+     "sd": 0.922
+    },
+    "heldout_thr": null,
+    "ODS": {
+     "per_seed": [
+      82.322,
+      81.115,
+      82.086
+     ],
+     "mean": 81.841,
+     "sd": 0.64
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.312,
+      0.337,
+      0.335
+     ],
+     "mean": 0.328,
+     "sd": 0.014
+    },
+    "AP": {
+     "per_seed": [
+      85.91,
+      85.067,
+      86.239
+     ],
+     "mean": 85.739,
+     "sd": 0.604
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      69.956,
+      68.229,
+      69.615
+     ],
+     "mean": 69.267,
+     "sd": 0.915
+    },
+    "boot_nested_ODS_ci_seed42": [
+     80.188,
+     84.298
+    ],
+    "boot_nested_halfwidth_seed42": 2.055,
+    "boot_fixed_thr_F1_ci_seed42": [
+     80.152,
+     84.277
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.062
+   },
+   "restormixer": {
+    "heldout_F1": {
+     "per_seed": [
+      83.73,
+      83.62,
+      82.939
+     ],
+     "mean": 83.43,
+     "sd": 0.428
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      72.013,
+      71.851,
+      70.852
+     ],
+     "mean": 71.572,
+     "sd": 0.629
+    },
+    "heldout_thr": null,
+    "ODS": {
+     "per_seed": [
+      83.809,
+      83.665,
+      82.983
+     ],
+     "mean": 83.486,
+     "sd": 0.441
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.013,
+      0.022,
+      0.006
+     ],
+     "mean": 0.014,
+     "sd": 0.008
+    },
+    "AP": {
+     "per_seed": [
+      85.452,
+      84.781,
+      82.41
+     ],
+     "mean": 84.214,
+     "sd": 1.598
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      72.13,
+      71.917,
+      70.915
+     ],
+     "mean": 71.654,
+     "sd": 0.649
+    },
+    "boot_nested_ODS_ci_seed42": [
+     81.902,
+     85.594
+    ],
+    "boot_nested_halfwidth_seed42": 1.846,
+    "boot_fixed_thr_F1_ci_seed42": [
+     81.864,
+     85.565
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.85
+   },
+   "rindnet": {
+    "heldout_F1": {
+     "per_seed": [
+      83.492,
+      23.539,
+      22.478
+     ],
+     "mean": 43.17,
+     "sd": 34.924
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      71.662,
+      13.339,
+      12.662
+     ],
+     "mean": 32.554,
+     "sd": 33.87
+    },
+    "heldout_thr": null,
+    "ODS": {
+     "per_seed": [
+      83.526,
+      23.567,
+      22.479
+     ],
+     "mean": 43.191,
+     "sd": 34.936
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.697,
+      0.059,
+      0.232
+     ],
+     "mean": 0.329,
+     "sd": 0.33
+    },
+    "AP": {
+     "per_seed": [
+      81.439,
+      13.129,
+      12.223
+     ],
+     "mean": 35.597,
+     "sd": 39.703
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      71.712,
+      13.357,
+      12.663
+     ],
+     "mean": 32.577,
+     "sd": 33.893
+    },
+    "boot_nested_ODS_ci_seed42": [
+     81.861,
+     85.104
+    ],
+    "boot_nested_halfwidth_seed42": 1.621,
+    "boot_fixed_thr_F1_ci_seed42": [
+     81.838,
+     85.093
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.628
+   },
+   "scsegamba": {
+    "heldout_F1": {
+     "per_seed": [
+      79.661,
+      80.937,
+      80.67
+     ],
+     "mean": 80.423,
+     "sd": 0.673
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      66.197,
+      67.979,
+      67.603
+     ],
+     "mean": 67.26,
+     "sd": 0.939
+    },
+    "heldout_thr": null,
+    "ODS": {
+     "per_seed": [
+      79.725,
+      80.986,
+      80.727
+     ],
+     "mean": 80.479,
+     "sd": 0.666
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.009,
+      0.015,
+      0.014
+     ],
+     "mean": 0.013,
+     "sd": 0.003
+    },
+    "AP": {
+     "per_seed": [
+      76.706,
+      79.464,
+      78.961
+     ],
+     "mean": 78.377,
+     "sd": 1.469
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      66.286,
+      68.048,
+      67.682
+     ],
+     "mean": 67.339,
+     "sd": 0.93
+    },
+    "boot_nested_ODS_ci_seed42": [
+     77.373,
+     82.005
+    ],
+    "boot_nested_halfwidth_seed42": 2.316,
+    "boot_fixed_thr_F1_ci_seed42": [
+     77.339,
+     81.949
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.305
+   },
+   "segformer_mit_b5": {
+    "heldout_F1": {
+     "per_seed": [
+      84.466,
+      83.132,
+      83.374
+     ],
+     "mean": 83.657,
+     "sd": 0.711
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      73.109,
+      71.134,
+      71.488
+     ],
+     "mean": 71.91,
+     "sd": 1.053
+    },
+    "heldout_thr": null,
+    "ODS": {
+     "per_seed": [
+      84.512,
+      83.177,
+      83.42
+     ],
+     "mean": 83.703,
+     "sd": 0.711
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.231,
+      0.23,
+      0.228
+     ],
+     "mean": 0.23,
+     "sd": 0.002
+    },
+    "AP": {
+     "per_seed": [
+      90.573,
+      88.376,
+      89.023
+     ],
+     "mean": 89.324,
+     "sd": 1.129
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      73.178,
+      71.199,
+      71.556
+     ],
+     "mean": 71.978,
+     "sd": 1.055
+    },
+    "boot_nested_ODS_ci_seed42": [
+     82.951,
+     86.002
+    ],
+    "boot_nested_halfwidth_seed42": 1.526,
+    "boot_fixed_thr_F1_ci_seed42": [
+     82.932,
+     85.979
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.523
+   },
+   "shuttlenet_v2": {
+    "heldout_F1": {
+     "per_seed": [
+      83.361,
+      83.915,
+      83.554
+     ],
+     "mean": 83.61,
+     "sd": 0.281
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      71.47,
+      72.288,
+      71.754
+     ],
+     "mean": 71.837,
+     "sd": 0.415
+    },
+    "heldout_thr": null,
+    "ODS": {
+     "per_seed": [
+      83.423,
+      83.971,
+      83.605
+     ],
+     "mean": 83.666,
+     "sd": 0.279
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.127,
+      0.223,
+      0.17
+     ],
+     "mean": 0.173,
+     "sd": 0.048
+    },
+    "AP": {
+     "per_seed": [
+      87.851,
+      88.284,
+      87.5
+     ],
+     "mean": 87.878,
+     "sd": 0.393
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      71.56,
+      72.371,
+      71.829
+     ],
+     "mean": 71.92,
+     "sd": 0.413
+    },
+    "boot_nested_ODS_ci_seed42": [
+     81.499,
+     85.211
+    ],
+    "boot_nested_halfwidth_seed42": 1.856,
+    "boot_fixed_thr_F1_ci_seed42": [
+     81.471,
+     85.199
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.864
+   },
+   "tangoseg": {
+    "heldout_F1": {
+     "per_seed": [
+      84.899,
+      83.677,
+      84.106
+     ],
+     "mean": 84.227,
+     "sd": 0.62
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      73.761,
+      71.935,
+      72.571
+     ],
+     "mean": 72.756,
+     "sd": 0.927
+    },
+    "heldout_thr": null,
+    "ODS": {
+     "per_seed": [
+      84.934,
+      83.717,
+      84.136
+     ],
+     "mean": 84.262,
+     "sd": 0.618
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.238,
+      0.127,
+      0.176
+     ],
+     "mean": 0.18,
+     "sd": 0.056
+    },
+    "AP": {
+     "per_seed": [
+      88.219,
+      85.886,
+      86.751
+     ],
+     "mean": 86.952,
+     "sd": 1.179
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      73.814,
+      71.995,
+      72.616
+     ],
+     "mean": 72.808,
+     "sd": 0.925
+    },
+    "boot_nested_ODS_ci_seed42": [
+     83.356,
+     86.384
+    ],
+    "boot_nested_halfwidth_seed42": 1.514,
+    "boot_fixed_thr_F1_ci_seed42": [
+     83.348,
+     86.379
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.516
+   },
+   "unet": {
+    "heldout_F1": {
+     "per_seed": [
+      84.302,
+      82.377,
+      84.094
+     ],
+     "mean": 83.591,
+     "sd": 1.056
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      72.865,
+      70.034,
+      72.553
+     ],
+     "mean": 71.817,
+     "sd": 1.552
+    },
+    "heldout_thr": null,
+    "ODS": {
+     "per_seed": [
+      84.346,
+      82.483,
+      84.143
+     ],
+     "mean": 83.657,
+     "sd": 1.022
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.321,
+      0.267,
+      0.272
+     ],
+     "mean": 0.287,
+     "sd": 0.03
+    },
+    "AP": {
+     "per_seed": [
+      90.78,
+      89.466,
+      90.715
+     ],
+     "mean": 90.32,
+     "sd": 0.741
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      72.93,
+      70.188,
+      72.627
+     ],
+     "mean": 71.915,
+     "sd": 1.503
+    },
+    "boot_nested_ODS_ci_seed42": [
+     82.352,
+     86.142
+    ],
+    "boot_nested_halfwidth_seed42": 1.895,
+    "boot_fixed_thr_F1_ci_seed42": [
+     82.34,
+     86.13
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.895
+   }
+  },
+  "crack500": {
+   "carnet": {
+    "heldout_F1": {
+     "per_seed": [
+      78.114,
+      78.247,
+      78.237
+     ],
+     "mean": 78.199,
+     "sd": 0.074
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      64.088,
+      64.267,
+      64.253
+     ],
+     "mean": 64.203,
+     "sd": 0.1
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.252,
+      0.278,
+      0.244
+     ],
+     "mean": 0.258,
+     "sd": 0.018
+    },
+    "ODS": {
+     "per_seed": [
+      78.138,
+      78.267,
+      78.251
+     ],
+     "mean": 78.219,
+     "sd": 0.07
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.338,
+      0.348,
+      0.301
+     ],
+     "mean": 0.329,
+     "sd": 0.025
+    },
+    "AP": {
+     "per_seed": [
+      80.197,
+      80.087,
+      79.894
+     ],
+     "mean": 80.059,
+     "sd": 0.153
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      64.12,
+      64.294,
+      64.272
+     ],
+     "mean": 64.229,
+     "sd": 0.095
+    },
+    "boot_nested_ODS_ci_seed42": [
+     76.851,
+     79.363
+    ],
+    "boot_nested_halfwidth_seed42": 1.256,
+    "boot_fixed_thr_F1_ci_seed42": [
+     76.843,
+     79.358
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.258
+   },
+   "convnext_xlarge": {
+    "heldout_F1": {
+     "per_seed": [
+      79.418,
+      79.269,
+      79.428
+     ],
+     "mean": 79.372,
+     "sd": 0.089
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      65.862,
+      65.658,
+      65.876
+     ],
+     "mean": 65.799,
+     "sd": 0.122
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.111,
+      0.116,
+      0.121
+     ],
+     "mean": 0.116,
+     "sd": 0.005
+    },
+    "ODS": {
+     "per_seed": [
+      79.469,
+      79.331,
+      79.447
+     ],
+     "mean": 79.416,
+     "sd": 0.074
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.163,
+      0.179,
+      0.159
+     ],
+     "mean": 0.167,
+     "sd": 0.011
+    },
+    "AP": {
+     "per_seed": [
+      81.362,
+      81.832,
+      81.715
+     ],
+     "mean": 81.636,
+     "sd": 0.245
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      65.932,
+      65.743,
+      65.902
+     ],
+     "mean": 65.859,
+     "sd": 0.102
+    },
+    "boot_nested_ODS_ci_seed42": [
+     78.207,
+     80.641
+    ],
+    "boot_nested_halfwidth_seed42": 1.217,
+    "boot_fixed_thr_F1_ci_seed42": [
+     78.2,
+     80.634
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.217
+   },
+   "deepcrack_fast_fuse": {
+    "heldout_F1": {
+     "per_seed": [
+      75.193,
+      75.008,
+      75.188
+     ],
+     "mean": 75.13,
+     "sd": 0.105
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      60.248,
+      60.011,
+      60.241
+     ],
+     "mean": 60.167,
+     "sd": 0.135
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.161,
+      0.164,
+      0.2
+     ],
+     "mean": 0.175,
+     "sd": 0.022
+    },
+    "ODS": {
+     "per_seed": [
+      75.205,
+      75.039,
+      75.198
+     ],
+     "mean": 75.147,
+     "sd": 0.094
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.185,
+      0.21,
+      0.224
+     ],
+     "mean": 0.206,
+     "sd": 0.02
+    },
+    "AP": {
+     "per_seed": [
+      77.882,
+      77.481,
+      78.069
+     ],
+     "mean": 77.811,
+     "sd": 0.3
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      60.262,
+      60.049,
+      60.254
+     ],
+     "mean": 60.188,
+     "sd": 0.121
+    },
+    "boot_nested_ODS_ci_seed42": [
+     73.823,
+     76.495
+    ],
+    "boot_nested_halfwidth_seed42": 1.336,
+    "boot_fixed_thr_F1_ci_seed42": [
+     73.819,
+     76.484
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.332
+   },
+   "deeplabv3plus_r50": {
+    "heldout_F1": {
+     "per_seed": [
+      77.77,
+      77.289,
+      77.364
+     ],
+     "mean": 77.474,
+     "sd": 0.259
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      63.626,
+      62.985,
+      63.084
+     ],
+     "mean": 63.232,
+     "sd": 0.345
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.202,
+      0.209,
+      0.18
+     ],
+     "mean": 0.197,
+     "sd": 0.015
+    },
+    "ODS": {
+     "per_seed": [
+      77.785,
+      77.3,
+      77.406
+     ],
+     "mean": 77.497,
+     "sd": 0.255
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.235,
+      0.227,
+      0.225
+     ],
+     "mean": 0.229,
+     "sd": 0.005
+    },
+    "AP": {
+     "per_seed": [
+      82.732,
+      82.352,
+      82.163
+     ],
+     "mean": 82.416,
+     "sd": 0.29
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      63.646,
+      62.999,
+      63.141
+     ],
+     "mean": 63.262,
+     "sd": 0.34
+    },
+    "boot_nested_ODS_ci_seed42": [
+     76.55,
+     78.971
+    ],
+    "boot_nested_halfwidth_seed42": 1.211,
+    "boot_fixed_thr_F1_ci_seed42": [
+     76.544,
+     78.968
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.212
+   },
+   "dtrcnet_pubdeit": {
+    "heldout_F1": {
+     "per_seed": [
+      77.164,
+      77.735,
+      77.605
+     ],
+     "mean": 77.501,
+     "sd": 0.299
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      62.819,
+      63.579,
+      63.406
+     ],
+     "mean": 63.268,
+     "sd": 0.398
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.052,
+      0.053,
+      0.048
+     ],
+     "mean": 0.051,
+     "sd": 0.003
+    },
+    "ODS": {
+     "per_seed": [
+      77.234,
+      77.811,
+      77.661
+     ],
+     "mean": 77.569,
+     "sd": 0.299
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.15,
+      0.128,
+      0.121
+     ],
+     "mean": 0.133,
+     "sd": 0.015
+    },
+    "AP": {
+     "per_seed": [
+      79.497,
+      80.319,
+      79.822
+     ],
+     "mean": 79.879,
+     "sd": 0.414
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      62.911,
+      63.68,
+      63.48
+     ],
+     "mean": 63.357,
+     "sd": 0.399
+    },
+    "boot_nested_ODS_ci_seed42": [
+     75.975,
+     78.443
+    ],
+    "boot_nested_halfwidth_seed42": 1.234,
+    "boot_fixed_thr_F1_ci_seed42": [
+     75.972,
+     78.433
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.231
+   },
+   "hrnet_w48": {
+    "heldout_F1": {
+     "per_seed": [
+      77.727,
+      77.657,
+      77.772
+     ],
+     "mean": 77.719,
+     "sd": 0.058
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      63.569,
+      63.475,
+      63.629
+     ],
+     "mean": 63.558,
+     "sd": 0.078
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.235,
+      0.232,
+      0.181
+     ],
+     "mean": 0.216,
+     "sd": 0.03
+    },
+    "ODS": {
+     "per_seed": [
+      77.781,
+      77.701,
+      77.827
+     ],
+     "mean": 77.77,
+     "sd": 0.064
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.297,
+      0.291,
+      0.247
+     ],
+     "mean": 0.278,
+     "sd": 0.027
+    },
+    "AP": {
+     "per_seed": [
+      83.016,
+      82.777,
+      82.39
+     ],
+     "mean": 82.728,
+     "sd": 0.316
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      63.641,
+      63.533,
+      63.702
+     ],
+     "mean": 63.625,
+     "sd": 0.086
+    },
+    "boot_nested_ODS_ci_seed42": [
+     76.581,
+     78.932
+    ],
+    "boot_nested_halfwidth_seed42": 1.175,
+    "boot_fixed_thr_F1_ci_seed42": [
+     76.572,
+     78.928
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.178
+   },
+   "mambavision": {
+    "heldout_F1": {
+     "per_seed": [
+      69.298,
+      72.732,
+      74.44
+     ],
+     "mean": 72.157,
+     "sd": 2.619
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      53.02,
+      57.149,
+      59.287
+     ],
+     "mean": 56.485,
+     "sd": 3.186
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.529,
+      0.557,
+      0.414
+     ],
+     "mean": 0.5,
+     "sd": 0.076
+    },
+    "ODS": {
+     "per_seed": [
+      69.312,
+      72.765,
+      74.798
+     ],
+     "mean": 72.292,
+     "sd": 2.773
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.628,
+      0.669,
+      0.766
+     ],
+     "mean": 0.688,
+     "sd": 0.071
+    },
+    "AP": {
+     "per_seed": [
+      72.311,
+      73.971,
+      78.397
+     ],
+     "mean": 74.893,
+     "sd": 3.146
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      53.037,
+      57.189,
+      59.742
+     ],
+     "mean": 56.656,
+     "sd": 3.384
+    },
+    "boot_nested_ODS_ci_seed42": [
+     63.224,
+     74.57
+    ],
+    "boot_nested_halfwidth_seed42": 5.673,
+    "boot_fixed_thr_F1_ci_seed42": [
+     63.133,
+     74.552
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 5.71
+   },
+   "mixercseg_faithful": {
+    "heldout_F1": {
+     "per_seed": [
+      76.971,
+      76.906,
+      76.967
+     ],
+     "mean": 76.948,
+     "sd": 0.036
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      62.563,
+      62.477,
+      62.559
+     ],
+     "mean": 62.533,
+     "sd": 0.049
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.382,
+      0.369,
+      0.401
+     ],
+     "mean": 0.384,
+     "sd": 0.016
+    },
+    "ODS": {
+     "per_seed": [
+      77.012,
+      76.981,
+      77.014
+     ],
+     "mean": 77.002,
+     "sd": 0.019
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.427,
+      0.422,
+      0.448
+     ],
+     "mean": 0.432,
+     "sd": 0.014
+    },
+    "AP": {
+     "per_seed": [
+      83.378,
+      83.144,
+      83.48
+     ],
+     "mean": 83.334,
+     "sd": 0.172
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      62.618,
+      62.577,
+      62.62
+     ],
+     "mean": 62.605,
+     "sd": 0.024
+    },
+    "boot_nested_ODS_ci_seed42": [
+     75.727,
+     78.251
+    ],
+    "boot_nested_halfwidth_seed42": 1.262,
+    "boot_fixed_thr_F1_ci_seed42": [
+     75.719,
+     78.242
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.262
+   },
+   "mixercseg_improved": {
+    "heldout_F1": {
+     "per_seed": [
+      77.279,
+      76.999,
+      77.285
+     ],
+     "mean": 77.188,
+     "sd": 0.163
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      62.972,
+      62.6,
+      62.98
+     ],
+     "mean": 62.851,
+     "sd": 0.217
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.721,
+      0.76,
+      0.736
+     ],
+     "mean": 0.739,
+     "sd": 0.02
+    },
+    "ODS": {
+     "per_seed": [
+      77.314,
+      77.016,
+      77.295
+     ],
+     "mean": 77.208,
+     "sd": 0.167
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.781,
+      0.797,
+      0.767
+     ],
+     "mean": 0.782,
+     "sd": 0.015
+    },
+    "AP": {
+     "per_seed": [
+      82.502,
+      82.281,
+      82.161
+     ],
+     "mean": 82.315,
+     "sd": 0.173
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      63.018,
+      62.622,
+      62.992
+     ],
+     "mean": 62.877,
+     "sd": 0.222
+    },
+    "boot_nested_ODS_ci_seed42": [
+     75.984,
+     78.568
+    ],
+    "boot_nested_halfwidth_seed42": 1.292,
+    "boot_fixed_thr_F1_ci_seed42": [
+     75.97,
+     78.564
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.297
+   },
+   "restormixer": {
+    "heldout_F1": {
+     "per_seed": [
+      74.837,
+      77.579,
+      78.275
+     ],
+     "mean": 76.897,
+     "sd": 1.818
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      59.792,
+      63.37,
+      64.304
+     ],
+     "mean": 62.489,
+     "sd": 2.382
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.19,
+      0.379,
+      0.307
+     ],
+     "mean": 0.292,
+     "sd": 0.095
+    },
+    "ODS": {
+     "per_seed": [
+      74.856,
+      77.58,
+      78.287
+     ],
+     "mean": 76.908,
+     "sd": 1.812
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.337,
+      0.43,
+      0.424
+     ],
+     "mean": 0.397,
+     "sd": 0.052
+    },
+    "AP": {
+     "per_seed": [
+      77.466,
+      81.217,
+      82.038
+     ],
+     "mean": 80.24,
+     "sd": 2.437
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      59.816,
+      63.372,
+      64.32
+     ],
+     "mean": 62.503,
+     "sd": 2.375
+    },
+    "boot_nested_ODS_ci_seed42": [
+     69.304,
+     78.71
+    ],
+    "boot_nested_halfwidth_seed42": 4.703,
+    "boot_fixed_thr_F1_ci_seed42": [
+     69.289,
+     78.693
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 4.702
+   },
+   "rindnet": {
+    "heldout_F1": {
+     "per_seed": [
+      76.944,
+      77.548,
+      75.033
+     ],
+     "mean": 76.508,
+     "sd": 1.313
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      62.527,
+      63.329,
+      60.043
+     ],
+     "mean": 61.966,
+     "sd": 1.713
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.262,
+      0.144,
+      0.094
+     ],
+     "mean": 0.167,
+     "sd": 0.086
+    },
+    "ODS": {
+     "per_seed": [
+      76.96,
+      77.573,
+      75.169
+     ],
+     "mean": 76.567,
+     "sd": 1.249
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.418,
+      0.229,
+      0.364
+     ],
+     "mean": 0.337,
+     "sd": 0.097
+    },
+    "AP": {
+     "per_seed": [
+      73.739,
+      72.266,
+      67.336
+     ],
+     "mean": 71.114,
+     "sd": 3.353
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      62.549,
+      63.363,
+      60.216
+     ],
+     "mean": 62.043,
+     "sd": 1.633
+    },
+    "boot_nested_ODS_ci_seed42": [
+     75.487,
+     78.325
+    ],
+    "boot_nested_halfwidth_seed42": 1.419,
+    "boot_fixed_thr_F1_ci_seed42": [
+     75.473,
+     78.321
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.424
+   },
+   "scsegamba": {
+    "heldout_F1": {
+     "per_seed": [
+      78.176,
+      77.955,
+      78.418
+     ],
+     "mean": 78.183,
+     "sd": 0.232
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      64.172,
+      63.873,
+      64.498
+     ],
+     "mean": 64.181,
+     "sd": 0.313
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.746,
+      0.191,
+      0.388
+     ],
+     "mean": 0.442,
+     "sd": 0.281
+    },
+    "ODS": {
+     "per_seed": [
+      78.184,
+      78.049,
+      78.473
+     ],
+     "mean": 78.235,
+     "sd": 0.217
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.796,
+      0.696,
+      0.691
+     ],
+     "mean": 0.728,
+     "sd": 0.059
+    },
+    "AP": {
+     "per_seed": [
+      82.023,
+      81.492,
+      82.137
+     ],
+     "mean": 81.884,
+     "sd": 0.344
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      64.182,
+      64.001,
+      64.572
+     ],
+     "mean": 64.252,
+     "sd": 0.292
+    },
+    "boot_nested_ODS_ci_seed42": [
+     76.935,
+     79.386
+    ],
+    "boot_nested_halfwidth_seed42": 1.225,
+    "boot_fixed_thr_F1_ci_seed42": [
+     76.93,
+     79.38
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.225
+   },
+   "segformer_mit_b5": {
+    "heldout_F1": {
+     "per_seed": [
+      78.368,
+      78.47,
+      78.388
+     ],
+     "mean": 78.409,
+     "sd": 0.054
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      64.43,
+      64.568,
+      64.458
+     ],
+     "mean": 64.485,
+     "sd": 0.073
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.198,
+      0.174,
+      0.201
+     ],
+     "mean": 0.191,
+     "sd": 0.015
+    },
+    "ODS": {
+     "per_seed": [
+      78.411,
+      78.545,
+      78.407
+     ],
+     "mean": 78.454,
+     "sd": 0.079
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.263,
+      0.252,
+      0.246
+     ],
+     "mean": 0.254,
+     "sd": 0.009
+    },
+    "AP": {
+     "per_seed": [
+      81.727,
+      81.697,
+      81.282
+     ],
+     "mean": 81.569,
+     "sd": 0.249
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      64.488,
+      64.669,
+      64.483
+     ],
+     "mean": 64.547,
+     "sd": 0.106
+    },
+    "boot_nested_ODS_ci_seed42": [
+     77.129,
+     79.619
+    ],
+    "boot_nested_halfwidth_seed42": 1.245,
+    "boot_fixed_thr_F1_ci_seed42": [
+     77.122,
+     79.61
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.244
+   },
+   "shuttlenet_v2": {
+    "heldout_F1": {
+     "per_seed": [
+      78.766,
+      78.334,
+      78.887
+     ],
+     "mean": 78.662,
+     "sd": 0.291
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      64.97,
+      64.384,
+      65.134
+     ],
+     "mean": 64.829,
+     "sd": 0.394
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.659,
+      0.792,
+      0.811
+     ],
+     "mean": 0.754,
+     "sd": 0.083
+    },
+    "ODS": {
+     "per_seed": [
+      78.823,
+      78.582,
+      78.938
+     ],
+     "mean": 78.781,
+     "sd": 0.182
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.798,
+      0.888,
+      0.898
+     ],
+     "mean": 0.861,
+     "sd": 0.055
+    },
+    "AP": {
+     "per_seed": [
+      84.273,
+      83.047,
+      84.451
+     ],
+     "mean": 83.924,
+     "sd": 0.764
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      65.048,
+      64.72,
+      65.205
+     ],
+     "mean": 64.991,
+     "sd": 0.247
+    },
+    "boot_nested_ODS_ci_seed42": [
+     77.564,
+     80.023
+    ],
+    "boot_nested_halfwidth_seed42": 1.23,
+    "boot_fixed_thr_F1_ci_seed42": [
+     77.562,
+     80.016
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.227
+   },
+   "tangoseg": {
+    "heldout_F1": {
+     "per_seed": [
+      76.923,
+      77.015,
+      77.093
+     ],
+     "mean": 77.01,
+     "sd": 0.085
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      62.499,
+      62.621,
+      62.724
+     ],
+     "mean": 62.615,
+     "sd": 0.113
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.331,
+      0.362,
+      0.417
+     ],
+     "mean": 0.37,
+     "sd": 0.044
+    },
+    "ODS": {
+     "per_seed": [
+      76.954,
+      77.048,
+      77.114
+     ],
+     "mean": 77.039,
+     "sd": 0.08
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.46,
+      0.489,
+      0.54
+     ],
+     "mean": 0.496,
+     "sd": 0.041
+    },
+    "AP": {
+     "per_seed": [
+      79.383,
+      79.727,
+      79.607
+     ],
+     "mean": 79.572,
+     "sd": 0.175
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      62.54,
+      62.665,
+      62.753
+     ],
+     "mean": 62.653,
+     "sd": 0.107
+    },
+    "boot_nested_ODS_ci_seed42": [
+     75.705,
+     78.151
+    ],
+    "boot_nested_halfwidth_seed42": 1.223,
+    "boot_fixed_thr_F1_ci_seed42": [
+     75.698,
+     78.143
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.223
+   },
+   "unet": {
+    "heldout_F1": {
+     "per_seed": [
+      78.193,
+      78.016,
+      77.883
+     ],
+     "mean": 78.031,
+     "sd": 0.156
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      64.194,
+      63.956,
+      63.777
+     ],
+     "mean": 63.976,
+     "sd": 0.209
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.365,
+      0.358,
+      0.341
+     ],
+     "mean": 0.355,
+     "sd": 0.012
+    },
+    "ODS": {
+     "per_seed": [
+      78.219,
+      78.052,
+      77.933
+     ],
+     "mean": 78.068,
+     "sd": 0.144
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.396,
+      0.383,
+      0.376
+     ],
+     "mean": 0.385,
+     "sd": 0.01
+    },
+    "AP": {
+     "per_seed": [
+      85.756,
+      85.466,
+      85.242
+     ],
+     "mean": 85.488,
+     "sd": 0.258
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      64.23,
+      64.004,
+      63.844
+     ],
+     "mean": 64.026,
+     "sd": 0.194
+    },
+    "boot_nested_ODS_ci_seed42": [
+     76.889,
+     79.478
+    ],
+    "boot_nested_halfwidth_seed42": 1.294,
+    "boot_fixed_thr_F1_ci_seed42": [
+     76.878,
+     79.474
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.298
+   }
+  },
+  "crack500_mother": {
+   "carnet": {
+    "heldout_F1": {
+     "per_seed": [
+      77.746,
+      77.572,
+      77.825
+     ],
+     "mean": 77.714,
+     "sd": 0.129
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      63.594,
+      63.361,
+      63.699
+     ],
+     "mean": 63.551,
+     "sd": 0.173
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.381,
+      0.313,
+      0.296
+     ],
+     "mean": 0.33,
+     "sd": 0.045
+    },
+    "ODS": {
+     "per_seed": [
+      77.749,
+      77.574,
+      77.829
+     ],
+     "mean": 77.717,
+     "sd": 0.13
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.357,
+      0.292,
+      0.34
+     ],
+     "mean": 0.33,
+     "sd": 0.034
+    },
+    "AP": {
+     "per_seed": [
+      79.945,
+      78.594,
+      79.131
+     ],
+     "mean": 79.223,
+     "sd": 0.68
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      63.597,
+      63.364,
+      63.705
+     ],
+     "mean": 63.555,
+     "sd": 0.174
+    },
+    "boot_nested_ODS_ci_seed42": [
+     75.315,
+     79.846
+    ],
+    "boot_nested_halfwidth_seed42": 2.266,
+    "boot_fixed_thr_F1_ci_seed42": [
+     75.297,
+     79.821
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.262
+   },
+   "convnext_xlarge": {
+    "heldout_F1": {
+     "per_seed": [
+      78.874,
+      78.826,
+      79.132
+     ],
+     "mean": 78.944,
+     "sd": 0.165
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      65.118,
+      65.052,
+      65.47
+     ],
+     "mean": 65.213,
+     "sd": 0.225
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.121,
+      0.149,
+      0.141
+     ],
+     "mean": 0.137,
+     "sd": 0.014
+    },
+    "ODS": {
+     "per_seed": [
+      78.881,
+      78.829,
+      79.136
+     ],
+     "mean": 78.949,
+     "sd": 0.164
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.147,
+      0.158,
+      0.16
+     ],
+     "mean": 0.155,
+     "sd": 0.007
+    },
+    "AP": {
+     "per_seed": [
+      79.706,
+      80.074,
+      80.123
+     ],
+     "mean": 79.968,
+     "sd": 0.228
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      65.128,
+      65.055,
+      65.476
+     ],
+     "mean": 65.22,
+     "sd": 0.225
+    },
+    "boot_nested_ODS_ci_seed42": [
+     76.449,
+     80.982
+    ],
+    "boot_nested_halfwidth_seed42": 2.267,
+    "boot_fixed_thr_F1_ci_seed42": [
+     76.431,
+     80.964
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.267
+   },
+   "deepcrack_fast_fuse": {
+    "heldout_F1": {
+     "per_seed": [
+      75.087,
+      75.306,
+      74.821
+     ],
+     "mean": 75.071,
+     "sd": 0.243
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      60.111,
+      60.392,
+      59.771
+     ],
+     "mean": 60.091,
+     "sd": 0.311
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.165,
+      0.177,
+      0.217
+     ],
+     "mean": 0.186,
+     "sd": 0.027
+    },
+    "ODS": {
+     "per_seed": [
+      75.089,
+      75.311,
+      74.822
+     ],
+     "mean": 75.074,
+     "sd": 0.245
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.151,
+      0.152,
+      0.211
+     ],
+     "mean": 0.171,
+     "sd": 0.034
+    },
+    "AP": {
+     "per_seed": [
+      76.055,
+      76.449,
+      76.858
+     ],
+     "mean": 76.454,
+     "sd": 0.402
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      60.114,
+      60.399,
+      59.772
+     ],
+     "mean": 60.095,
+     "sd": 0.314
+    },
+    "boot_nested_ODS_ci_seed42": [
+     72.443,
+     77.41
+    ],
+    "boot_nested_halfwidth_seed42": 2.483,
+    "boot_fixed_thr_F1_ci_seed42": [
+     72.411,
+     77.403
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.496
+   },
+   "deeplabv3plus_r50": {
+    "heldout_F1": {
+     "per_seed": [
+      78.114,
+      77.816,
+      77.609
+     ],
+     "mean": 77.846,
+     "sd": 0.254
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      64.087,
+      63.688,
+      63.411
+     ],
+     "mean": 63.729,
+     "sd": 0.34
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.209,
+      0.186,
+      0.228
+     ],
+     "mean": 0.208,
+     "sd": 0.021
+    },
+    "ODS": {
+     "per_seed": [
+      78.116,
+      77.817,
+      77.611
+     ],
+     "mean": 77.848,
+     "sd": 0.254
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.222,
+      0.195,
+      0.235
+     ],
+     "mean": 0.217,
+     "sd": 0.02
+    },
+    "AP": {
+     "per_seed": [
+      81.815,
+      81.489,
+      81.794
+     ],
+     "mean": 81.699,
+     "sd": 0.182
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      64.09,
+      63.689,
+      63.413
+     ],
+     "mean": 63.731,
+     "sd": 0.34
+    },
+    "boot_nested_ODS_ci_seed42": [
+     75.769,
+     80.172
+    ],
+    "boot_nested_halfwidth_seed42": 2.201,
+    "boot_fixed_thr_F1_ci_seed42": [
+     75.759,
+     80.158
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.2
+   },
+   "dtrcnet_pubdeit": {
+    "heldout_F1": {
+     "per_seed": [
+      77.488,
+      77.36,
+      77.717
+     ],
+     "mean": 77.522,
+     "sd": 0.181
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      63.249,
+      63.08,
+      63.556
+     ],
+     "mean": 63.295,
+     "sd": 0.241
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.104,
+      0.185,
+      0.088
+     ],
+     "mean": 0.126,
+     "sd": 0.052
+    },
+    "ODS": {
+     "per_seed": [
+      77.491,
+      77.393,
+      77.718
+     ],
+     "mean": 77.534,
+     "sd": 0.167
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.091,
+      0.086,
+      0.081
+     ],
+     "mean": 0.086,
+     "sd": 0.005
+    },
+    "AP": {
+     "per_seed": [
+      80.181,
+      79.071,
+      79.959
+     ],
+     "mean": 79.737,
+     "sd": 0.587
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      63.254,
+      63.123,
+      63.556
+     ],
+     "mean": 63.311,
+     "sd": 0.222
+    },
+    "boot_nested_ODS_ci_seed42": [
+     75.066,
+     79.629
+    ],
+    "boot_nested_halfwidth_seed42": 2.282,
+    "boot_fixed_thr_F1_ci_seed42": [
+     75.048,
+     79.616
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.284
+   },
+   "hrnet_w48": {
+    "heldout_F1": {
+     "per_seed": [
+      77.884,
+      77.699,
+      77.854
+     ],
+     "mean": 77.812,
+     "sd": 0.099
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      63.779,
+      63.531,
+      63.738
+     ],
+     "mean": 63.683,
+     "sd": 0.133
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.278,
+      0.223,
+      0.255
+     ],
+     "mean": 0.252,
+     "sd": 0.028
+    },
+    "ODS": {
+     "per_seed": [
+      77.885,
+      77.705,
+      77.854
+     ],
+     "mean": 77.815,
+     "sd": 0.096
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.279,
+      0.252,
+      0.238
+     ],
+     "mean": 0.256,
+     "sd": 0.021
+    },
+    "AP": {
+     "per_seed": [
+      82.115,
+      81.422,
+      81.823
+     ],
+     "mean": 81.787,
+     "sd": 0.348
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      63.779,
+      63.539,
+      63.739
+     ],
+     "mean": 63.686,
+     "sd": 0.129
+    },
+    "boot_nested_ODS_ci_seed42": [
+     75.437,
+     80.02
+    ],
+    "boot_nested_halfwidth_seed42": 2.291,
+    "boot_fixed_thr_F1_ci_seed42": [
+     75.411,
+     80.006
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.297
+   },
+   "mambavision": {
+    "heldout_F1": {
+     "per_seed": [
+      71.254,
+      76.183,
+      76.235
+     ],
+     "mean": 74.557,
+     "sd": 2.861
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      55.345,
+      61.528,
+      61.596
+     ],
+     "mean": 59.49,
+     "sd": 3.59
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.829,
+      0.541,
+      0.522
+     ],
+     "mean": 0.631,
+     "sd": 0.172
+    },
+    "ODS": {
+     "per_seed": [
+      71.286,
+      76.184,
+      76.236
+     ],
+     "mean": 74.569,
+     "sd": 2.843
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.733,
+      0.528,
+      0.554
+     ],
+     "mean": 0.605,
+     "sd": 0.112
+    },
+    "AP": {
+     "per_seed": [
+      75.582,
+      80.596,
+      79.859
+     ],
+     "mean": 78.679,
+     "sd": 2.707
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      55.383,
+      61.53,
+      61.598
+     ],
+     "mean": 59.504,
+     "sd": 3.569
+    },
+    "boot_nested_ODS_ci_seed42": [
+     63.007,
+     77.439
+    ],
+    "boot_nested_halfwidth_seed42": 7.216,
+    "boot_fixed_thr_F1_ci_seed42": [
+     62.939,
+     77.417
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 7.239
+   },
+   "mixercseg_faithful": {
+    "heldout_F1": {
+     "per_seed": [
+      76.601,
+      77.053,
+      77.071
+     ],
+     "mean": 76.908,
+     "sd": 0.266
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      62.076,
+      62.672,
+      62.695
+     ],
+     "mean": 62.481,
+     "sd": 0.351
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.397,
+      0.397,
+      0.42
+     ],
+     "mean": 0.405,
+     "sd": 0.013
+    },
+    "ODS": {
+     "per_seed": [
+      76.606,
+      77.058,
+      77.077
+     ],
+     "mean": 76.914,
+     "sd": 0.267
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.416,
+      0.415,
+      0.404
+     ],
+     "mean": 0.412,
+     "sd": 0.007
+    },
+    "AP": {
+     "per_seed": [
+      82.561,
+      83.391,
+      83.235
+     ],
+     "mean": 83.062,
+     "sd": 0.441
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      62.083,
+      62.678,
+      62.703
+     ],
+     "mean": 62.488,
+     "sd": 0.351
+    },
+    "boot_nested_ODS_ci_seed42": [
+     74.073,
+     78.815
+    ],
+    "boot_nested_halfwidth_seed42": 2.371,
+    "boot_fixed_thr_F1_ci_seed42": [
+     74.062,
+     78.806
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.372
+   },
+   "mixercseg_improved": {
+    "heldout_F1": {
+     "per_seed": [
+      76.911,
+      77.362,
+      77.003
+     ],
+     "mean": 77.092,
+     "sd": 0.238
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      62.485,
+      63.082,
+      62.606
+     ],
+     "mean": 62.724,
+     "sd": 0.316
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.749,
+      0.737,
+      0.685
+     ],
+     "mean": 0.724,
+     "sd": 0.034
+    },
+    "ODS": {
+     "per_seed": [
+      76.914,
+      77.372,
+      77.032
+     ],
+     "mean": 77.106,
+     "sd": 0.238
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.756,
+      0.775,
+      0.747
+     ],
+     "mean": 0.759,
+     "sd": 0.014
+    },
+    "AP": {
+     "per_seed": [
+      81.327,
+      82.65,
+      80.918
+     ],
+     "mean": 81.632,
+     "sd": 0.905
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      62.488,
+      63.095,
+      62.644
+     ],
+     "mean": 62.742,
+     "sd": 0.315
+    },
+    "boot_nested_ODS_ci_seed42": [
+     74.379,
+     79.163
+    ],
+    "boot_nested_halfwidth_seed42": 2.392,
+    "boot_fixed_thr_F1_ci_seed42": [
+     74.364,
+     79.147
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.392
+   },
+   "restormixer": {
+    "heldout_F1": {
+     "per_seed": [
+      75.045,
+      74.785,
+      72.632
+     ],
+     "mean": 74.154,
+     "sd": 1.324
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      60.057,
+      59.726,
+      57.026
+     ],
+     "mean": 58.936,
+     "sd": 1.663
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.191,
+      0.094,
+      0.306
+     ],
+     "mean": 0.197,
+     "sd": 0.106
+    },
+    "ODS": {
+     "per_seed": [
+      75.218,
+      75.038,
+      72.633
+     ],
+     "mean": 74.296,
+     "sd": 1.443
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.819,
+      0.607,
+      0.288
+     ],
+     "mean": 0.571,
+     "sd": 0.267
+    },
+    "AP": {
+     "per_seed": [
+      80.109,
+      79.399,
+      72.317
+     ],
+     "mean": 77.275,
+     "sd": 4.308
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      60.279,
+      60.049,
+      57.027
+     ],
+     "mean": 59.118,
+     "sd": 1.815
+    },
+    "boot_nested_ODS_ci_seed42": [
+     70.681,
+     79.444
+    ],
+    "boot_nested_halfwidth_seed42": 4.382,
+    "boot_fixed_thr_F1_ci_seed42": [
+     69.705,
+     79.227
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 4.761
+   },
+   "rindnet": {
+    "heldout_F1": {
+     "per_seed": [
+      77.631,
+      77.338,
+      63.338
+     ],
+     "mean": 72.769,
+     "sd": 8.169
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      63.44,
+      63.05,
+      46.347
+     ],
+     "mean": 57.612,
+     "sd": 9.758
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.709,
+      0.268,
+      0.149
+     ],
+     "mean": 0.375,
+     "sd": 0.295
+    },
+    "ODS": {
+     "per_seed": [
+      77.632,
+      77.35,
+      63.339
+     ],
+     "mean": 72.774,
+     "sd": 8.172
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.641,
+      0.176,
+      0.164
+     ],
+     "mean": 0.327,
+     "sd": 0.272
+    },
+    "AP": {
+     "per_seed": [
+      74.977,
+      71.81,
+      49.452
+     ],
+     "mean": 65.413,
+     "sd": 13.913
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      63.441,
+      63.065,
+      46.347
+     ],
+     "mean": 57.618,
+     "sd": 9.762
+    },
+    "boot_nested_ODS_ci_seed42": [
+     75.224,
+     79.767
+    ],
+    "boot_nested_halfwidth_seed42": 2.271,
+    "boot_fixed_thr_F1_ci_seed42": [
+     75.212,
+     79.754
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.271
+   },
+   "scsegamba": {
+    "heldout_F1": {
+     "per_seed": [
+      76.996,
+      78.023,
+      78.112
+     ],
+     "mean": 77.71,
+     "sd": 0.62
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      62.597,
+      63.965,
+      64.085
+     ],
+     "mean": 63.549,
+     "sd": 0.827
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.523,
+      0.11,
+      0.384
+     ],
+     "mean": 0.339,
+     "sd": 0.21
+    },
+    "ODS": {
+     "per_seed": [
+      76.997,
+      78.025,
+      78.113
+     ],
+     "mean": 77.712,
+     "sd": 0.62
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.539,
+      0.127,
+      0.344
+     ],
+     "mean": 0.337,
+     "sd": 0.206
+    },
+    "AP": {
+     "per_seed": [
+      80.309,
+      80.944,
+      81.572
+     ],
+     "mean": 80.942,
+     "sd": 0.632
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      62.598,
+      63.968,
+      64.086
+     ],
+     "mean": 63.551,
+     "sd": 0.827
+    },
+    "boot_nested_ODS_ci_seed42": [
+     74.591,
+     79.101
+    ],
+    "boot_nested_halfwidth_seed42": 2.255,
+    "boot_fixed_thr_F1_ci_seed42": [
+     74.574,
+     79.092
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.259
+   },
+   "segformer_mit_b5": {
+    "heldout_F1": {
+     "per_seed": [
+      78.7,
+      78.409,
+      78.49
+     ],
+     "mean": 78.533,
+     "sd": 0.15
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      64.88,
+      64.486,
+      64.596
+     ],
+     "mean": 64.654,
+     "sd": 0.203
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.232,
+      0.232,
+      0.253
+     ],
+     "mean": 0.239,
+     "sd": 0.012
+    },
+    "ODS": {
+     "per_seed": [
+      78.701,
+      78.411,
+      78.496
+     ],
+     "mean": 78.536,
+     "sd": 0.149
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.248,
+      0.2,
+      0.22
+     ],
+     "mean": 0.223,
+     "sd": 0.024
+    },
+    "AP": {
+     "per_seed": [
+      80.343,
+      80.305,
+      80.185
+     ],
+     "mean": 80.278,
+     "sd": 0.082
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      64.882,
+      64.489,
+      64.604
+     ],
+     "mean": 64.658,
+     "sd": 0.202
+    },
+    "boot_nested_ODS_ci_seed42": [
+     76.497,
+     80.698
+    ],
+    "boot_nested_halfwidth_seed42": 2.1,
+    "boot_fixed_thr_F1_ci_seed42": [
+     76.48,
+     80.692
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.106
+   },
+   "shuttlenet_v2": {
+    "heldout_F1": {
+     "per_seed": [
+      78.484,
+      78.345,
+      78.632
+     ],
+     "mean": 78.487,
+     "sd": 0.144
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      64.588,
+      64.399,
+      64.788
+     ],
+     "mean": 64.592,
+     "sd": 0.195
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.909,
+      0.827,
+      0.807
+     ],
+     "mean": 0.848,
+     "sd": 0.054
+    },
+    "ODS": {
+     "per_seed": [
+      78.492,
+      78.345,
+      78.632
+     ],
+     "mean": 78.49,
+     "sd": 0.144
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.887,
+      0.826,
+      0.806
+     ],
+     "mean": 0.84,
+     "sd": 0.042
+    },
+    "AP": {
+     "per_seed": [
+      83.711,
+      84.086,
+      84.136
+     ],
+     "mean": 83.978,
+     "sd": 0.232
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      64.598,
+      64.4,
+      64.788
+     ],
+     "mean": 64.595,
+     "sd": 0.194
+    },
+    "boot_nested_ODS_ci_seed42": [
+     76.195,
+     80.565
+    ],
+    "boot_nested_halfwidth_seed42": 2.185,
+    "boot_fixed_thr_F1_ci_seed42": [
+     76.168,
+     80.557
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.194
+   },
+   "tangoseg": {
+    "heldout_F1": {
+     "per_seed": [
+      76.926,
+      77.102,
+      77.143
+     ],
+     "mean": 77.057,
+     "sd": 0.115
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      62.503,
+      62.737,
+      62.79
+     ],
+     "mean": 62.677,
+     "sd": 0.153
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.416,
+      0.373,
+      0.399
+     ],
+     "mean": 0.396,
+     "sd": 0.022
+    },
+    "ODS": {
+     "per_seed": [
+      76.928,
+      77.118,
+      77.147
+     ],
+     "mean": 77.064,
+     "sd": 0.119
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.444,
+      0.482,
+      0.435
+     ],
+     "mean": 0.454,
+     "sd": 0.025
+    },
+    "AP": {
+     "per_seed": [
+      79.014,
+      78.977,
+      79.223
+     ],
+     "mean": 79.071,
+     "sd": 0.133
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      62.506,
+      62.758,
+      62.796
+     ],
+     "mean": 62.687,
+     "sd": 0.158
+    },
+    "boot_nested_ODS_ci_seed42": [
+     74.4,
+     79.119
+    ],
+    "boot_nested_halfwidth_seed42": 2.359,
+    "boot_fixed_thr_F1_ci_seed42": [
+     74.39,
+     79.115
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.362
+   },
+   "unet": {
+    "heldout_F1": {
+     "per_seed": [
+      78.103,
+      78.045,
+      77.903
+     ],
+     "mean": 78.017,
+     "sd": 0.103
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      64.072,
+      63.995,
+      63.804
+     ],
+     "mean": 63.957,
+     "sd": 0.138
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.369,
+      0.388,
+      0.386
+     ],
+     "mean": 0.381,
+     "sd": 0.01
+    },
+    "ODS": {
+     "per_seed": [
+      78.106,
+      78.045,
+      77.909
+     ],
+     "mean": 78.02,
+     "sd": 0.101
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.376,
+      0.39,
+      0.376
+     ],
+     "mean": 0.381,
+     "sd": 0.008
+    },
+    "AP": {
+     "per_seed": [
+      85.028,
+      84.927,
+      84.734
+     ],
+     "mean": 84.896,
+     "sd": 0.149
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      64.077,
+      63.995,
+      63.812
+     ],
+     "mean": 63.961,
+     "sd": 0.136
+    },
+    "boot_nested_ODS_ci_seed42": [
+     75.775,
+     80.165
+    ],
+    "boot_nested_halfwidth_seed42": 2.195,
+    "boot_fixed_thr_F1_ci_seed42": [
+     75.756,
+     80.151
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.197
+   }
+  },
+  "camcrack789": {
+   "carnet": {
+    "heldout_F1": {
+     "per_seed": [
+      84.698,
+      84.96,
+      84.676
+     ],
+     "mean": 84.778,
+     "sd": 0.158
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      73.458,
+      73.853,
+      73.424
+     ],
+     "mean": 73.578,
+     "sd": 0.238
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.304,
+      0.302,
+      0.299
+     ],
+     "mean": 0.302,
+     "sd": 0.003
+    },
+    "ODS": {
+     "per_seed": [
+      84.812,
+      85.018,
+      84.735
+     ],
+     "mean": 84.855,
+     "sd": 0.146
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.145,
+      0.171,
+      0.166
+     ],
+     "mean": 0.161,
+     "sd": 0.014
+    },
+    "AP": {
+     "per_seed": [
+      86.878,
+      87.44,
+      87.266
+     ],
+     "mean": 87.195,
+     "sd": 0.288
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      73.63,
+      73.94,
+      73.513
+     ],
+     "mean": 73.694,
+     "sd": 0.221
+    },
+    "boot_nested_ODS_ci_seed42": [
+     83.427,
+     86.154
+    ],
+    "boot_nested_halfwidth_seed42": 1.363,
+    "boot_fixed_thr_F1_ci_seed42": [
+     83.417,
+     86.149
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.366
+   },
+   "convnext_xlarge": {
+    "heldout_F1": {
+     "per_seed": [
+      86.428,
+      86.458,
+      86.46
+     ],
+     "mean": 86.449,
+     "sd": 0.018
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      76.099,
+      76.146,
+      76.15
+     ],
+     "mean": 76.132,
+     "sd": 0.028
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.312,
+      0.304,
+      0.323
+     ],
+     "mean": 0.313,
+     "sd": 0.01
+    },
+    "ODS": {
+     "per_seed": [
+      86.45,
+      86.46,
+      86.468
+     ],
+     "mean": 86.459,
+     "sd": 0.009
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.266,
+      0.297,
+      0.307
+     ],
+     "mean": 0.29,
+     "sd": 0.021
+    },
+    "AP": {
+     "per_seed": [
+      92.217,
+      92.107,
+      92.524
+     ],
+     "mean": 92.283,
+     "sd": 0.216
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      76.133,
+      76.149,
+      76.162
+     ],
+     "mean": 76.148,
+     "sd": 0.015
+    },
+    "boot_nested_ODS_ci_seed42": [
+     85.368,
+     87.525
+    ],
+    "boot_nested_halfwidth_seed42": 1.079,
+    "boot_fixed_thr_F1_ci_seed42": [
+     85.356,
+     87.513
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.079
+   },
+   "deepcrack_fast_fuse": {
+    "heldout_F1": {
+     "per_seed": [
+      83.424,
+      82.983,
+      83.276
+     ],
+     "mean": 83.228,
+     "sd": 0.224
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      71.561,
+      70.915,
+      71.345
+     ],
+     "mean": 71.274,
+     "sd": 0.329
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.316,
+      0.296,
+      0.299
+     ],
+     "mean": 0.304,
+     "sd": 0.011
+    },
+    "ODS": {
+     "per_seed": [
+      83.424,
+      82.986,
+      83.297
+     ],
+     "mean": 83.236,
+     "sd": 0.225
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.317,
+      0.309,
+      0.268
+     ],
+     "mean": 0.298,
+     "sd": 0.026
+    },
+    "AP": {
+     "per_seed": [
+      89.93,
+      89.248,
+      89.957
+     ],
+     "mean": 89.712,
+     "sd": 0.402
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      71.562,
+      70.92,
+      71.376
+     ],
+     "mean": 71.286,
+     "sd": 0.33
+    },
+    "boot_nested_ODS_ci_seed42": [
+     81.917,
+     84.928
+    ],
+    "boot_nested_halfwidth_seed42": 1.505,
+    "boot_fixed_thr_F1_ci_seed42": [
+     81.89,
+     84.915
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.513
+   },
+   "deeplabv3plus_r50": {
+    "heldout_F1": {
+     "per_seed": [
+      85.306,
+      85.409,
+      85.115
+     ],
+     "mean": 85.277,
+     "sd": 0.149
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      74.376,
+      74.533,
+      74.088
+     ],
+     "mean": 74.332,
+     "sd": 0.226
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.312,
+      0.268,
+      0.316
+     ],
+     "mean": 0.299,
+     "sd": 0.027
+    },
+    "ODS": {
+     "per_seed": [
+      85.319,
+      85.41,
+      85.12
+     ],
+     "mean": 85.283,
+     "sd": 0.148
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.284,
+      0.266,
+      0.33
+     ],
+     "mean": 0.293,
+     "sd": 0.033
+    },
+    "AP": {
+     "per_seed": [
+      91.384,
+      91.348,
+      91.443
+     ],
+     "mean": 91.392,
+     "sd": 0.048
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      74.398,
+      74.536,
+      74.095
+     ],
+     "mean": 74.343,
+     "sd": 0.226
+    },
+    "boot_nested_ODS_ci_seed42": [
+     84.02,
+     86.568
+    ],
+    "boot_nested_halfwidth_seed42": 1.274,
+    "boot_fixed_thr_F1_ci_seed42": [
+     84.005,
+     86.549
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.272
+   },
+   "dtrcnet_pubdeit": {
+    "heldout_F1": {
+     "per_seed": [
+      84.899,
+      84.557,
+      85.037
+     ],
+     "mean": 84.831,
+     "sd": 0.247
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      73.76,
+      73.246,
+      73.969
+     ],
+     "mean": 73.658,
+     "sd": 0.372
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.106,
+      0.099,
+      0.085
+     ],
+     "mean": 0.097,
+     "sd": 0.011
+    },
+    "ODS": {
+     "per_seed": [
+      84.912,
+      84.599,
+      85.042
+     ],
+     "mean": 84.851,
+     "sd": 0.228
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.083,
+      0.036,
+      0.099
+     ],
+     "mean": 0.073,
+     "sd": 0.033
+    },
+    "AP": {
+     "per_seed": [
+      84.361,
+      83.401,
+      84.136
+     ],
+     "mean": 83.966,
+     "sd": 0.502
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      73.78,
+      73.309,
+      73.977
+     ],
+     "mean": 73.689,
+     "sd": 0.343
+    },
+    "boot_nested_ODS_ci_seed42": [
+     83.559,
+     86.222
+    ],
+    "boot_nested_halfwidth_seed42": 1.331,
+    "boot_fixed_thr_F1_ci_seed42": [
+     83.539,
+     86.209
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.335
+   },
+   "hrnet_w48": {
+    "heldout_F1": {
+     "per_seed": [
+      85.859,
+      85.221,
+      85.392
+     ],
+     "mean": 85.491,
+     "sd": 0.33
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      75.222,
+      74.249,
+      74.508
+     ],
+     "mean": 74.66,
+     "sd": 0.504
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.359,
+      0.339,
+      0.365
+     ],
+     "mean": 0.354,
+     "sd": 0.014
+    },
+    "ODS": {
+     "per_seed": [
+      85.864,
+      85.224,
+      85.425
+     ],
+     "mean": 85.504,
+     "sd": 0.327
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.366,
+      0.327,
+      0.322
+     ],
+     "mean": 0.338,
+     "sd": 0.024
+    },
+    "AP": {
+     "per_seed": [
+      92.951,
+      91.726,
+      92.271
+     ],
+     "mean": 92.316,
+     "sd": 0.614
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      75.229,
+      74.252,
+      74.558
+     ],
+     "mean": 74.68,
+     "sd": 0.5
+    },
+    "boot_nested_ODS_ci_seed42": [
+     84.646,
+     87.026
+    ],
+    "boot_nested_halfwidth_seed42": 1.19,
+    "boot_fixed_thr_F1_ci_seed42": [
+     84.638,
+     87.018
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.19
+   },
+   "mambavision": {
+    "heldout_F1": {
+     "per_seed": [
+      84.373,
+      84.499,
+      82.897
+     ],
+     "mean": 83.923,
+     "sd": 0.891
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      72.969,
+      73.159,
+      70.79
+     ],
+     "mean": 72.306,
+     "sd": 1.316
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.431,
+      0.373,
+      0.346
+     ],
+     "mean": 0.383,
+     "sd": 0.043
+    },
+    "ODS": {
+     "per_seed": [
+      84.452,
+      84.563,
+      82.9
+     ],
+     "mean": 83.972,
+     "sd": 0.93
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.257,
+      0.249,
+      0.32
+     ],
+     "mean": 0.275,
+     "sd": 0.039
+    },
+    "AP": {
+     "per_seed": [
+      87.561,
+      87.465,
+      86.573
+     ],
+     "mean": 87.2,
+     "sd": 0.545
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      73.088,
+      73.255,
+      70.795
+     ],
+     "mean": 72.379,
+     "sd": 1.375
+    },
+    "boot_nested_ODS_ci_seed42": [
+     83.004,
+     85.858
+    ],
+    "boot_nested_halfwidth_seed42": 1.427,
+    "boot_fixed_thr_F1_ci_seed42": [
+     82.986,
+     85.84
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.427
+   },
+   "mixercseg_faithful": {
+    "heldout_F1": {
+     "per_seed": [
+      80.975,
+      82.305,
+      81.561
+     ],
+     "mean": 81.614,
+     "sd": 0.667
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      68.032,
+      69.93,
+      68.864
+     ],
+     "mean": 68.942,
+     "sd": 0.951
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.307,
+      0.409,
+      0.327
+     ],
+     "mean": 0.348,
+     "sd": 0.054
+    },
+    "ODS": {
+     "per_seed": [
+      81.227,
+      82.313,
+      81.563
+     ],
+     "mean": 81.701,
+     "sd": 0.556
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.427,
+      0.423,
+      0.324
+     ],
+     "mean": 0.391,
+     "sd": 0.058
+    },
+    "AP": {
+     "per_seed": [
+      87.378,
+      87.947,
+      89.086
+     ],
+     "mean": 88.137,
+     "sd": 0.87
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      68.388,
+      69.942,
+      68.866
+     ],
+     "mean": 69.065,
+     "sd": 0.796
+    },
+    "boot_nested_ODS_ci_seed42": [
+     79.474,
+     82.865
+    ],
+    "boot_nested_halfwidth_seed42": 1.695,
+    "boot_fixed_thr_F1_ci_seed42": [
+     79.451,
+     82.85
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.7
+   },
+   "mixercseg_improved": {
+    "heldout_F1": {
+     "per_seed": [
+      83.546,
+      83.761,
+      83.912
+     ],
+     "mean": 83.74,
+     "sd": 0.184
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      71.742,
+      72.059,
+      72.283
+     ],
+     "mean": 72.028,
+     "sd": 0.272
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.598,
+      0.662,
+      0.648
+     ],
+     "mean": 0.636,
+     "sd": 0.034
+    },
+    "ODS": {
+     "per_seed": [
+      83.56,
+      83.893,
+      83.957
+     ],
+     "mean": 83.803,
+     "sd": 0.213
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.57,
+      0.528,
+      0.547
+     ],
+     "mean": 0.548,
+     "sd": 0.021
+    },
+    "AP": {
+     "per_seed": [
+      88.701,
+      89.255,
+      89.241
+     ],
+     "mean": 89.066,
+     "sd": 0.316
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      71.762,
+      72.255,
+      72.35
+     ],
+     "mean": 72.122,
+     "sd": 0.316
+    },
+    "boot_nested_ODS_ci_seed42": [
+     82.135,
+     84.953
+    ],
+    "boot_nested_halfwidth_seed42": 1.409,
+    "boot_fixed_thr_F1_ci_seed42": [
+     82.094,
+     84.943
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.425
+   },
+   "restormixer": {
+    "heldout_F1": {
+     "per_seed": [
+      85.478,
+      85.927,
+      85.698
+     ],
+     "mean": 85.701,
+     "sd": 0.225
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      74.639,
+      75.326,
+      74.975
+     ],
+     "mean": 74.98,
+     "sd": 0.344
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.381,
+      0.314,
+      0.333
+     ],
+     "mean": 0.343,
+     "sd": 0.035
+    },
+    "ODS": {
+     "per_seed": [
+      85.554,
+      85.935,
+      85.713
+     ],
+     "mean": 85.734,
+     "sd": 0.191
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.142,
+      0.255,
+      0.278
+     ],
+     "mean": 0.225,
+     "sd": 0.073
+    },
+    "AP": {
+     "per_seed": [
+      87.571,
+      88.864,
+      88.197
+     ],
+     "mean": 88.211,
+     "sd": 0.647
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      74.755,
+      75.338,
+      74.997
+     ],
+     "mean": 75.03,
+     "sd": 0.293
+    },
+    "boot_nested_ODS_ci_seed42": [
+     84.14,
+     86.887
+    ],
+    "boot_nested_halfwidth_seed42": 1.373,
+    "boot_fixed_thr_F1_ci_seed42": [
+     84.129,
+     86.872
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.371
+   },
+   "rindnet": {
+    "heldout_F1": {
+     "per_seed": [
+      85.251,
+      50.837,
+      78.447
+     ],
+     "mean": 71.512,
+     "sd": 18.225
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      74.294,
+      34.081,
+      64.537
+     ],
+     "mean": 57.637,
+     "sd": 20.976
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.781,
+      0.618,
+      0.521
+     ],
+     "mean": 0.64,
+     "sd": 0.131
+    },
+    "ODS": {
+     "per_seed": [
+      85.267,
+      50.837,
+      78.447
+     ],
+     "mean": 71.517,
+     "sd": 18.231
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.83,
+      0.618,
+      0.521
+     ],
+     "mean": 0.656,
+     "sd": 0.158
+    },
+    "AP": {
+     "per_seed": [
+      84.875,
+      33.551,
+      65.136
+     ],
+     "mean": 61.187,
+     "sd": 25.889
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      74.317,
+      34.081,
+      64.537
+     ],
+     "mean": 57.645,
+     "sd": 20.985
+    },
+    "boot_nested_ODS_ci_seed42": [
+     83.956,
+     86.507
+    ],
+    "boot_nested_halfwidth_seed42": 1.276,
+    "boot_fixed_thr_F1_ci_seed42": [
+     83.946,
+     86.485
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.27
+   },
+   "scsegamba": {
+    "heldout_F1": {
+     "per_seed": [
+      84.53,
+      84.803,
+      84.988
+     ],
+     "mean": 84.774,
+     "sd": 0.23
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      73.206,
+      73.616,
+      73.895
+     ],
+     "mean": 73.572,
+     "sd": 0.347
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.099,
+      0.285,
+      0.439
+     ],
+     "mean": 0.274,
+     "sd": 0.17
+    },
+    "ODS": {
+     "per_seed": [
+      84.563,
+      84.812,
+      85.009
+     ],
+     "mean": 84.795,
+     "sd": 0.224
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.036,
+      0.165,
+      0.242
+     ],
+     "mean": 0.148,
+     "sd": 0.104
+    },
+    "AP": {
+     "per_seed": [
+      84.144,
+      85.326,
+      85.658
+     ],
+     "mean": 85.043,
+     "sd": 0.796
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      73.254,
+      73.63,
+      73.927
+     ],
+     "mean": 73.604,
+     "sd": 0.337
+    },
+    "boot_nested_ODS_ci_seed42": [
+     83.191,
+     85.921
+    ],
+    "boot_nested_halfwidth_seed42": 1.365,
+    "boot_fixed_thr_F1_ci_seed42": [
+     83.162,
+     85.913
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.375
+   },
+   "segformer_mit_b5": {
+    "heldout_F1": {
+     "per_seed": [
+      86.102,
+      85.921,
+      85.905
+     ],
+     "mean": 85.976,
+     "sd": 0.109
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      75.595,
+      75.317,
+      75.292
+     ],
+     "mean": 75.401,
+     "sd": 0.168
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.353,
+      0.362,
+      0.387
+     ],
+     "mean": 0.367,
+     "sd": 0.018
+    },
+    "ODS": {
+     "per_seed": [
+      86.102,
+      85.936,
+      85.911
+     ],
+     "mean": 85.983,
+     "sd": 0.104
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.352,
+      0.395,
+      0.378
+     ],
+     "mean": 0.375,
+     "sd": 0.022
+    },
+    "AP": {
+     "per_seed": [
+      92.778,
+      92.625,
+      92.572
+     ],
+     "mean": 92.658,
+     "sd": 0.107
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      75.596,
+      75.34,
+      75.302
+     ],
+     "mean": 75.413,
+     "sd": 0.16
+    },
+    "boot_nested_ODS_ci_seed42": [
+     84.857,
+     87.303
+    ],
+    "boot_nested_halfwidth_seed42": 1.223,
+    "boot_fixed_thr_F1_ci_seed42": [
+     84.842,
+     87.292
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.225
+   },
+   "shuttlenet_v2": {
+    "heldout_F1": {
+     "per_seed": [
+      85.952,
+      86.117,
+      85.711
+     ],
+     "mean": 85.927,
+     "sd": 0.204
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      75.364,
+      75.618,
+      74.994
+     ],
+     "mean": 75.325,
+     "sd": 0.314
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.518,
+      0.592,
+      0.52
+     ],
+     "mean": 0.543,
+     "sd": 0.042
+    },
+    "ODS": {
+     "per_seed": [
+      85.995,
+      86.156,
+      85.725
+     ],
+     "mean": 85.959,
+     "sd": 0.218
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.379,
+      0.482,
+      0.408
+     ],
+     "mean": 0.423,
+     "sd": 0.053
+    },
+    "AP": {
+     "per_seed": [
+      91.132,
+      91.171,
+      90.659
+     ],
+     "mean": 90.987,
+     "sd": 0.285
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      75.43,
+      75.679,
+      75.016
+     ],
+     "mean": 75.375,
+     "sd": 0.335
+    },
+    "boot_nested_ODS_ci_seed42": [
+     84.654,
+     87.258
+    ],
+    "boot_nested_halfwidth_seed42": 1.302,
+    "boot_fixed_thr_F1_ci_seed42": [
+     84.639,
+     87.249
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.305
+   },
+   "tangoseg": {
+    "heldout_F1": {
+     "per_seed": [
+      84.595,
+      84.613,
+      84.3
+     ],
+     "mean": 84.503,
+     "sd": 0.176
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      73.303,
+      73.329,
+      72.86
+     ],
+     "mean": 73.164,
+     "sd": 0.264
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.586,
+      0.537,
+      0.547
+     ],
+     "mean": 0.557,
+     "sd": 0.026
+    },
+    "ODS": {
+     "per_seed": [
+      84.617,
+      84.614,
+      84.311
+     ],
+     "mean": 84.514,
+     "sd": 0.176
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.476,
+      0.538,
+      0.481
+     ],
+     "mean": 0.498,
+     "sd": 0.034
+    },
+    "AP": {
+     "per_seed": [
+      88.642,
+      88.358,
+      88.163
+     ],
+     "mean": 88.388,
+     "sd": 0.241
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      73.336,
+      73.331,
+      72.877
+     ],
+     "mean": 73.181,
+     "sd": 0.264
+    },
+    "boot_nested_ODS_ci_seed42": [
+     83.292,
+     85.916
+    ],
+    "boot_nested_halfwidth_seed42": 1.312,
+    "boot_fixed_thr_F1_ci_seed42": [
+     83.274,
+     85.897
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.312
+   },
+   "unet": {
+    "heldout_F1": {
+     "per_seed": [
+      85.512,
+      85.424,
+      85.303
+     ],
+     "mean": 85.413,
+     "sd": 0.105
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      74.691,
+      74.557,
+      74.372
+     ],
+     "mean": 74.54,
+     "sd": 0.16
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.374,
+      0.372,
+      0.354
+     ],
+     "mean": 0.367,
+     "sd": 0.011
+    },
+    "ODS": {
+     "per_seed": [
+      85.517,
+      85.427,
+      85.305
+     ],
+     "mean": 85.416,
+     "sd": 0.106
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.368,
+      0.369,
+      0.356
+     ],
+     "mean": 0.364,
+     "sd": 0.007
+    },
+    "AP": {
+     "per_seed": [
+      93.356,
+      93.053,
+      93.029
+     ],
+     "mean": 93.146,
+     "sd": 0.182
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      74.698,
+      74.561,
+      74.375
+     ],
+     "mean": 74.545,
+     "sd": 0.162
+    },
+    "boot_nested_ODS_ci_seed42": [
+     84.13,
+     86.829
+    ],
+    "boot_nested_halfwidth_seed42": 1.349,
+    "boot_fixed_thr_F1_ci_seed42": [
+     84.1,
+     86.816
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.358
+   }
+  },
+  "crackmap_parent": {
+   "carnet": {
+    "heldout_F1": {
+     "per_seed": [
+      74.64,
+      68.449,
+      74.659
+     ],
+     "mean": 72.583,
+     "sd": 3.58
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      59.54,
+      52.032,
+      59.565
+     ],
+     "mean": 57.046,
+     "sd": 4.342
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.818,
+      0.728,
+      0.892
+     ],
+     "mean": 0.813,
+     "sd": 0.082
+    },
+    "ODS": {
+     "per_seed": [
+      74.649,
+      68.463,
+      74.665
+     ],
+     "mean": 72.592,
+     "sd": 3.576
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.82,
+      0.723,
+      0.89
+     ],
+     "mean": 0.811,
+     "sd": 0.084
+    },
+    "AP": {
+     "per_seed": [
+      76.349,
+      62.725,
+      76.595
+     ],
+     "mean": 71.89,
+     "sd": 7.938
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      59.552,
+      52.048,
+      59.573
+     ],
+     "mean": 57.058,
+     "sd": 4.339
+    },
+    "boot_nested_ODS_ci_seed42": [
+     69.562,
+     79.213
+    ],
+    "boot_nested_halfwidth_seed42": 4.825,
+    "boot_fixed_thr_F1_ci_seed42": [
+     68.64,
+     78.958
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 5.159
+   },
+   "convnext_xlarge": {
+    "heldout_F1": {
+     "per_seed": [
+      77.015,
+      76.473,
+      76.301
+     ],
+     "mean": 76.596,
+     "sd": 0.373
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      62.622,
+      61.908,
+      61.683
+     ],
+     "mean": 62.071,
+     "sd": 0.49
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.409,
+      0.489,
+      0.386
+     ],
+     "mean": 0.428,
+     "sd": 0.054
+    },
+    "ODS": {
+     "per_seed": [
+      77.199,
+      77.079,
+      76.763
+     ],
+     "mean": 77.014,
+     "sd": 0.225
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.286,
+      0.282,
+      0.204
+     ],
+     "mean": 0.257,
+     "sd": 0.046
+    },
+    "AP": {
+     "per_seed": [
+      83.55,
+      82.668,
+      82.445
+     ],
+     "mean": 82.888,
+     "sd": 0.584
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      62.865,
+      62.706,
+      62.289
+     ],
+     "mean": 62.62,
+     "sd": 0.297
+    },
+    "boot_nested_ODS_ci_seed42": [
+     74.363,
+     80.716
+    ],
+    "boot_nested_halfwidth_seed42": 3.176,
+    "boot_fixed_thr_F1_ci_seed42": [
+     74.118,
+     80.401
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 3.142
+   },
+   "deepcrack_fast_fuse": {
+    "heldout_F1": {
+     "per_seed": [
+      70.769,
+      70.723,
+      70.365
+     ],
+     "mean": 70.619,
+     "sd": 0.221
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      54.762,
+      54.707,
+      54.279
+     ],
+     "mean": 54.583,
+     "sd": 0.264
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.45,
+      0.507,
+      0.417
+     ],
+     "mean": 0.458,
+     "sd": 0.046
+    },
+    "ODS": {
+     "per_seed": [
+      72.273,
+      72.445,
+      71.182
+     ],
+     "mean": 71.967,
+     "sd": 0.685
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.333,
+      0.373,
+      0.329
+     ],
+     "mean": 0.345,
+     "sd": 0.024
+    },
+    "AP": {
+     "per_seed": [
+      77.288,
+      77.809,
+      77.029
+     ],
+     "mean": 77.375,
+     "sd": 0.397
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      56.583,
+      56.795,
+      55.257
+     ],
+     "mean": 56.212,
+     "sd": 0.834
+    },
+    "boot_nested_ODS_ci_seed42": [
+     67.663,
+     76.48
+    ],
+    "boot_nested_halfwidth_seed42": 4.409,
+    "boot_fixed_thr_F1_ci_seed42": [
+     67.141,
+     76.001
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 4.43
+   },
+   "deeplabv3plus_r50": {
+    "heldout_F1": {
+     "per_seed": [
+      73.292,
+      74.531,
+      74.623
+     ],
+     "mean": 74.149,
+     "sd": 0.743
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      57.843,
+      59.401,
+      59.518
+     ],
+     "mean": 58.921,
+     "sd": 0.935
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.311,
+      0.267,
+      0.319
+     ],
+     "mean": 0.299,
+     "sd": 0.028
+    },
+    "ODS": {
+     "per_seed": [
+      73.655,
+      74.777,
+      74.873
+     ],
+     "mean": 74.435,
+     "sd": 0.677
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.144,
+      0.141,
+      0.193
+     ],
+     "mean": 0.159,
+     "sd": 0.029
+    },
+    "AP": {
+     "per_seed": [
+      77.8,
+      78.089,
+      79.141
+     ],
+     "mean": 78.343,
+     "sd": 0.706
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      58.297,
+      59.715,
+      59.837
+     ],
+     "mean": 59.283,
+     "sd": 0.856
+    },
+    "boot_nested_ODS_ci_seed42": [
+     70.551,
+     77.691
+    ],
+    "boot_nested_halfwidth_seed42": 3.57,
+    "boot_fixed_thr_F1_ci_seed42": [
+     70.078,
+     77.352
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 3.637
+   },
+   "dtrcnet_pubdeit": {
+    "heldout_F1": {
+     "per_seed": [
+      72.481,
+      74.814,
+      73.038
+     ],
+     "mean": 73.444,
+     "sd": 1.218
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      56.84,
+      59.762,
+      57.528
+     ],
+     "mean": 58.043,
+     "sd": 1.528
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.135,
+      0.028,
+      0.01
+     ],
+     "mean": 0.058,
+     "sd": 0.068
+    },
+    "ODS": {
+     "per_seed": [
+      72.565,
+      74.824,
+      73.065
+     ],
+     "mean": 73.485,
+     "sd": 1.187
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.063,
+      0.025,
+      0.008
+     ],
+     "mean": 0.032,
+     "sd": 0.028
+    },
+    "AP": {
+     "per_seed": [
+      65.594,
+      70.454,
+      66.279
+     ],
+     "mean": 67.442,
+     "sd": 2.631
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      56.943,
+      59.775,
+      57.561
+     ],
+     "mean": 58.093,
+     "sd": 1.489
+    },
+    "boot_nested_ODS_ci_seed42": [
+     69.518,
+     76.188
+    ],
+    "boot_nested_halfwidth_seed42": 3.335,
+    "boot_fixed_thr_F1_ci_seed42": [
+     69.197,
+     76.092
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 3.447
+   },
+   "hrnet_w48": {
+    "heldout_F1": {
+     "per_seed": [
+      74.103,
+      74.287,
+      73.28
+     ],
+     "mean": 73.89,
+     "sd": 0.536
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      58.86,
+      59.093,
+      57.828
+     ],
+     "mean": 58.594,
+     "sd": 0.673
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.371,
+      0.333,
+      0.281
+     ],
+     "mean": 0.328,
+     "sd": 0.045
+    },
+    "ODS": {
+     "per_seed": [
+      74.367,
+      74.43,
+      73.446
+     ],
+     "mean": 74.081,
+     "sd": 0.551
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.225,
+      0.213,
+      0.175
+     ],
+     "mean": 0.204,
+     "sd": 0.026
+    },
+    "AP": {
+     "per_seed": [
+      78.033,
+      78.594,
+      76.785
+     ],
+     "mean": 77.804,
+     "sd": 0.926
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      59.194,
+      59.273,
+      58.035
+     ],
+     "mean": 58.834,
+     "sd": 0.693
+    },
+    "boot_nested_ODS_ci_seed42": [
+     71.91,
+     77.526
+    ],
+    "boot_nested_halfwidth_seed42": 2.808,
+    "boot_fixed_thr_F1_ci_seed42": [
+     71.47,
+     77.323
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.926
+   },
+   "mambavision": {
+    "heldout_F1": {
+     "per_seed": [
+      73.122,
+      70.701,
+      72.613
+     ],
+     "mean": 72.145,
+     "sd": 1.276
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      57.631,
+      54.68,
+      57.001
+     ],
+     "mean": 56.437,
+     "sd": 1.554
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.195,
+      0.613,
+      0.563
+     ],
+     "mean": 0.457,
+     "sd": 0.228
+    },
+    "ODS": {
+     "per_seed": [
+      73.166,
+      72.369,
+      73.525
+     ],
+     "mean": 73.02,
+     "sd": 0.592
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.138,
+      0.053,
+      0.115
+     ],
+     "mean": 0.102,
+     "sd": 0.044
+    },
+    "AP": {
+     "per_seed": [
+      77.42,
+      75.019,
+      75.983
+     ],
+     "mean": 76.141,
+     "sd": 1.208
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      57.686,
+      56.701,
+      58.134
+     ],
+     "mean": 57.507,
+     "sd": 0.733
+    },
+    "boot_nested_ODS_ci_seed42": [
+     70.668,
+     76.692
+    ],
+    "boot_nested_halfwidth_seed42": 3.012,
+    "boot_fixed_thr_F1_ci_seed42": [
+     70.282,
+     76.385
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 3.052
+   },
+   "mixercseg_faithful": {
+    "heldout_F1": {
+     "per_seed": [
+      70.366,
+      72.612,
+      70.428
+     ],
+     "mean": 71.135,
+     "sd": 1.279
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      54.28,
+      57.0,
+      54.355
+     ],
+     "mean": 55.212,
+     "sd": 1.549
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.454,
+      0.259,
+      0.313
+     ],
+     "mean": 0.342,
+     "sd": 0.101
+    },
+    "ODS": {
+     "per_seed": [
+      71.692,
+      72.732,
+      72.164
+     ],
+     "mean": 72.196,
+     "sd": 0.521
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.419,
+      0.258,
+      0.229
+     ],
+     "mean": 0.302,
+     "sd": 0.102
+    },
+    "AP": {
+     "per_seed": [
+      68.423,
+      64.868,
+      77.476
+     ],
+     "mean": 70.256,
+     "sd": 6.501
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      55.875,
+      57.149,
+      56.451
+     ],
+     "mean": 56.492,
+     "sd": 0.638
+    },
+    "boot_nested_ODS_ci_seed42": [
+     64.46,
+     77.55
+    ],
+    "boot_nested_halfwidth_seed42": 6.545,
+    "boot_fixed_thr_F1_ci_seed42": [
+     64.123,
+     77.238
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 6.557
+   },
+   "mixercseg_improved": {
+    "heldout_F1": {
+     "per_seed": [
+      72.254,
+      71.668,
+      71.355
+     ],
+     "mean": 71.759,
+     "sd": 0.456
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      56.561,
+      55.846,
+      55.467
+     ],
+     "mean": 55.958,
+     "sd": 0.556
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.528,
+      0.792,
+      0.62
+     ],
+     "mean": 0.647,
+     "sd": 0.134
+    },
+    "ODS": {
+     "per_seed": [
+      72.296,
+      72.602,
+      71.412
+     ],
+     "mean": 72.103,
+     "sd": 0.618
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.481,
+      0.598,
+      0.563
+     ],
+     "mean": 0.547,
+     "sd": 0.06
+    },
+    "AP": {
+     "per_seed": [
+      74.077,
+      75.713,
+      73.474
+     ],
+     "mean": 74.421,
+     "sd": 1.159
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      56.612,
+      56.989,
+      55.535
+     ],
+     "mean": 56.379,
+     "sd": 0.755
+    },
+    "boot_nested_ODS_ci_seed42": [
+     69.348,
+     75.861
+    ],
+    "boot_nested_halfwidth_seed42": 3.257,
+    "boot_fixed_thr_F1_ci_seed42": [
+     68.711,
+     75.443
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 3.366
+   },
+   "restormixer": {
+    "heldout_F1": {
+     "per_seed": [
+      74.615,
+      73.872,
+      73.796
+     ],
+     "mean": 74.094,
+     "sd": 0.453
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      59.509,
+      58.569,
+      58.473
+     ],
+     "mean": 58.85,
+     "sd": 0.572
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.435,
+      0.863,
+      0.634
+     ],
+     "mean": 0.644,
+     "sd": 0.214
+    },
+    "ODS": {
+     "per_seed": [
+      74.758,
+      74.894,
+      74.087
+     ],
+     "mean": 74.58,
+     "sd": 0.432
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.161,
+      0.286,
+      0.185
+     ],
+     "mean": 0.211,
+     "sd": 0.066
+    },
+    "AP": {
+     "per_seed": [
+      76.602,
+      76.409,
+      76.187
+     ],
+     "mean": 76.399,
+     "sd": 0.208
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      59.691,
+      59.865,
+      58.84
+     ],
+     "mean": 59.465,
+     "sd": 0.548
+    },
+    "boot_nested_ODS_ci_seed42": [
+     71.91,
+     77.898
+    ],
+    "boot_nested_halfwidth_seed42": 2.994,
+    "boot_fixed_thr_F1_ci_seed42": [
+     71.156,
+     77.477
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 3.16
+   },
+   "rindnet": {
+    "heldout_F1": {
+     "per_seed": [
+      72.881,
+      15.983,
+      19.832
+     ],
+     "mean": 36.232,
+     "sd": 31.797
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      57.333,
+      8.686,
+      11.008
+     ],
+     "mean": 25.676,
+     "sd": 27.441
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.543,
+      0.142,
+      0.611
+     ],
+     "mean": 0.432,
+     "sd": 0.253
+    },
+    "ODS": {
+     "per_seed": [
+      73.28,
+      15.984,
+      19.833
+     ],
+     "mean": 36.366,
+     "sd": 32.027
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.48,
+      0.14,
+      0.612
+     ],
+     "mean": 0.411,
+     "sd": 0.244
+    },
+    "AP": {
+     "per_seed": [
+      62.87,
+      8.501,
+      10.829
+     ],
+     "mean": 27.4,
+     "sd": 30.74
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      57.828,
+      8.686,
+      11.008
+     ],
+     "mean": 25.841,
+     "sd": 27.726
+    },
+    "boot_nested_ODS_ci_seed42": [
+     69.269,
+     77.305
+    ],
+    "boot_nested_halfwidth_seed42": 4.018,
+    "boot_fixed_thr_F1_ci_seed42": [
+     69.243,
+     77.28
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 4.019
+   },
+   "scsegamba": {
+    "heldout_F1": {
+     "per_seed": [
+      58.598,
+      65.026,
+      69.806
+     ],
+     "mean": 64.477,
+     "sd": 5.624
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      41.441,
+      48.177,
+      53.617
+     ],
+     "mean": 47.745,
+     "sd": 6.099
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.003,
+      0.042,
+      0.009
+     ],
+     "mean": 0.018,
+     "sd": 0.021
+    },
+    "ODS": {
+     "per_seed": [
+      59.213,
+      65.616,
+      69.89
+     ],
+     "mean": 64.906,
+     "sd": 5.374
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.002,
+      0.017,
+      0.006
+     ],
+     "mean": 0.008,
+     "sd": 0.008
+    },
+    "AP": {
+     "per_seed": [
+      48.463,
+      59.961,
+      66.289
+     ],
+     "mean": 58.238,
+     "sd": 9.037
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      42.058,
+      48.827,
+      53.716
+     ],
+     "mean": 48.2,
+     "sd": 5.854
+    },
+    "boot_nested_ODS_ci_seed42": [
+     55.042,
+     64.843
+    ],
+    "boot_nested_halfwidth_seed42": 4.901,
+    "boot_fixed_thr_F1_ci_seed42": [
+     55.032,
+     64.784
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 4.876
+   },
+   "segformer_mit_b5": {
+    "heldout_F1": {
+     "per_seed": [
+      74.773,
+      72.578,
+      73.218
+     ],
+     "mean": 73.523,
+     "sd": 1.129
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      59.71,
+      56.959,
+      57.751
+     ],
+     "mean": 58.14,
+     "sd": 1.416
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.5,
+      0.551,
+      0.465
+     ],
+     "mean": 0.505,
+     "sd": 0.043
+    },
+    "ODS": {
+     "per_seed": [
+      75.493,
+      73.711,
+      73.873
+     ],
+     "mean": 74.359,
+     "sd": 0.985
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.296,
+      0.262,
+      0.263
+     ],
+     "mean": 0.274,
+     "sd": 0.019
+    },
+    "AP": {
+     "per_seed": [
+      79.005,
+      76.578,
+      77.616
+     ],
+     "mean": 77.733,
+     "sd": 1.218
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      60.634,
+      58.367,
+      58.57
+     ],
+     "mean": 59.19,
+     "sd": 1.254
+    },
+    "boot_nested_ODS_ci_seed42": [
+     72.292,
+     79.389
+    ],
+    "boot_nested_halfwidth_seed42": 3.548,
+    "boot_fixed_thr_F1_ci_seed42": [
+     71.441,
+     79.221
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 3.89
+   },
+   "shuttlenet_v2": {
+    "heldout_F1": {
+     "per_seed": [
+      75.203,
+      74.514,
+      76.128
+     ],
+     "mean": 75.282,
+     "sd": 0.81
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      60.26,
+      59.38,
+      61.457
+     ],
+     "mean": 60.366,
+     "sd": 1.043
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.507,
+      0.66,
+      0.658
+     ],
+     "mean": 0.608,
+     "sd": 0.088
+    },
+    "ODS": {
+     "per_seed": [
+      75.212,
+      74.653,
+      76.341
+     ],
+     "mean": 75.402,
+     "sd": 0.86
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.468,
+      0.325,
+      0.219
+     ],
+     "mean": 0.337,
+     "sd": 0.125
+    },
+    "AP": {
+     "per_seed": [
+      77.009,
+      75.421,
+      78.344
+     ],
+     "mean": 76.925,
+     "sd": 1.463
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      60.272,
+      59.557,
+      61.736
+     ],
+     "mean": 60.522,
+     "sd": 1.111
+    },
+    "boot_nested_ODS_ci_seed42": [
+     72.317,
+     78.332
+    ],
+    "boot_nested_halfwidth_seed42": 3.008,
+    "boot_fixed_thr_F1_ci_seed42": [
+     71.97,
+     77.985
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 3.008
+   },
+   "tangoseg": {
+    "heldout_F1": {
+     "per_seed": [
+      71.738,
+      71.824,
+      72.255
+     ],
+     "mean": 71.939,
+     "sd": 0.277
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      55.931,
+      56.036,
+      56.561
+     ],
+     "mean": 56.176,
+     "sd": 0.338
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.19,
+      0.165,
+      0.168
+     ],
+     "mean": 0.174,
+     "sd": 0.014
+    },
+    "ODS": {
+     "per_seed": [
+      71.969,
+      72.191,
+      72.465
+     ],
+     "mean": 72.208,
+     "sd": 0.248
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.05,
+      0.048,
+      0.067
+     ],
+     "mean": 0.055,
+     "sd": 0.01
+    },
+    "AP": {
+     "per_seed": [
+      72.416,
+      72.248,
+      72.867
+     ],
+     "mean": 72.51,
+     "sd": 0.32
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      56.213,
+      56.484,
+      56.819
+     ],
+     "mean": 56.505,
+     "sd": 0.304
+    },
+    "boot_nested_ODS_ci_seed42": [
+     69.263,
+     75.497
+    ],
+    "boot_nested_halfwidth_seed42": 3.117,
+    "boot_fixed_thr_F1_ci_seed42": [
+     68.443,
+     74.901
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 3.229
+   },
+   "unet": {
+    "heldout_F1": {
+     "per_seed": [
+      74.474,
+      76.374,
+      75.542
+     ],
+     "mean": 75.463,
+     "sd": 0.952
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      59.329,
+      61.778,
+      60.697
+     ],
+     "mean": 60.601,
+     "sd": 1.227
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.482,
+      0.445,
+      0.427
+     ],
+     "mean": 0.451,
+     "sd": 0.028
+    },
+    "ODS": {
+     "per_seed": [
+      75.717,
+      76.685,
+      75.879
+     ],
+     "mean": 76.094,
+     "sd": 0.518
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.311,
+      0.375,
+      0.348
+     ],
+     "mean": 0.345,
+     "sd": 0.032
+    },
+    "AP": {
+     "per_seed": [
+      82.792,
+      83.592,
+      82.361
+     ],
+     "mean": 82.915,
+     "sd": 0.625
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      60.924,
+      62.186,
+      61.133
+     ],
+     "mean": 61.414,
+     "sd": 0.676
+    },
+    "boot_nested_ODS_ci_seed42": [
+     71.992,
+     80.145
+    ],
+    "boot_nested_halfwidth_seed42": 4.076,
+    "boot_fixed_thr_F1_ci_seed42": [
+     70.451,
+     79.72
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 4.635
+   }
+  },
+  "crackmap": {
+   "carnet": {
+    "heldout_F1": {
+     "per_seed": [
+      76.093,
+      69.291,
+      76.16
+     ],
+     "mean": 73.848,
+     "sd": 3.947
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      61.412,
+      53.012,
+      61.499
+     ],
+     "mean": 58.641,
+     "sd": 4.875
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.811,
+      0.692,
+      0.891
+     ],
+     "mean": 0.798,
+     "sd": 0.1
+    },
+    "ODS": {
+     "per_seed": [
+      76.113,
+      69.615,
+      76.337
+     ],
+     "mean": 74.022,
+     "sd": 3.818
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.818,
+      0.732,
+      0.918
+     ],
+     "mean": 0.823,
+     "sd": 0.093
+    },
+    "AP": {
+     "per_seed": [
+      79.581,
+      63.555,
+      80.008
+     ],
+     "mean": 74.381,
+     "sd": 9.378
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      61.438,
+      53.392,
+      61.73
+     ],
+     "mean": 58.853,
+     "sd": 4.732
+    },
+    "boot_nested_ODS_ci_seed42": [
+     73.05,
+     78.38
+    ],
+    "boot_nested_halfwidth_seed42": 2.665,
+    "boot_fixed_thr_F1_ci_seed42": [
+     72.933,
+     78.341
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.704
+   },
+   "convnext_xlarge": {
+    "heldout_F1": {
+     "per_seed": [
+      79.422,
+      79.496,
+      79.53
+     ],
+     "mean": 79.483,
+     "sd": 0.055
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      65.868,
+      65.97,
+      66.016
+     ],
+     "mean": 65.951,
+     "sd": 0.076
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.239,
+      0.193,
+      0.259
+     ],
+     "mean": 0.23,
+     "sd": 0.034
+    },
+    "ODS": {
+     "per_seed": [
+      79.494,
+      79.839,
+      79.584
+     ],
+     "mean": 79.639,
+     "sd": 0.179
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.305,
+      0.33,
+      0.292
+     ],
+     "mean": 0.309,
+     "sd": 0.019
+    },
+    "AP": {
+     "per_seed": [
+      86.036,
+      85.939,
+      85.534
+     ],
+     "mean": 85.836,
+     "sd": 0.266
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      65.967,
+      66.443,
+      66.091
+     ],
+     "mean": 66.167,
+     "sd": 0.247
+    },
+    "boot_nested_ODS_ci_seed42": [
+     76.783,
+     81.646
+    ],
+    "boot_nested_halfwidth_seed42": 2.431,
+    "boot_fixed_thr_F1_ci_seed42": [
+     76.737,
+     81.6
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.431
+   },
+   "deepcrack_fast_fuse": {
+    "heldout_F1": {
+     "per_seed": [
+      71.081,
+      71.527,
+      71.769
+     ],
+     "mean": 71.459,
+     "sd": 0.349
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      55.136,
+      55.675,
+      55.968
+     ],
+     "mean": 55.593,
+     "sd": 0.422
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.362,
+      0.355,
+      0.305
+     ],
+     "mean": 0.341,
+     "sd": 0.031
+    },
+    "ODS": {
+     "per_seed": [
+      71.253,
+      72.258,
+      72.116
+     ],
+     "mean": 71.876,
+     "sd": 0.544
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.398,
+      0.445,
+      0.348
+     ],
+     "mean": 0.397,
+     "sd": 0.049
+    },
+    "AP": {
+     "per_seed": [
+      75.753,
+      76.814,
+      77.447
+     ],
+     "mean": 76.671,
+     "sd": 0.856
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      55.343,
+      56.566,
+      56.391
+     ],
+     "mean": 56.1,
+     "sd": 0.661
+    },
+    "boot_nested_ODS_ci_seed42": [
+     68.838,
+     73.305
+    ],
+    "boot_nested_halfwidth_seed42": 2.234,
+    "boot_fixed_thr_F1_ci_seed42": [
+     68.605,
+     73.232
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.313
+   },
+   "deeplabv3plus_r50": {
+    "heldout_F1": {
+     "per_seed": [
+      76.725,
+      77.11,
+      77.001
+     ],
+     "mean": 76.945,
+     "sd": 0.198
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      62.238,
+      62.747,
+      62.603
+     ],
+     "mean": 62.529,
+     "sd": 0.262
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.135,
+      0.117,
+      0.13
+     ],
+     "mean": 0.127,
+     "sd": 0.009
+    },
+    "ODS": {
+     "per_seed": [
+      76.791,
+      77.482,
+      77.335
+     ],
+     "mean": 77.203,
+     "sd": 0.364
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.168,
+      0.257,
+      0.257
+     ],
+     "mean": 0.227,
+     "sd": 0.051
+    },
+    "AP": {
+     "per_seed": [
+      81.968,
+      83.387,
+      83.298
+     ],
+     "mean": 82.884,
+     "sd": 0.795
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      62.325,
+      63.241,
+      63.045
+     ],
+     "mean": 62.87,
+     "sd": 0.482
+    },
+    "boot_nested_ODS_ci_seed42": [
+     74.646,
+     78.763
+    ],
+    "boot_nested_halfwidth_seed42": 2.059,
+    "boot_fixed_thr_F1_ci_seed42": [
+     74.554,
+     78.707
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.076
+   },
+   "dtrcnet_pubdeit": {
+    "heldout_F1": {
+     "per_seed": [
+      75.06,
+      74.744,
+      74.705
+     ],
+     "mean": 74.836,
+     "sd": 0.195
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      60.077,
+      59.673,
+      59.623
+     ],
+     "mean": 59.791,
+     "sd": 0.249
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.214,
+      0.011,
+      0.092
+     ],
+     "mean": 0.106,
+     "sd": 0.102
+    },
+    "ODS": {
+     "per_seed": [
+      75.113,
+      75.089,
+      74.713
+     ],
+     "mean": 74.972,
+     "sd": 0.224
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.092,
+      0.158,
+      0.073
+     ],
+     "mean": 0.108,
+     "sd": 0.045
+    },
+    "AP": {
+     "per_seed": [
+      69.86,
+      70.247,
+      69.695
+     ],
+     "mean": 69.934,
+     "sd": 0.283
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      60.144,
+      60.114,
+      59.634
+     ],
+     "mean": 59.964,
+     "sd": 0.286
+    },
+    "boot_nested_ODS_ci_seed42": [
+     72.496,
+     77.03
+    ],
+    "boot_nested_halfwidth_seed42": 2.267,
+    "boot_fixed_thr_F1_ci_seed42": [
+     72.399,
+     76.995
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.298
+   },
+   "hrnet_w48": {
+    "heldout_F1": {
+     "per_seed": [
+      77.262,
+      76.908,
+      78.029
+     ],
+     "mean": 77.4,
+     "sd": 0.573
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      62.948,
+      62.48,
+      63.973
+     ],
+     "mean": 63.134,
+     "sd": 0.764
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.11,
+      0.183,
+      0.217
+     ],
+     "mean": 0.17,
+     "sd": 0.055
+    },
+    "ODS": {
+     "per_seed": [
+      77.856,
+      77.027,
+      78.096
+     ],
+     "mean": 77.66,
+     "sd": 0.561
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.258,
+      0.256,
+      0.279
+     ],
+     "mean": 0.264,
+     "sd": 0.013
+    },
+    "AP": {
+     "per_seed": [
+      83.409,
+      82.912,
+      83.607
+     ],
+     "mean": 83.309,
+     "sd": 0.358
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      63.742,
+      62.637,
+      64.063
+     ],
+     "mean": 63.481,
+     "sd": 0.748
+    },
+    "boot_nested_ODS_ci_seed42": [
+     76.072,
+     79.439
+    ],
+    "boot_nested_halfwidth_seed42": 1.683,
+    "boot_fixed_thr_F1_ci_seed42": [
+     76.041,
+     79.425
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 1.692
+   },
+   "mambavision": {
+    "heldout_F1": {
+     "per_seed": [
+      74.247,
+      73.739,
+      74.719
+     ],
+     "mean": 74.235,
+     "sd": 0.49
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      59.042,
+      58.402,
+      59.641
+     ],
+     "mean": 59.028,
+     "sd": 0.62
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.087,
+      0.075,
+      0.09
+     ],
+     "mean": 0.084,
+     "sd": 0.008
+    },
+    "ODS": {
+     "per_seed": [
+      74.44,
+      73.744,
+      74.88
+     ],
+     "mean": 74.355,
+     "sd": 0.573
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.213,
+      0.077,
+      0.27
+     ],
+     "mean": 0.187,
+     "sd": 0.099
+    },
+    "AP": {
+     "per_seed": [
+      77.026,
+      75.798,
+      77.763
+     ],
+     "mean": 76.862,
+     "sd": 0.993
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      59.286,
+      58.408,
+      59.846
+     ],
+     "mean": 59.18,
+     "sd": 0.725
+    },
+    "boot_nested_ODS_ci_seed42": [
+     71.437,
+     77.271
+    ],
+    "boot_nested_halfwidth_seed42": 2.917,
+    "boot_fixed_thr_F1_ci_seed42": [
+     71.274,
+     77.153
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.94
+   },
+   "mixercseg_faithful": {
+    "heldout_F1": {
+     "per_seed": [
+      70.405,
+      71.323,
+      71.436
+     ],
+     "mean": 71.055,
+     "sd": 0.565
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      54.327,
+      55.428,
+      55.565
+     ],
+     "mean": 55.107,
+     "sd": 0.679
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.404,
+      0.256,
+      0.253
+     ],
+     "mean": 0.304,
+     "sd": 0.086
+    },
+    "ODS": {
+     "per_seed": [
+      70.692,
+      71.57,
+      72.135
+     ],
+     "mean": 71.466,
+     "sd": 0.727
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.418,
+      0.258,
+      0.349
+     ],
+     "mean": 0.342,
+     "sd": 0.08
+    },
+    "AP": {
+     "per_seed": [
+      66.078,
+      63.184,
+      76.664
+     ],
+     "mean": 68.642,
+     "sd": 7.096
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      54.669,
+      55.726,
+      56.415
+     ],
+     "mean": 55.603,
+     "sd": 0.879
+    },
+    "boot_nested_ODS_ci_seed42": [
+     67.416,
+     73.712
+    ],
+    "boot_nested_halfwidth_seed42": 3.148,
+    "boot_fixed_thr_F1_ci_seed42": [
+     67.273,
+     73.679
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 3.203
+   },
+   "mixercseg_improved": {
+    "heldout_F1": {
+     "per_seed": [
+      72.181,
+      73.673,
+      73.564
+     ],
+     "mean": 73.139,
+     "sd": 0.832
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      56.472,
+      58.32,
+      58.183
+     ],
+     "mean": 57.658,
+     "sd": 1.03
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.535,
+      0.637,
+      0.582
+     ],
+     "mean": 0.585,
+     "sd": 0.051
+    },
+    "ODS": {
+     "per_seed": [
+      72.2,
+      73.7,
+      73.568
+     ],
+     "mean": 73.156,
+     "sd": 0.831
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.508,
+      0.676,
+      0.585
+     ],
+     "mean": 0.59,
+     "sd": 0.084
+    },
+    "AP": {
+     "per_seed": [
+      74.513,
+      78.124,
+      76.441
+     ],
+     "mean": 76.359,
+     "sd": 1.807
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      56.494,
+      58.354,
+      58.188
+     ],
+     "mean": 57.679,
+     "sd": 1.029
+    },
+    "boot_nested_ODS_ci_seed42": [
+     68.788,
+     75.881
+    ],
+    "boot_nested_halfwidth_seed42": 3.547,
+    "boot_fixed_thr_F1_ci_seed42": [
+     68.704,
+     75.739
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 3.518
+   },
+   "restormixer": {
+    "heldout_F1": {
+     "per_seed": [
+      73.722,
+      73.773,
+      71.195
+     ],
+     "mean": 72.897,
+     "sd": 1.474
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      58.381,
+      58.445,
+      55.273
+     ],
+     "mean": 57.366,
+     "sd": 1.813
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.639,
+      0.204,
+      0.534
+     ],
+     "mean": 0.459,
+     "sd": 0.227
+    },
+    "ODS": {
+     "per_seed": [
+      73.879,
+      73.84,
+      71.2
+     ],
+     "mean": 72.973,
+     "sd": 1.536
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.434,
+      0.266,
+      0.552
+     ],
+     "mean": 0.417,
+     "sd": 0.144
+    },
+    "AP": {
+     "per_seed": [
+      76.029,
+      76.671,
+      72.756
+     ],
+     "mean": 75.152,
+     "sd": 2.1
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      58.578,
+      58.529,
+      55.28
+     ],
+     "mean": 57.462,
+     "sd": 1.89
+    },
+    "boot_nested_ODS_ci_seed42": [
+     70.648,
+     77.322
+    ],
+    "boot_nested_halfwidth_seed42": 3.337,
+    "boot_fixed_thr_F1_ci_seed42": [
+     70.436,
+     77.206
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 3.385
+   },
+   "rindnet": {
+    "heldout_F1": {
+     "per_seed": [
+      77.11,
+      22.609,
+      19.693
+     ],
+     "mean": 39.804,
+     "sd": 32.341
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      62.747,
+      12.745,
+      10.922
+     ],
+     "mean": 28.805,
+     "sd": 29.409
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.479,
+      0.237,
+      0.612
+     ],
+     "mean": 0.443,
+     "sd": 0.19
+    },
+    "ODS": {
+     "per_seed": [
+      77.118,
+      22.621,
+      19.693
+     ],
+     "mean": 39.811,
+     "sd": 32.342
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.483,
+      0.346,
+      0.612
+     ],
+     "mean": 0.48,
+     "sd": 0.133
+    },
+    "AP": {
+     "per_seed": [
+      69.721,
+      12.58,
+      10.774
+     ],
+     "mean": 31.025,
+     "sd": 33.524
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      62.757,
+      12.753,
+      10.922
+     ],
+     "mean": 28.811,
+     "sd": 29.413
+    },
+    "boot_nested_ODS_ci_seed42": [
+     74.477,
+     78.963
+    ],
+    "boot_nested_halfwidth_seed42": 2.243,
+    "boot_fixed_thr_F1_ci_seed42": [
+     74.446,
+     78.942
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.248
+   },
+   "scsegamba": {
+    "heldout_F1": {
+     "per_seed": [
+      71.158,
+      73.854,
+      71.89
+     ],
+     "mean": 72.301,
+     "sd": 1.394
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      55.229,
+      58.546,
+      56.116
+     ],
+     "mean": 56.63,
+     "sd": 1.717
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.017,
+      0.01,
+      0.002
+     ],
+     "mean": 0.01,
+     "sd": 0.008
+    },
+    "ODS": {
+     "per_seed": [
+      71.221,
+      73.958,
+      71.89
+     ],
+     "mean": 72.356,
+     "sd": 1.427
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.04,
+      0.021,
+      0.002
+     ],
+     "mean": 0.021,
+     "sd": 0.019
+    },
+    "AP": {
+     "per_seed": [
+      68.149,
+      72.617,
+      66.301
+     ],
+     "mean": 69.022,
+     "sd": 3.247
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      55.305,
+      58.677,
+      56.116
+     ],
+     "mean": 56.699,
+     "sd": 1.76
+    },
+    "boot_nested_ODS_ci_seed42": [
+     67.213,
+     75.639
+    ],
+    "boot_nested_halfwidth_seed42": 4.213,
+    "boot_fixed_thr_F1_ci_seed42": [
+     67.0,
+     75.45
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 4.225
+   },
+   "segformer_mit_b5": {
+    "heldout_F1": {
+     "per_seed": [
+      78.846,
+      78.629,
+      78.869
+     ],
+     "mean": 78.781,
+     "sd": 0.132
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      65.08,
+      64.784,
+      65.111
+     ],
+     "mean": 64.992,
+     "sd": 0.181
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.397,
+      0.274,
+      0.351
+     ],
+     "mean": 0.341,
+     "sd": 0.062
+    },
+    "ODS": {
+     "per_seed": [
+      78.859,
+      78.757,
+      78.886
+     ],
+     "mean": 78.834,
+     "sd": 0.068
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.407,
+      0.334,
+      0.378
+     ],
+     "mean": 0.373,
+     "sd": 0.037
+    },
+    "AP": {
+     "per_seed": [
+      84.405,
+      83.782,
+      84.704
+     ],
+     "mean": 84.297,
+     "sd": 0.47
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      65.097,
+      64.957,
+      65.134
+     ],
+     "mean": 65.063,
+     "sd": 0.093
+    },
+    "boot_nested_ODS_ci_seed42": [
+     76.549,
+     80.82
+    ],
+    "boot_nested_halfwidth_seed42": 2.135,
+    "boot_fixed_thr_F1_ci_seed42": [
+     76.497,
+     80.781
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.142
+   },
+   "shuttlenet_v2": {
+    "heldout_F1": {
+     "per_seed": [
+      76.443,
+      77.548,
+      76.486
+     ],
+     "mean": 76.826,
+     "sd": 0.626
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      61.869,
+      63.329,
+      61.925
+     ],
+     "mean": 62.374,
+     "sd": 0.827
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.402,
+      0.263,
+      0.26
+     ],
+     "mean": 0.308,
+     "sd": 0.081
+    },
+    "ODS": {
+     "per_seed": [
+      76.459,
+      77.659,
+      76.553
+     ],
+     "mean": 76.89,
+     "sd": 0.667
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.428,
+      0.463,
+      0.491
+     ],
+     "mean": 0.461,
+     "sd": 0.032
+    },
+    "AP": {
+     "per_seed": [
+      77.601,
+      80.639,
+      78.852
+     ],
+     "mean": 79.031,
+     "sd": 1.527
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      61.89,
+      63.478,
+      62.013
+     ],
+     "mean": 62.46,
+     "sd": 0.883
+    },
+    "boot_nested_ODS_ci_seed42": [
+     73.745,
+     79.102
+    ],
+    "boot_nested_halfwidth_seed42": 2.678,
+    "boot_fixed_thr_F1_ci_seed42": [
+     73.627,
+     79.067
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.72
+   },
+   "tangoseg": {
+    "heldout_F1": {
+     "per_seed": [
+      71.773,
+      71.034,
+      71.887
+     ],
+     "mean": 71.565,
+     "sd": 0.463
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      55.973,
+      55.079,
+      56.113
+     ],
+     "mean": 55.722,
+     "sd": 0.561
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.046,
+      0.014,
+      0.028
+     ],
+     "mean": 0.029,
+     "sd": 0.016
+    },
+    "ODS": {
+     "per_seed": [
+      71.799,
+      71.18,
+      72.255
+     ],
+     "mean": 71.745,
+     "sd": 0.54
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.064,
+      0.027,
+      0.176
+     ],
+     "mean": 0.089,
+     "sd": 0.078
+    },
+    "AP": {
+     "per_seed": [
+      72.341,
+      71.357,
+      72.833
+     ],
+     "mean": 72.177,
+     "sd": 0.752
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      56.005,
+      55.256,
+      56.562
+     ],
+     "mean": 55.941,
+     "sd": 0.655
+    },
+    "boot_nested_ODS_ci_seed42": [
+     69.511,
+     74.482
+    ],
+    "boot_nested_halfwidth_seed42": 2.486,
+    "boot_fixed_thr_F1_ci_seed42": [
+     69.421,
+     74.37
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.474
+   },
+   "unet": {
+    "heldout_F1": {
+     "per_seed": [
+      76.795,
+      76.208,
+      77.387
+     ],
+     "mean": 76.797,
+     "sd": 0.59
+    },
+    "heldout_IoU": {
+     "per_seed": [
+      62.331,
+      61.562,
+      63.115
+     ],
+     "mean": 62.336,
+     "sd": 0.777
+    },
+    "heldout_thr": {
+     "per_seed": [
+      0.355,
+      0.258,
+      0.321
+     ],
+     "mean": 0.311,
+     "sd": 0.049
+    },
+    "ODS": {
+     "per_seed": [
+      76.841,
+      76.825,
+      77.614
+     ],
+     "mean": 77.093,
+     "sd": 0.451
+    },
+    "ODS_thr": {
+     "per_seed": [
+      0.38,
+      0.353,
+      0.372
+     ],
+     "mean": 0.368,
+     "sd": 0.014
+    },
+    "AP": {
+     "per_seed": [
+      83.441,
+      83.437,
+      84.942
+     ],
+     "mean": 83.94,
+     "sd": 0.868
+    },
+    "IoU_at_ODS": {
+     "per_seed": [
+      62.391,
+      62.371,
+      63.417
+     ],
+     "mean": 62.726,
+     "sd": 0.598
+    },
+    "boot_nested_ODS_ci_seed42": [
+     73.665,
+     79.232
+    ],
+    "boot_nested_halfwidth_seed42": 2.783,
+    "boot_fixed_thr_F1_ci_seed42": [
+     73.547,
+     79.186
+    ],
+    "boot_fixed_thr_halfwidth_seed42": 2.82
+   }
+  }
+ },
+ "mean_heldout_F1": {
+  "carnet": {
+   "per_seed": [
+    80.073,
+    78.725,
+    80.248
+   ],
+   "mean": 79.682,
+   "sd": 0.833
+  },
+  "convnext_xlarge": {
+   "per_seed": [
+    81.763,
+    81.62,
+    81.529
+   ],
+   "mean": 81.637,
+   "sd": 0.118
+  },
+  "deepcrack_fast_fuse": {
+   "per_seed": [
+    77.939,
+    77.944,
+    77.815
+   ],
+   "mean": 77.899,
+   "sd": 0.073
+  },
+  "deeplabv3plus_r50": {
+   "per_seed": [
+    79.924,
+    80.185,
+    80.418
+   ],
+   "mean": 80.176,
+   "sd": 0.247
+  },
+  "dtrcnet_pubdeit": {
+   "per_seed": [
+    79.627,
+    79.897,
+    79.833
+   ],
+   "mean": 79.786,
+   "sd": 0.141
+  },
+  "hrnet_w48": {
+   "per_seed": [
+    80.321,
+    80.015,
+    80.065
+   ],
+   "mean": 80.134,
+   "sd": 0.164
+  },
+  "mambavision": {
+   "per_seed": [
+    77.319,
+    78.283,
+    76.806
+   ],
+   "mean": 77.469,
+   "sd": 0.75
+  },
+  "mixercseg_faithful": {
+   "per_seed": [
+    77.71,
+    78.569,
+    77.886
+   ],
+   "mean": 78.055,
+   "sd": 0.454
+  },
+  "mixercseg_improved": {
+   "per_seed": [
+    78.749,
+    78.465,
+    78.581
+   ],
+   "mean": 78.598,
+   "sd": 0.143
+  },
+  "restormixer": {
+   "per_seed": [
+    79.717,
+    79.551,
+    78.766
+   ],
+   "mean": 79.345,
+   "sd": 0.508
+  },
+  "rindnet": {
+   "per_seed": [
+    79.814,
+    41.924,
+    46.024
+   ],
+   "mean": 55.921,
+   "sd": 20.793
+  },
+  "scsegamba": {
+   "per_seed": [
+    74.946,
+    77.197,
+    78.394
+   ],
+   "mean": 76.846,
+   "sd": 1.751
+  },
+  "segformer_mit_b5": {
+   "per_seed": [
+    81.01,
+    80.01,
+    80.247
+   ],
+   "mean": 80.422,
+   "sd": 0.523
+  },
+  "shuttlenet_v2": {
+   "per_seed": [
+    80.75,
+    80.723,
+    81.006
+   ],
+   "mean": 80.826,
+   "sd": 0.156
+  },
+  "tangoseg": {
+   "per_seed": [
+    79.54,
+    79.304,
+    79.451
+   ],
+   "mean": 79.431,
+   "sd": 0.119
+  },
+  "unet": {
+   "per_seed": [
+    80.598,
+    80.555,
+    80.71
+   ],
+   "mean": 80.621,
+   "sd": 0.08
+  }
+ },
+ "adjacent_pairs_nested_seed": 42,
+ "adjacent_pairs_nested": {
+  "deepcrack": [
+   {
+    "pair": [
+     "tangoseg",
+     "convnext_xlarge"
+    ],
+    "diff": 0.166,
+    "nested_ci": [
+     -0.454,
+     0.801
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "convnext_xlarge",
+     "segformer_mit_b5"
+    ],
+    "diff": 0.256,
+    "nested_ci": [
+     -0.887,
+     1.431
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "segformer_mit_b5",
+     "unet"
+    ],
+    "diff": 0.166,
+    "nested_ci": [
+     -1.091,
+     1.47
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "unet",
+     "restormixer"
+    ],
+    "diff": 0.537,
+    "nested_ci": [
+     -0.493,
+     1.469
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "restormixer",
+     "dtrcnet_pubdeit"
+    ],
+    "diff": 0.057,
+    "nested_ci": [
+     -0.772,
+     0.861
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "dtrcnet_pubdeit",
+     "rindnet"
+    ],
+    "diff": 0.226,
+    "nested_ci": [
+     -0.477,
+     1.067
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "rindnet",
+     "hrnet_w48"
+    ],
+    "diff": 0.044,
+    "nested_ci": [
+     -0.807,
+     0.905
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "hrnet_w48",
+     "shuttlenet_v2"
+    ],
+    "diff": 0.059,
+    "nested_ci": [
+     -0.697,
+     0.867
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "shuttlenet_v2",
+     "carnet"
+    ],
+    "diff": 0.13,
+    "nested_ci": [
+     -0.76,
+     1.191
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "carnet",
+     "deeplabv3plus_r50"
+    ],
+    "diff": 0.188,
+    "nested_ci": [
+     -1.265,
+     1.574
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "deeplabv3plus_r50",
+     "mixercseg_faithful"
+    ],
+    "diff": 0.179,
+    "nested_ci": [
+     -1.149,
+     1.552
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "mixercseg_faithful",
+     "deepcrack_fast_fuse"
+    ],
+    "diff": 0.413,
+    "nested_ci": [
+     -0.341,
+     1.147
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "deepcrack_fast_fuse",
+     "mixercseg_improved"
+    ],
+    "diff": 0.191,
+    "nested_ci": [
+     -1.861,
+     2.597
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "mixercseg_improved",
+     "mambavision"
+    ],
+    "diff": 1.606,
+    "nested_ci": [
+     -1.688,
+     5.067
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "mambavision",
+     "scsegamba"
+    ],
+    "diff": 0.991,
+    "nested_ci": [
+     -2.646,
+     4.502
+    ],
+    "separated": false
+   }
+  ],
+  "crack500": [
+   {
+    "pair": [
+     "convnext_xlarge",
+     "shuttlenet_v2"
+    ],
+    "diff": 0.646,
+    "nested_ci": [
+     0.273,
+     1.037
+    ],
+    "separated": true
+   },
+   {
+    "pair": [
+     "shuttlenet_v2",
+     "segformer_mit_b5"
+    ],
+    "diff": 0.412,
+    "nested_ci": [
+     0.017,
+     0.788
+    ],
+    "separated": true
+   },
+   {
+    "pair": [
+     "segformer_mit_b5",
+     "unet"
+    ],
+    "diff": 0.192,
+    "nested_ci": [
+     -0.31,
+     0.703
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "unet",
+     "scsegamba"
+    ],
+    "diff": 0.035,
+    "nested_ci": [
+     -0.504,
+     0.588
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "scsegamba",
+     "carnet"
+    ],
+    "diff": 0.046,
+    "nested_ci": [
+     -0.467,
+     0.556
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "carnet",
+     "deeplabv3plus_r50"
+    ],
+    "diff": 0.353,
+    "nested_ci": [
+     -0.038,
+     0.716
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "deeplabv3plus_r50",
+     "hrnet_w48"
+    ],
+    "diff": 0.004,
+    "nested_ci": [
+     -0.314,
+     0.328
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "hrnet_w48",
+     "mixercseg_improved"
+    ],
+    "diff": 0.467,
+    "nested_ci": [
+     -0.034,
+     0.981
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "mixercseg_improved",
+     "dtrcnet_pubdeit"
+    ],
+    "diff": 0.08,
+    "nested_ci": [
+     -0.568,
+     0.678
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "dtrcnet_pubdeit",
+     "mixercseg_faithful"
+    ],
+    "diff": 0.222,
+    "nested_ci": [
+     -0.346,
+     0.816
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "mixercseg_faithful",
+     "rindnet"
+    ],
+    "diff": 0.052,
+    "nested_ci": [
+     -0.57,
+     0.739
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "rindnet",
+     "tangoseg"
+    ],
+    "diff": 0.006,
+    "nested_ci": [
+     -0.746,
+     0.676
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "tangoseg",
+     "deepcrack_fast_fuse"
+    ],
+    "diff": 1.749,
+    "nested_ci": [
+     1.187,
+     2.321
+    ],
+    "separated": true
+   },
+   {
+    "pair": [
+     "deepcrack_fast_fuse",
+     "restormixer"
+    ],
+    "diff": 0.349,
+    "nested_ci": [
+     -3.194,
+     5.694
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "restormixer",
+     "mambavision"
+    ],
+    "diff": 5.544,
+    "nested_ci": [
+     2.859,
+     8.356
+    ],
+    "separated": true
+   }
+  ],
+  "crack500_mother": [
+   {
+    "pair": [
+     "convnext_xlarge",
+     "segformer_mit_b5"
+    ],
+    "diff": 0.18,
+    "nested_ci": [
+     -0.45,
+     0.733
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "segformer_mit_b5",
+     "shuttlenet_v2"
+    ],
+    "diff": 0.209,
+    "nested_ci": [
+     -0.344,
+     0.818
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "shuttlenet_v2",
+     "deeplabv3plus_r50"
+    ],
+    "diff": 0.376,
+    "nested_ci": [
+     -0.199,
+     0.919
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "deeplabv3plus_r50",
+     "unet"
+    ],
+    "diff": 0.01,
+    "nested_ci": [
+     -0.482,
+     0.517
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "unet",
+     "hrnet_w48"
+    ],
+    "diff": 0.221,
+    "nested_ci": [
+     -0.408,
+     0.907
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "hrnet_w48",
+     "carnet"
+    ],
+    "diff": 0.136,
+    "nested_ci": [
+     -0.385,
+     0.662
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "carnet",
+     "rindnet"
+    ],
+    "diff": 0.117,
+    "nested_ci": [
+     -0.395,
+     0.619
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "rindnet",
+     "dtrcnet_pubdeit"
+    ],
+    "diff": 0.141,
+    "nested_ci": [
+     -0.478,
+     0.751
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "dtrcnet_pubdeit",
+     "scsegamba"
+    ],
+    "diff": 0.494,
+    "nested_ci": [
+     -0.238,
+     1.223
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "scsegamba",
+     "tangoseg"
+    ],
+    "diff": 0.069,
+    "nested_ci": [
+     -0.724,
+     0.866
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "tangoseg",
+     "mixercseg_improved"
+    ],
+    "diff": 0.014,
+    "nested_ci": [
+     -0.735,
+     0.839
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "mixercseg_improved",
+     "mixercseg_faithful"
+    ],
+    "diff": 0.308,
+    "nested_ci": [
+     -0.63,
+     1.141
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "mixercseg_faithful",
+     "restormixer"
+    ],
+    "diff": 1.388,
+    "nested_ci": [
+     -2.094,
+     5.439
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "restormixer",
+     "deepcrack_fast_fuse"
+    ],
+    "diff": 0.129,
+    "nested_ci": [
+     -3.941,
+     3.684
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "deepcrack_fast_fuse",
+     "mambavision"
+    ],
+    "diff": 3.803,
+    "nested_ci": [
+     -1.216,
+     11.415
+    ],
+    "separated": false
+   }
+  ],
+  "camcrack789": [
+   {
+    "pair": [
+     "convnext_xlarge",
+     "segformer_mit_b5"
+    ],
+    "diff": 0.348,
+    "nested_ci": [
+     -0.111,
+     0.84
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "segformer_mit_b5",
+     "shuttlenet_v2"
+    ],
+    "diff": 0.107,
+    "nested_ci": [
+     -0.325,
+     0.571
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "shuttlenet_v2",
+     "hrnet_w48"
+    ],
+    "diff": 0.131,
+    "nested_ci": [
+     -0.247,
+     0.537
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "hrnet_w48",
+     "restormixer"
+    ],
+    "diff": 0.31,
+    "nested_ci": [
+     -0.154,
+     0.774
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "restormixer",
+     "unet"
+    ],
+    "diff": 0.037,
+    "nested_ci": [
+     -0.464,
+     0.602
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "unet",
+     "deeplabv3plus_r50"
+    ],
+    "diff": 0.198,
+    "nested_ci": [
+     -0.567,
+     0.902
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "deeplabv3plus_r50",
+     "rindnet"
+    ],
+    "diff": 0.052,
+    "nested_ci": [
+     -0.249,
+     0.337
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "rindnet",
+     "dtrcnet_pubdeit"
+    ],
+    "diff": 0.355,
+    "nested_ci": [
+     -0.067,
+     0.787
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "dtrcnet_pubdeit",
+     "carnet"
+    ],
+    "diff": 0.1,
+    "nested_ci": [
+     -0.485,
+     0.748
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "carnet",
+     "tangoseg"
+    ],
+    "diff": 0.195,
+    "nested_ci": [
+     -0.361,
+     0.683
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "tangoseg",
+     "scsegamba"
+    ],
+    "diff": 0.054,
+    "nested_ci": [
+     -0.501,
+     0.609
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "scsegamba",
+     "mambavision"
+    ],
+    "diff": 0.111,
+    "nested_ci": [
+     -0.404,
+     0.628
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "mambavision",
+     "mixercseg_improved"
+    ],
+    "diff": 0.892,
+    "nested_ci": [
+     0.331,
+     1.445
+    ],
+    "separated": true
+   },
+   {
+    "pair": [
+     "mixercseg_improved",
+     "deepcrack_fast_fuse"
+    ],
+    "diff": 0.136,
+    "nested_ci": [
+     -0.555,
+     0.874
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "deepcrack_fast_fuse",
+     "mixercseg_faithful"
+    ],
+    "diff": 2.197,
+    "nested_ci": [
+     1.564,
+     2.938
+    ],
+    "separated": true
+   }
+  ],
+  "crackmap_parent": [
+   {
+    "pair": [
+     "convnext_xlarge",
+     "unet"
+    ],
+    "diff": 1.482,
+    "nested_ci": [
+     -0.771,
+     3.94
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "unet",
+     "segformer_mit_b5"
+    ],
+    "diff": 0.224,
+    "nested_ci": [
+     -4.411,
+     4.225
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "segformer_mit_b5",
+     "shuttlenet_v2"
+    ],
+    "diff": 0.281,
+    "nested_ci": [
+     -2.331,
+     3.567
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "shuttlenet_v2",
+     "restormixer"
+    ],
+    "diff": 0.454,
+    "nested_ci": [
+     -1.707,
+     3.899
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "restormixer",
+     "carnet"
+    ],
+    "diff": 0.109,
+    "nested_ci": [
+     -2.934,
+     3.901
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "carnet",
+     "hrnet_w48"
+    ],
+    "diff": 0.282,
+    "nested_ci": [
+     -3.975,
+     2.835
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "hrnet_w48",
+     "deeplabv3plus_r50"
+    ],
+    "diff": 0.712,
+    "nested_ci": [
+     -0.959,
+     1.632
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "deeplabv3plus_r50",
+     "rindnet"
+    ],
+    "diff": 0.375,
+    "nested_ci": [
+     -1.173,
+     3.394
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "rindnet",
+     "mambavision"
+    ],
+    "diff": 0.114,
+    "nested_ci": [
+     -4.468,
+     3.756
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "mambavision",
+     "dtrcnet_pubdeit"
+    ],
+    "diff": 0.601,
+    "nested_ci": [
+     -3.121,
+     3.592
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "dtrcnet_pubdeit",
+     "mixercseg_improved"
+    ],
+    "diff": 0.269,
+    "nested_ci": [
+     -2.274,
+     3.326
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "mixercseg_improved",
+     "deepcrack_fast_fuse"
+    ],
+    "diff": 0.023,
+    "nested_ci": [
+     -2.109,
+     3.521
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "deepcrack_fast_fuse",
+     "tangoseg"
+    ],
+    "diff": 0.304,
+    "nested_ci": [
+     -2.74,
+     1.753
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "tangoseg",
+     "mixercseg_faithful"
+    ],
+    "diff": 0.277,
+    "nested_ci": [
+     -2.746,
+     5.744
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "mixercseg_faithful",
+     "scsegamba"
+    ],
+    "diff": 12.479,
+    "nested_ci": [
+     3.627,
+     20.581
+    ],
+    "separated": true
+   }
+  ],
+  "crackmap": [
+   {
+    "pair": [
+     "convnext_xlarge",
+     "segformer_mit_b5"
+    ],
+    "diff": 0.635,
+    "nested_ci": [
+     -0.782,
+     2.076
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "segformer_mit_b5",
+     "hrnet_w48"
+    ],
+    "diff": 1.003,
+    "nested_ci": [
+     -1.016,
+     2.827
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "hrnet_w48",
+     "rindnet"
+    ],
+    "diff": 0.738,
+    "nested_ci": [
+     -0.738,
+     2.823
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "rindnet",
+     "unet"
+    ],
+    "diff": 0.277,
+    "nested_ci": [
+     -1.201,
+     1.699
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "unet",
+     "deeplabv3plus_r50"
+    ],
+    "diff": 0.05,
+    "nested_ci": [
+     -1.922,
+     1.492
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "deeplabv3plus_r50",
+     "shuttlenet_v2"
+    ],
+    "diff": 0.332,
+    "nested_ci": [
+     -0.95,
+     1.511
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "shuttlenet_v2",
+     "carnet"
+    ],
+    "diff": 0.346,
+    "nested_ci": [
+     -1.155,
+     2.532
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "carnet",
+     "dtrcnet_pubdeit"
+    ],
+    "diff": 1.0,
+    "nested_ci": [
+     -0.324,
+     2.157
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "dtrcnet_pubdeit",
+     "mambavision"
+    ],
+    "diff": 0.673,
+    "nested_ci": [
+     -1.505,
+     2.734
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "mambavision",
+     "restormixer"
+    ],
+    "diff": 0.561,
+    "nested_ci": [
+     -2.302,
+     2.924
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "restormixer",
+     "mixercseg_improved"
+    ],
+    "diff": 1.679,
+    "nested_ci": [
+     -1.388,
+     4.248
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "mixercseg_improved",
+     "tangoseg"
+    ],
+    "diff": 0.401,
+    "nested_ci": [
+     -1.622,
+     2.585
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "tangoseg",
+     "deepcrack_fast_fuse"
+    ],
+    "diff": 0.546,
+    "nested_ci": [
+     -1.715,
+     2.893
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "deepcrack_fast_fuse",
+     "scsegamba"
+    ],
+    "diff": 0.032,
+    "nested_ci": [
+     -4.458,
+     4.339
+    ],
+    "separated": false
+   },
+   {
+    "pair": [
+     "scsegamba",
+     "mixercseg_faithful"
+    ],
+    "diff": 0.529,
+    "nested_ci": [
+     -3.388,
+     5.552
+    ],
+    "separated": false
+   }
+  ]
+ },
+ "all_pairs_nested": {
+  "deepcrack": {
+   "n_pairs": 120,
+   "n_separated": 59
+  },
+  "crack500": {
+   "n_pairs": 120,
+   "n_separated": 87
+  },
+  "crack500_mother": {
+   "n_pairs": 120,
+   "n_separated": 77
+  },
+  "camcrack789": {
+   "n_pairs": 120,
+   "n_separated": 90
+  },
+  "crackmap_parent": {
+   "n_pairs": 120,
+   "n_separated": 43
+  },
+  "crackmap": {
+   "n_pairs": 120,
+   "n_separated": 73
+  }
+ }
+}

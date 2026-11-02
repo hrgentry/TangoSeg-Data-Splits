@@ -27,6 +27,7 @@ regenerate the partitions.
 | `verify_manifests.py` | Checks a local dataset copy against a manifest |
 | `make_crack500_mother_split.py` | Regenerates the parent-disjoint Crack500 partition (vendored verbatim; see below) |
 | `make_crackmap_parent_split.py` | Regenerates the source-disjoint CrackMap partition (vendored verbatim; same rule, grouping by GoPro source file) |
+| `revision_2026/` | Materials of the revised manuscript (v2.0.0): three-seed held-out-threshold results, fixed-test partition experiments, budget decomposition, five-seed matched contrasts with geometry metrics, native-resolution runs, per-image score histograms, training logs and configurations, scripts, and the revised supplementary material. See `revision_2026/README.md` |
 
 Split index files list one sample per line as `<image path> <mask path>`,
 relative to the dataset root.

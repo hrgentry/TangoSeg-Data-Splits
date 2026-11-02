@@ -1,0 +1,630 @@
+{
+ "source": "data/tango_priors_two_datasets.json",
+ "method": "paired t (two-sided, df = n - 1); Holm across all contrasts of one metric (both datasets, four crack priors plus ImageNet-1k init)",
+ "families": {
+  "ODS": [
+   {
+    "dataset": "deepcrack",
+    "arm": "a2_noprop",
+    "label": "remove_propagation",
+    "n": 3,
+    "per_seed_change": [
+     -0.27,
+     0.426,
+     1.106
+    ],
+    "reference_per_seed": [
+     84.87,
+     84.421,
+     84.186
+    ],
+    "arm_per_seed": [
+     84.6,
+     84.847,
+     85.292
+    ],
+    "mean": 0.4207,
+    "sd": 0.688,
+    "t": 1.059,
+    "ci95": [
+     -1.2885,
+     2.1298
+    ],
+    "p": 0.400598,
+    "p_holm": 1.0,
+    "established": false
+   },
+   {
+    "dataset": "deepcrack",
+    "arm": "a3_noori",
+    "label": "remove_orientation",
+    "n": 3,
+    "per_seed_change": [
+     -0.54,
+     -0.04,
+     0.736
+    ],
+    "reference_per_seed": [
+     84.87,
+     84.421,
+     84.186
+    ],
+    "arm_per_seed": [
+     84.33,
+     84.381,
+     84.922
+    ],
+    "mean": 0.052,
+    "sd": 0.643,
+    "t": 0.1401,
+    "ci95": [
+     -1.5452,
+     1.6492
+    ],
+    "p": 0.901429,
+    "p_holm": 1.0,
+    "established": false
+   },
+   {
+    "dataset": "deepcrack",
+    "arm": "a4_nocldice",
+    "label": "remove_cldice_loss",
+    "n": 3,
+    "per_seed_change": [
+     0.334,
+     0.145,
+     0.529
+    ],
+    "reference_per_seed": [
+     84.87,
+     84.421,
+     84.186
+    ],
+    "arm_per_seed": [
+     85.204,
+     84.566,
+     84.715
+    ],
+    "mean": 0.336,
+    "sd": 0.192,
+    "t": 3.031,
+    "ci95": [
+     -0.141,
+     0.813
+    ],
+    "p": 0.09379,
+    "p_holm": 0.65653,
+    "established": false
+   },
+   {
+    "dataset": "deepcrack",
+    "arm": "a5_uniform",
+    "label": "uniform_instead_of_anisotropic",
+    "n": 3,
+    "per_seed_change": [
+     0.029,
+     -0.596,
+     0.343
+    ],
+    "reference_per_seed": [
+     84.87,
+     84.421,
+     84.186
+    ],
+    "arm_per_seed": [
+     84.899,
+     83.825,
+     84.529
+    ],
+    "mean": -0.0747,
+    "sd": 0.478,
+    "t": -0.2706,
+    "ci95": [
+     -1.2621,
+     1.1128
+    ],
+    "p": 0.812097,
+    "p_holm": 1.0,
+    "established": false
+   },
+   {
+    "dataset": "deepcrack",
+    "arm": "a7_in1k",
+    "label": "add_imagenet1k_init",
+    "n": 3,
+    "per_seed_change": [
+     -0.023,
+     0.06,
+     0.316
+    ],
+    "reference_per_seed": [
+     84.87,
+     84.421,
+     84.186
+    ],
+    "arm_per_seed": [
+     84.847,
+     84.481,
+     84.502
+    ],
+    "mean": 0.1177,
+    "sd": 0.1767,
+    "t": 1.1534,
+    "ci95": [
+     -0.3213,
+     0.5566
+    ],
+    "p": 0.367983,
+    "p_holm": 1.0,
+    "established": false
+   },
+   {
+    "dataset": "crack500_mother",
+    "arm": "a2_noprop",
+    "label": "remove_propagation",
+    "n": 3,
+    "per_seed_change": [
+     -0.03,
+     0.088,
+     -0.044
+    ],
+    "reference_per_seed": [
+     77.278,
+     77.1,
+     77.12
+    ],
+    "arm_per_seed": [
+     77.248,
+     77.188,
+     77.076
+    ],
+    "mean": 0.0047,
+    "sd": 0.0725,
+    "t": 0.1115,
+    "ci95": [
+     -0.1755,
+     0.1848
+    ],
+    "p": 0.921418,
+    "p_holm": 1.0,
+    "established": false
+   },
+   {
+    "dataset": "crack500_mother",
+    "arm": "a3_noori",
+    "label": "remove_orientation",
+    "n": 3,
+    "per_seed_change": [
+     -0.357,
+     -0.273,
+     -0.185
+    ],
+    "reference_per_seed": [
+     77.278,
+     77.1,
+     77.12
+    ],
+    "arm_per_seed": [
+     76.921,
+     76.827,
+     76.935
+    ],
+    "mean": -0.2717,
+    "sd": 0.086,
+    "t": -5.4709,
+    "ci95": [
+     -0.4853,
+     -0.058
+    ],
+    "p": 0.031824,
+    "p_holm": 0.286416,
+    "established": false
+   },
+   {
+    "dataset": "crack500_mother",
+    "arm": "a4_nocldice",
+    "label": "remove_cldice_loss",
+    "n": 3,
+    "per_seed_change": [
+     0.112,
+     0.272,
+     0.132
+    ],
+    "reference_per_seed": [
+     77.278,
+     77.1,
+     77.12
+    ],
+    "arm_per_seed": [
+     77.39,
+     77.372,
+     77.252
+    ],
+    "mean": 0.172,
+    "sd": 0.0872,
+    "t": 3.4173,
+    "ci95": [
+     -0.0446,
+     0.3886
+    ],
+    "p": 0.075999,
+    "p_holm": 0.607992,
+    "established": false
+   },
+   {
+    "dataset": "crack500_mother",
+    "arm": "a5_uniform",
+    "label": "uniform_instead_of_anisotropic",
+    "n": 3,
+    "per_seed_change": [
+     -0.071,
+     0.074,
+     -0.041
+    ],
+    "reference_per_seed": [
+     77.278,
+     77.1,
+     77.12
+    ],
+    "arm_per_seed": [
+     77.207,
+     77.174,
+     77.079
+    ],
+    "mean": -0.0127,
+    "sd": 0.0765,
+    "t": -0.2866,
+    "ci95": [
+     -0.2028,
+     0.1775
+    ],
+    "p": 0.801355,
+    "p_holm": 1.0,
+    "established": false
+   },
+   {
+    "dataset": "crack500_mother",
+    "arm": "a7_in1k",
+    "label": "add_imagenet1k_init",
+    "n": 3,
+    "per_seed_change": [
+     1.184,
+     1.309,
+     1.413
+    ],
+    "reference_per_seed": [
+     77.278,
+     77.1,
+     77.12
+    ],
+    "arm_per_seed": [
+     78.462,
+     78.409,
+     78.533
+    ],
+    "mean": 1.302,
+    "sd": 0.1147,
+    "t": 19.6679,
+    "ci95": [
+     1.0172,
+     1.5868
+    ],
+    "p": 0.002575,
+    "p_holm": 0.02575,
+    "established": true
+   }
+  ],
+  "clDice": [
+   {
+    "dataset": "deepcrack",
+    "arm": "a2_noprop",
+    "label": "remove_propagation",
+    "n": 3,
+    "per_seed_change": [
+     0.681,
+     0.095,
+     0.885
+    ],
+    "reference_per_seed": [
+     88.157,
+     88.512,
+     87.957
+    ],
+    "arm_per_seed": [
+     88.838,
+     88.607,
+     88.842
+    ],
+    "mean": 0.5537,
+    "sd": 0.4101,
+    "t": 2.3384,
+    "ci95": [
+     -0.4651,
+     1.5724
+    ],
+    "p": 0.144318,
+    "p_holm": 0.656275,
+    "established": false
+   },
+   {
+    "dataset": "deepcrack",
+    "arm": "a3_noori",
+    "label": "remove_orientation",
+    "n": 3,
+    "per_seed_change": [
+     -0.557,
+     -0.601,
+     -0.081
+    ],
+    "reference_per_seed": [
+     88.157,
+     88.512,
+     87.957
+    ],
+    "arm_per_seed": [
+     87.6,
+     87.911,
+     87.876
+    ],
+    "mean": -0.413,
+    "sd": 0.2884,
+    "t": -2.4807,
+    "ci95": [
+     -1.1293,
+     0.3033
+    ],
+    "p": 0.131255,
+    "p_holm": 0.656275,
+    "established": false
+   },
+   {
+    "dataset": "deepcrack",
+    "arm": "a4_nocldice",
+    "label": "remove_cldice_loss",
+    "n": 3,
+    "per_seed_change": [
+     -0.202,
+     -0.521,
+     -0.535
+    ],
+    "reference_per_seed": [
+     88.157,
+     88.512,
+     87.957
+    ],
+    "arm_per_seed": [
+     87.955,
+     87.991,
+     87.422
+    ],
+    "mean": -0.4193,
+    "sd": 0.1883,
+    "t": -3.8562,
+    "ci95": [
+     -0.8872,
+     0.0485
+    ],
+    "p": 0.061144,
+    "p_holm": 0.428008,
+    "established": false
+   },
+   {
+    "dataset": "deepcrack",
+    "arm": "a5_uniform",
+    "label": "uniform_instead_of_anisotropic",
+    "n": 3,
+    "per_seed_change": [
+     0.45,
+     -0.432,
+     -0.002
+    ],
+    "reference_per_seed": [
+     88.157,
+     88.512,
+     87.957
+    ],
+    "arm_per_seed": [
+     88.607,
+     88.08,
+     87.955
+    ],
+    "mean": 0.0053,
+    "sd": 0.441,
+    "t": 0.0209,
+    "ci95": [
+     -1.0903,
+     1.101
+    ],
+    "p": 0.985191,
+    "p_holm": 1.0,
+    "established": false
+   },
+   {
+    "dataset": "deepcrack",
+    "arm": "a7_in1k",
+    "label": "add_imagenet1k_init",
+    "n": 3,
+    "per_seed_change": [
+     0.894,
+     0.34,
+     1.04
+    ],
+    "reference_per_seed": [
+     88.157,
+     88.512,
+     87.957
+    ],
+    "arm_per_seed": [
+     89.051,
+     88.852,
+     88.997
+    ],
+    "mean": 0.758,
+    "sd": 0.3693,
+    "t": 3.5552,
+    "ci95": [
+     -0.1594,
+     1.6754
+    ],
+    "p": 0.070815,
+    "p_holm": 0.428008,
+    "established": false
+   },
+   {
+    "dataset": "crack500_mother",
+    "arm": "a2_noprop",
+    "label": "remove_propagation",
+    "n": 3,
+    "per_seed_change": [
+     0.692,
+     0.529,
+     0.329
+    ],
+    "reference_per_seed": [
+     80.6,
+     80.211,
+     80.237
+    ],
+    "arm_per_seed": [
+     81.292,
+     80.74,
+     80.566
+    ],
+    "mean": 0.5167,
+    "sd": 0.1818,
+    "t": 4.922,
+    "ci95": [
+     0.065,
+     0.9683
+    ],
+    "p": 0.038886,
+    "p_holm": 0.349974,
+    "established": false
+   },
+   {
+    "dataset": "crack500_mother",
+    "arm": "a3_noori",
+    "label": "remove_orientation",
+    "n": 3,
+    "per_seed_change": [
+     -0.317,
+     0.053,
+     -0.192
+    ],
+    "reference_per_seed": [
+     80.6,
+     80.211,
+     80.237
+    ],
+    "arm_per_seed": [
+     80.283,
+     80.264,
+     80.045
+    ],
+    "mean": -0.152,
+    "sd": 0.1882,
+    "t": -1.3988,
+    "ci95": [
+     -0.6196,
+     0.3156
+    ],
+    "p": 0.296783,
+    "p_holm": 0.890349,
+    "established": false
+   },
+   {
+    "dataset": "crack500_mother",
+    "arm": "a4_nocldice",
+    "label": "remove_cldice_loss",
+    "n": 3,
+    "per_seed_change": [
+     -1.913,
+     -0.872,
+     -1.27
+    ],
+    "reference_per_seed": [
+     80.6,
+     80.211,
+     80.237
+    ],
+    "arm_per_seed": [
+     78.687,
+     79.339,
+     78.967
+    ],
+    "mean": -1.3517,
+    "sd": 0.5253,
+    "t": -4.4569,
+    "ci95": [
+     -2.6565,
+     -0.0468
+    ],
+    "p": 0.046833,
+    "p_holm": 0.374664,
+    "established": false
+   },
+   {
+    "dataset": "crack500_mother",
+    "arm": "a5_uniform",
+    "label": "uniform_instead_of_anisotropic",
+    "n": 3,
+    "per_seed_change": [
+     -0.183,
+     0.15,
+     0.0
+    ],
+    "reference_per_seed": [
+     80.6,
+     80.211,
+     80.237
+    ],
+    "arm_per_seed": [
+     80.417,
+     80.361,
+     80.237
+    ],
+    "mean": -0.011,
+    "sd": 0.1668,
+    "t": -0.1142,
+    "ci95": [
+     -0.4253,
+     0.4033
+    ],
+    "p": 0.91948,
+    "p_holm": 1.0,
+    "established": false
+   },
+   {
+    "dataset": "crack500_mother",
+    "arm": "a7_in1k",
+    "label": "add_imagenet1k_init",
+    "n": 3,
+    "per_seed_change": [
+     1.56,
+     1.512,
+     1.272
+    ],
+    "reference_per_seed": [
+     80.6,
+     80.211,
+     80.237
+    ],
+    "arm_per_seed": [
+     82.16,
+     81.723,
+     81.509
+    ],
+    "mean": 1.448,
+    "sd": 0.1543,
+    "t": 16.2543,
+    "ci95": [
+     1.0647,
+     1.8313
+    ],
+    "p": 0.003764,
+    "p_holm": 0.03764,
+    "established": true
+   }
+  ]
+ }
+}
